@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=15">
+  <link rel="stylesheet" href="style.css?v=17">
   <!-- Supabase JS Client para banco de dados e autenticacao na nuvem -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <!-- Hls.js para suporte a streaming HLS -->
@@ -310,9 +310,29 @@
   <!-- Grade de Títulos / Catálogo Principal -->
   <main class="catalog-section">
     <div class="catalog-header">
-      <h3 class="catalog-title" id="currentViewTitle">Lançamentos & Destaques</h3>
-      <div class="catalog-filters">
-        <span id="itemsFoundText">Carregando catálogo...</span>
+      <div class="catalog-header-left">
+        <h3 class="catalog-title" id="currentViewTitle">Lançamentos & Destaques</h3>
+        <div class="catalog-filters">
+          <span id="itemsFoundText">Carregando catálogo...</span>
+        </div>
+      </div>
+      <!-- Alternador de Visualização para Séries: Todos os Capítulos vs Agrupar por Série -->
+      <div class="series-view-controls" id="seriesViewControls" style="display: none;">
+        <button class="btn-toggle-view active" id="btnViewAll" data-view="all" title="Exibir todos os capítulos separadamente">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+          <span>Todos os Capítulos</span>
+        </button>
+        <button class="btn-toggle-view" id="btnViewGrouped" data-view="grouped" title="Agrupar capítulos por série">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span>Agrupar por Série</span>
+        </button>
       </div>
     </div>
 
@@ -334,10 +354,29 @@
     <div class="player-container">
       <div class="player-header">
         <div class="player-title-info">
-          <span class="badge" id="modalCategoryBadge">CATEGORIA</span>
+          <div class="player-badges-row">
+            <span class="badge" id="modalCategoryBadge">CATEGORIA</span>
+            <span class="badge badge-episode" id="modalEpisodeBadge" style="display: none;">T01 • EP 01</span>
+          </div>
           <h3 id="modalVideoTitle">Título do Vídeo</h3>
         </div>
-        <button class="btn-close" id="btnClosePlayer">&times;</button>
+        <div class="player-header-actions">
+          <div class="player-episode-nav" id="playerEpisodeNav" style="display: none;">
+            <button class="btn-ep-nav" id="btnPrevEp" title="Episódio Anterior">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+              <span>Anterior</span>
+            </button>
+            <button class="btn-ep-nav" id="btnNextEp" title="Próximo Episódio">
+              <span>Próximo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+          <button class="btn-close" id="btnClosePlayer">&times;</button>
+        </div>
       </div>
 
       <div class="video-wrapper">
@@ -345,6 +384,23 @@
         <div class="player-loading" id="playerLoading">
           <div class="spinner"></div>
           <span>Carregando transmissão...</span>
+        </div>
+      </div>
+
+      <!-- Barra de Navegação Rápida de Capítulos (Apenas quando assistindo Série) -->
+      <div class="player-series-strip-container" id="playerSeriesStrip" style="display: none;">
+        <div class="player-series-strip-header">
+          <div class="strip-header-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+              <polyline points="17 2 12 7 7 2"></polyline>
+            </svg>
+            <span id="stripSeriesName">Capítulos da Série</span>
+          </div>
+          <span class="strip-ep-count" id="stripEpCount">0 capítulos</span>
+        </div>
+        <div class="player-series-strip-scroll" id="playerStripScroll">
+          <!-- Botões de episódios injetados via app.js -->
         </div>
       </div>
 
@@ -362,6 +418,40 @@
         <div class="player-footer-actions">
           <a id="btnModalOpenVlc" href="#" class="btn-vlc admin-only" target="_blank">Abrir no VLC</a>
           <button class="btn-close-modal" id="btnModalDismiss">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Detalhes da Série (Temporadas e Episódios) -->
+  <div class="modal-overlay" id="seriesModal">
+    <div class="series-modal-container">
+      <div class="series-modal-header">
+        <div class="series-modal-hero">
+          <div class="series-modal-poster">
+            <img id="seriesModalPoster" src="" alt="Poster da Série">
+          </div>
+          <div class="series-modal-info">
+            <span class="badge" id="seriesModalCategory">SÉRIE COMPLETA</span>
+            <h3 id="seriesModalTitle">Nome da Série</h3>
+            <div class="series-modal-meta">
+              <span class="meta-tag" id="seriesModalTotalEpisodes">0 episódios</span>
+              <span class="meta-tag" id="seriesModalTotalSeasons">0 temporadas</span>
+            </div>
+          </div>
+        </div>
+        <button class="btn-close" id="btnCloseSeriesModal">&times;</button>
+      </div>
+
+      <div class="series-modal-body">
+        <!-- Abas de Temporadas -->
+        <div class="series-seasons-bar" id="seriesSeasonsBar">
+          <!-- Tabs de Temporadas injetadas via app.js -->
+        </div>
+
+        <!-- Grade de Episódios da Temporada Selecionada -->
+        <div class="series-episodes-grid" id="seriesEpisodesGrid">
+          <!-- Cards de episódios injetados via app.js -->
         </div>
       </div>
     </div>
@@ -572,8 +662,8 @@
   <!-- Toast de Notificação -->
   <div class="toast" id="toastNotification">Link copiado com sucesso!</div>
 
-  <script src="supabase-config.js?v=15"></script>
-  <script src="auth.js?v=16"></script>
-  <script src="app.js?v=15"></script>
+  <script src="supabase-config.js?v=17"></script>
+  <script src="auth.js?v=17"></script>
+  <script src="app.js?v=17"></script>
 </body>
 </html>

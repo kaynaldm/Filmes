@@ -13,7 +13,12 @@ const state = {
   hlsPlayer: null,
   heroIndex: 0,
   heroItems: [],
-  currentUser: null
+  currentUser: null,
+  // Estado de Séries & Capítulos
+  seriesViewMode: 'all', // 'all' (todos os capítulos) | 'grouped' (agrupado por série)
+  groupedSeriesList: [],
+  activeSeriesContext: null, // { seriesName, episodes: [], currentIndex: 0 }
+  activeSeriesGroup: null
 };
 
 // Elementos DOM
@@ -66,17 +71,41 @@ const dom = {
   btnTypeFilmes: document.getElementById('btnTypeFilmes'),
   btnTypeSeries: document.getElementById('btnTypeSeries'),
 
-  // Player Modal
+  // Alternador de Visualização de Séries
+  seriesViewControls: document.getElementById('seriesViewControls'),
+  btnViewAll: document.getElementById('btnViewAll'),
+  btnViewGrouped: document.getElementById('btnViewGrouped'),
+
+  // Player Modal & Navegação de Capítulos
   playerModal: document.getElementById('playerModal'),
   htmlVideoPlayer: document.getElementById('htmlVideoPlayer'),
   modalVideoTitle: document.getElementById('modalVideoTitle'),
   modalCategoryBadge: document.getElementById('modalCategoryBadge'),
+  modalEpisodeBadge: document.getElementById('modalEpisodeBadge'),
+  playerEpisodeNav: document.getElementById('playerEpisodeNav'),
+  btnPrevEp: document.getElementById('btnPrevEp'),
+  btnNextEp: document.getElementById('btnNextEp'),
+  playerSeriesStrip: document.getElementById('playerSeriesStrip'),
+  stripSeriesName: document.getElementById('stripSeriesName'),
+  stripEpCount: document.getElementById('stripEpCount'),
+  playerStripScroll: document.getElementById('playerStripScroll'),
   streamUrlDisplay: document.getElementById('streamUrlDisplay'),
   btnCopyModalUrl: document.getElementById('btnCopyModalUrl'),
   btnModalOpenVlc: document.getElementById('btnModalOpenVlc'),
   btnClosePlayer: document.getElementById('btnClosePlayer'),
   btnModalDismiss: document.getElementById('btnModalDismiss'),
   playerLoading: document.getElementById('playerLoading'),
+
+  // Modal de Detalhes da Série (Temporadas e Episódios)
+  seriesModal: document.getElementById('seriesModal'),
+  seriesModalPoster: document.getElementById('seriesModalPoster'),
+  seriesModalCategory: document.getElementById('seriesModalCategory'),
+  seriesModalTitle: document.getElementById('seriesModalTitle'),
+  seriesModalTotalEpisodes: document.getElementById('seriesModalTotalEpisodes'),
+  seriesModalTotalSeasons: document.getElementById('seriesModalTotalSeasons'),
+  seriesSeasonsBar: document.getElementById('seriesSeasonsBar'),
+  seriesEpisodesGrid: document.getElementById('seriesEpisodesGrid'),
+  btnCloseSeriesModal: document.getElementById('btnCloseSeriesModal'),
 
   // Modais Secundários
   exportModal: document.getElementById('exportModal'),
@@ -323,7 +352,9 @@ function setupEventListeners() {
         showToast(`Bem-vindo, ${result.user.username}!`);
 
         // Re-renderiza o catálogo para aplicar restrições visuais do perfil
-        if (state.currentItems && state.currentItems.length) {
+        if (state.rawItems && state.rawItems.length) {
+          refreshCatalogDisplay();
+        } else if (state.currentItems && state.currentItems.length) {
           state.displayedCount = 0;
           dom.cardsGrid.innerHTML = '';
           renderNextBatch();
@@ -402,15 +433,34 @@ function setupEventListeners() {
     });
   }
 
-  // Player Modal
+  // Alternador de Visualização de Séries (Todos os Capítulos vs Agrupar por Série)
+  if (dom.btnViewAll) {
+    dom.btnViewAll.addEventListener('click', () => setSeriesViewMode('all'));
+  }
+  if (dom.btnViewGrouped) {
+    dom.btnViewGrouped.addEventListener('click', () => setSeriesViewMode('grouped'));
+  }
+
+  // Player Modal & Navegação de Capítulos
   dom.btnClosePlayer.addEventListener('click', closePlayerModal);
   dom.btnModalDismiss.addEventListener('click', closePlayerModal);
+  if (dom.btnPrevEp) {
+    dom.btnPrevEp.addEventListener('click', playPreviousEpisode);
+  }
+  if (dom.btnNextEp) {
+    dom.btnNextEp.addEventListener('click', playNextEpisode);
+  }
   if (dom.btnCopyModalUrl) {
     dom.btnCopyModalUrl.addEventListener('click', () => {
       if (state.currentUser && state.currentUser.role === 'admin') {
         copyToClipboard(dom.streamUrlDisplay.value);
       }
     });
+  }
+
+  // Modal de Série
+  if (dom.btnCloseSeriesModal) {
+    dom.btnCloseSeriesModal.addEventListener('click', () => closeModal(dom.seriesModal));
   }
 
   // Export Modal
@@ -530,7 +580,7 @@ function setupEventListeners() {
   }
 
   // Fechar Modais ao clicar no Backdrop escuro
-  [dom.playerModal, dom.exportModal, dom.guideModal, dom.adminModal].forEach(modal => {
+  [dom.playerModal, dom.exportModal, dom.guideModal, dom.adminModal, dom.seriesModal].forEach(modal => {
     if (modal) {
       modal.addEventListener('click', (e) => {
         if (e.target === modal) {
@@ -970,14 +1020,8 @@ function loadDestaques() {
     }
   });
 
-  state.currentItems = pool;
-  if (dom.sortSelect && dom.sortSelect.value !== 'padrao') {
-    applySortingInMemory(dom.sortSelect.value);
-  }
-  state.displayedCount = 0;
-  dom.cardsGrid.innerHTML = '';
-  renderNextBatch();
-  dom.itemsFoundText.textContent = `${pool.length} títulos em destaque`;
+  state.rawItems = pool;
+  refreshCatalogDisplay();
 }
 
 async function selectCategory(catId, catName) {
@@ -999,22 +1043,75 @@ async function selectCategory(catId, catName) {
     if (!resp.ok) throw new Error('Falha ao carregar categoria');
     const items = await resp.json();
 
-    state.currentItems = items.map(it => ({
+    state.rawItems = items.map(it => ({
       ...it,
       catNome: catName
     }));
 
-    if (dom.sortSelect && dom.sortSelect.value !== 'padrao') {
-      applySortingInMemory(dom.sortSelect.value);
-    }
-
-    state.displayedCount = 0;
-    dom.cardsGrid.innerHTML = '';
-    renderNextBatch();
-    dom.itemsFoundText.textContent = `${items.length.toLocaleString()} títulos disponíveis`;
+    refreshCatalogDisplay();
   } catch (err) {
     console.error('Erro ao buscar dados da categoria:', err);
     dom.cardsGrid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #ef4444;">Erro ao carregar títulos desta categoria.</div>';
+  }
+}
+
+// =====================================================================
+// ORGANIZAÇÃO E AGRUPAMENTO DE SÉRIES
+// =====================================================================
+function setSeriesViewMode(mode) {
+  state.seriesViewMode = mode;
+  if (dom.btnViewAll) dom.btnViewAll.classList.toggle('active', mode === 'all');
+  if (dom.btnViewGrouped) dom.btnViewGrouped.classList.toggle('active', mode === 'grouped');
+  refreshCatalogDisplay();
+}
+
+function updateSeriesControlsVisibility() {
+  if (!dom.seriesViewControls) return;
+  const isSeriesCat = (state.activeType === 'series') || 
+                      (state.activeCategoryId && (
+                        state.activeCategoryId.includes('series') ||
+                        state.activeCategoryId.includes('novelas') ||
+                        state.activeCategoryId.includes('doramas') ||
+                        state.activeCategoryId.includes('netflix') ||
+                        state.activeCategoryId.includes('prime') ||
+                        state.activeCategoryId.includes('max') ||
+                        state.activeCategoryId.includes('disney') ||
+                        state.activeCategoryId.includes('crunchyroll') ||
+                        state.activeCategoryId.includes('turcas')
+                      ));
+  const hasEpisodes = state.rawItems && state.rawItems.some(it => parseEpisodeInfo(it.t).isEpisode);
+
+  if (isSeriesCat || hasEpisodes) {
+    dom.seriesViewControls.style.display = 'inline-flex';
+  } else {
+    dom.seriesViewControls.style.display = 'none';
+  }
+}
+
+function refreshCatalogDisplay() {
+  if (!state.rawItems) state.rawItems = [];
+  updateSeriesControlsVisibility();
+
+  if (state.seriesViewMode === 'grouped') {
+    const { groups, nonSeries } = groupItemsBySeries(state.rawItems);
+    state.currentItems = [...groups, ...nonSeries];
+  } else {
+    state.currentItems = [...state.rawItems];
+  }
+
+  if (dom.sortSelect && dom.sortSelect.value !== 'padrao') {
+    applySortingInMemory(dom.sortSelect.value);
+  }
+
+  state.displayedCount = 0;
+  dom.cardsGrid.innerHTML = '';
+  renderNextBatch();
+
+  if (state.seriesViewMode === 'grouped') {
+    const groupCount = state.currentItems.filter(it => it.isGroup).length;
+    dom.itemsFoundText.textContent = `${groupCount} séries agrupadas (${state.rawItems.length.toLocaleString()} episódios no total)`;
+  } else {
+    dom.itemsFoundText.textContent = `${state.currentItems.length.toLocaleString()} títulos disponíveis`;
   }
 }
 
@@ -1028,9 +1125,9 @@ function applySorting(sortType) {
 function applySortingInMemory(sortType) {
   if (!state.currentItems || !state.currentItems.length) return;
   if (sortType === 'az') {
-    state.currentItems.sort((a, b) => (a.t || '').localeCompare(b.t || '', 'pt-BR'));
+    state.currentItems.sort((a, b) => (a.seriesName || a.t || '').localeCompare(b.seriesName || b.t || '', 'pt-BR'));
   } else if (sortType === 'za') {
-    state.currentItems.sort((a, b) => (b.t || '').localeCompare(a.t || '', 'pt-BR'));
+    state.currentItems.sort((a, b) => (b.seriesName || b.t || '').localeCompare(a.seriesName || a.t || '', 'pt-BR'));
   }
 }
 
@@ -1067,16 +1164,220 @@ function renderNextBatch() {
 }
 
 // =====================================================================
-// CRIAÇÃO DE CARDS (PROTEÇÃO DO CLIENTE: APENAS ASSISTIR)
+// PARSER DE EPISÓDIOS & IDENTIFICAÇÃO DE CAPÍTULOS
 // =====================================================================
+function parseEpisodeInfo(rawTitle) {
+  if (!rawTitle || typeof rawTitle !== 'string') {
+    return { isEpisode: false, seriesName: '', season: null, episode: null, episodeTitle: '', badge: '', label: '', shortBadge: '', cleanTitle: '' };
+  }
+
+  const title = rawTitle.trim();
+
+  // 1. Padrão Clássico: S01E02, S1E2, T01E02, TEMP 01 EP 02, Temporada 1 Episodio 2
+  // Ex: "90 Dias De Volta Pra Pista S04E01", "Breaking Bad T02E07 - O Retorno", "Dark S01 E03"
+  const p1 = /^(.*?)\s*[\(\[\{]?(?:S|TEMP|TEMPORADA|T)\s*(\d{1,2})\s*[\s\.\-_]*\s*(?:E|EP|CAP|CAPITULO|EPS)\s*(\d{1,3})[\)\]\}]?(?:\s*[\-\:]?\s*(.*?))?$/i;
+  let m = title.match(p1);
+  if (m) {
+    const seriesName = m[1].replace(/[\s\.\-_]+$/, '').trim() || title;
+    const s = parseInt(m[2], 10);
+    const e = parseInt(m[3], 10);
+    const sStr = String(s).padStart(2, '0');
+    const eStr = String(e).padStart(2, '0');
+    const epTitle = m[4] ? m[4].replace(/^[\[\(].*?[\]\)]$/, '').trim() : '';
+    return {
+      isEpisode: true,
+      seriesName,
+      season: s,
+      episode: e,
+      episodeTitle: epTitle,
+      badge: `T${sStr} • EP ${eStr}`,
+      label: `Temporada ${s} • Episódio ${e}`,
+      shortBadge: `T${sStr} E${eStr}`,
+      cleanTitle: seriesName
+    };
+  }
+
+  // 2. Padrão 01x05, 1x5
+  // Ex: "Game of Thrones 01x05", "Lost 3x10"
+  const p2 = /^(.*?)\s*[\(\[\{]?(\d{1,2})x(\d{1,3})[\)\]\}]?(?:\s*[\-\:]?\s*(.*?))?$/i;
+  m = title.match(p2);
+  if (m) {
+    const seriesName = m[1].replace(/[\s\.\-_]+$/, '').trim() || title;
+    const s = parseInt(m[2], 10);
+    const e = parseInt(m[3], 10);
+    const sStr = String(s).padStart(2, '0');
+    const eStr = String(e).padStart(2, '0');
+    const epTitle = m[4] ? m[4].trim() : '';
+    return {
+      isEpisode: true,
+      seriesName,
+      season: s,
+      episode: e,
+      episodeTitle: epTitle,
+      badge: `T${sStr} • EP ${eStr}`,
+      label: `Temporada ${s} • Episódio ${e}`,
+      shortBadge: `T${sStr} E${eStr}`,
+      cleanTitle: seriesName
+    };
+  }
+
+  // 3. Padrão Capítulo / Episódio avulso (Novelas, Doramas, Animes):
+  // Ex: "Amor de Mae Cap 45", "Renascer Capitulo 102", "Chaves Ep 12", "Naruto Ep 200"
+  const p3 = /^(.*?)\s*[\(\[\{]?(?:EP|EPISODIO|CAP|CAPITULO)\s*[\.\-_]?\s*(\d{1,4})[\)\]\}]?(?:\s*[\-\:]?\s*(.*?))?$/i;
+  m = title.match(p3);
+  if (m) {
+    const seriesName = m[1].replace(/[\s\.\-_]+$/, '').trim() || title;
+    const e = parseInt(m[2], 10);
+    const eStr = String(e).padStart(2, '0');
+    const isCap = /cap/i.test(m[0]);
+    return {
+      isEpisode: true,
+      seriesName,
+      season: 1,
+      episode: e,
+      episodeTitle: m[3] ? m[3].trim() : '',
+      badge: isCap ? `CAP ${eStr}` : `EP ${eStr}`,
+      label: isCap ? `Capítulo ${e}` : `Episódio ${e}`,
+      shortBadge: isCap ? `C${eStr}` : `E${eStr}`,
+      cleanTitle: seriesName
+    };
+  }
+
+  return {
+    isEpisode: false,
+    seriesName: title,
+    season: null,
+    episode: null,
+    episodeTitle: '',
+    badge: '',
+    label: '',
+    shortBadge: '',
+    cleanTitle: title
+  };
+}
+
+function groupItemsBySeries(items) {
+  const groups = new Map();
+  const nonSeries = [];
+
+  items.forEach((item, originalIndex) => {
+    const parsed = parseEpisodeInfo(item.t);
+    if (parsed.isEpisode) {
+      const key = parsed.seriesName.toLowerCase();
+      if (!groups.has(key)) {
+        groups.set(key, {
+          isGroup: true,
+          seriesName: parsed.seriesName,
+          catNome: item.catNome || 'Série',
+          poster: item.p,
+          episodes: [],
+          seasons: new Set()
+        });
+      }
+      const g = groups.get(key);
+      if (parsed.season) g.seasons.add(parsed.season);
+      if ((!g.poster || g.poster === FALLBACK_POSTER) && item.p && item.p.startsWith('http')) {
+        g.poster = item.p;
+      }
+      g.episodes.push({
+        ...item,
+        parsed,
+        originalIndex
+      });
+    } else {
+      nonSeries.push(item);
+    }
+  });
+
+  // Ordena episódios de cada série cronologicamente (Temporada crescente, Episódio crescente)
+  const groupList = Array.from(groups.values());
+  groupList.forEach(g => {
+    g.episodes.sort((a, b) => {
+      const sDiff = (a.parsed.season || 1) - (b.parsed.season || 1);
+      if (sDiff !== 0) return sDiff;
+      return (a.parsed.episode || 1) - (b.parsed.episode || 1);
+    });
+    g.totalEpisodes = g.episodes.length;
+    g.totalSeasons = g.seasons.size || 1;
+    if ((!g.poster || g.poster === FALLBACK_POSTER) && g.episodes[0] && g.episodes[0].p) {
+      g.poster = g.episodes[0].p;
+    }
+    g.u = g.episodes[0] ? g.episodes[0].u : '';
+    g.t = g.seriesName;
+    g.p = g.poster;
+  });
+
+  return {
+    groups: groupList,
+    nonSeries
+  };
+}
+
+// =====================================================================
+// CRIAÇÃO DE CARDS (SUPORTE A CAPÍTULOS, BADGES E AGRUPAMENTO)
+// =====================================================================
+function createSeriesGroupCard(group, index) {
+  const card = document.createElement('div');
+  card.className = 'video-card is-series-group';
+
+  const posterUrl = group.poster && group.poster.startsWith('http') ? group.poster : FALLBACK_POSTER;
+  const categoryName = group.catNome || 'Série';
+
+  card.innerHTML = `
+    <div class="card-poster">
+      <img src="${posterUrl}" alt="${escapeHtml(group.seriesName)}" loading="lazy" onerror="this.src='${FALLBACK_POSTER}'">
+      <span class="card-badge group-badge">${group.totalEpisodes} EPISÓDIOS</span>
+      <div class="card-play-overlay">
+        <div class="play-circle" title="Ver Episódios">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-chapter-pill">
+        <span class="pill-dot"></span>
+        <span>${group.totalEpisodes} Episódios • ${group.totalSeasons} Temporada${group.totalSeasons > 1 ? 's' : ''}</span>
+      </div>
+      <h4 class="card-title" title="${escapeHtml(group.seriesName)}">${escapeHtml(group.seriesName)}</h4>
+      <span class="card-category">${escapeHtml(categoryName)}</span>
+      <div class="card-actions">
+        <button class="btn-card-action btn-view-series" title="Explorar todos os episódios">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="8" y1="6" x2="21" y2="6"></line>
+            <line x1="8" y1="12" x2="21" y2="12"></line>
+            <line x1="8" y1="18" x2="21" y2="18"></line>
+            <line x1="3" y1="6" x2="3.01" y2="6"></line>
+            <line x1="3" y1="12" x2="3.01" y2="12"></line>
+            <line x1="3" y1="18" x2="3.01" y2="18"></line>
+          </svg>
+          Ver Capítulos
+        </button>
+      </div>
+    </div>
+  `;
+
+  card.querySelector('.card-play-overlay').onclick = () => openSeriesModal(group);
+  card.querySelector('.btn-view-series').onclick = (e) => {
+    e.stopPropagation();
+    openSeriesModal(group);
+  };
+
+  return card;
+}
+
 function createVideoCard(item, index) {
+  if (item.isGroup) {
+    return createSeriesGroupCard(item, index);
+  }
+
   const card = document.createElement('div');
   card.className = 'video-card';
 
   const posterUrl = item.p && item.p.startsWith('http') ? item.p : FALLBACK_POSTER;
   const categoryName = item.catNome || 'Filmes & Séries';
-  const isSeries = categoryName.toLowerCase().includes('séries') || item.t.toLowerCase().match(/s\d+e\d+/i);
-  const badgeText = isSeries ? 'SÉRIE' : 'HD / 4K';
+  const epInfo = parseEpisodeInfo(item.t);
 
   const isAdmin = state.currentUser && state.currentUser.role === 'admin';
   const isClient = !isAdmin;
@@ -1092,10 +1393,21 @@ function createVideoCard(item, index) {
     </button>
   ` : '';
 
+  // Se for episódio, exibe badge com o episódio exato (ex: T04 • EP 01) e pílula no corpo
+  const badgeHtml = epInfo.isEpisode
+    ? `<span class="card-badge series-badge">${epInfo.badge}</span>`
+    : `<span class="card-badge">HD / 4K</span>`;
+
+  const chapterPillHtml = epInfo.isEpisode
+    ? `<div class="card-chapter-pill"><span class="pill-dot"></span><span>${escapeHtml(epInfo.label)}</span></div>`
+    : '';
+
+  const displayTitle = epInfo.isEpisode ? epInfo.seriesName : item.t;
+
   card.innerHTML = `
     <div class="card-poster">
       <img src="${posterUrl}" alt="${escapeHtml(item.t)}" loading="lazy" onerror="this.src='${FALLBACK_POSTER}'">
-      <span class="card-badge">${badgeText}</span>
+      ${badgeHtml}
       <div class="card-play-overlay">
         <div class="play-circle">
           <svg viewBox="0 0 24 24" fill="currentColor">
@@ -1105,7 +1417,8 @@ function createVideoCard(item, index) {
       </div>
     </div>
     <div class="card-body">
-      <h4 class="card-title" title="${escapeHtml(item.t)}">${escapeHtml(item.t)}</h4>
+      ${chapterPillHtml}
+      <h4 class="card-title" title="${escapeHtml(item.t)}">${escapeHtml(displayTitle)}</h4>
       <span class="card-category">${escapeHtml(categoryName)}</span>
       <div class="card-actions">
         <button class="btn-card-action btn-play" title="Assistir Agora">
@@ -1120,8 +1433,8 @@ function createVideoCard(item, index) {
   `;
 
   // Eventos de Reprodução
-  card.querySelector('.card-play-overlay').onclick = () => openPlayer(item.t, categoryName, item.u);
-  card.querySelector('.btn-play').onclick = () => openPlayer(item.t, categoryName, item.u);
+  card.querySelector('.card-play-overlay').onclick = () => openPlayer(item.t, categoryName, item.u, item);
+  card.querySelector('.btn-play').onclick = () => openPlayer(item.t, categoryName, item.u, item);
 
   const btnCopy = card.querySelector('.btn-copy');
   if (btnCopy) {
@@ -1169,12 +1482,13 @@ async function handleSearch(query) {
   }
 
   const lowerQ = query.toLowerCase();
-  const matched = state.currentItems.filter(item => item.t && item.t.toLowerCase().includes(lowerQ));
+  const pool = state.rawItems || state.currentItems || [];
+  const matched = pool.filter(item => item.t && item.t.toLowerCase().includes(lowerQ));
   displaySearchResults(matched, query);
 }
 
 function displaySearchResults(results, query) {
-  state.currentItems = results;
+  state.rawItems = results;
   state.displayedCount = 0;
   dom.cardsGrid.innerHTML = '';
 
@@ -1189,16 +1503,31 @@ function displaySearchResults(results, query) {
     return;
   }
 
-  renderNextBatch();
+  refreshCatalogDisplay();
   dom.itemsFoundText.textContent = `${results.length.toLocaleString()} títulos encontrados`;
 }
 
 // =====================================================================
-// PLAYER DE VÍDEO
+// PLAYER DE VÍDEO & NAVEGAÇÃO DE SÉRIES
 // =====================================================================
-function openPlayer(title, category, url) {
+function openPlayer(title, category, url, itemObj = null) {
   dom.modalVideoTitle.textContent = title;
   dom.modalCategoryBadge.textContent = category;
+
+  // Informações de Episódio / Navegação Binge
+  const epInfo = parseEpisodeInfo(title);
+  if (epInfo.isEpisode) {
+    if (dom.modalEpisodeBadge) {
+      dom.modalEpisodeBadge.textContent = epInfo.badge;
+      dom.modalEpisodeBadge.style.display = 'inline-block';
+    }
+    setupPlayerSeriesNavigation(epInfo, url, category);
+  } else {
+    if (dom.modalEpisodeBadge) dom.modalEpisodeBadge.style.display = 'none';
+    if (dom.playerEpisodeNav) dom.playerEpisodeNav.style.display = 'none';
+    if (dom.playerSeriesStrip) dom.playerSeriesStrip.style.display = 'none';
+    state.activeSeriesContext = null;
+  }
 
   // Apenas admin tem visualização e cópia do link direto
   const isAdmin = state.currentUser && state.currentUser.role === 'admin';
@@ -1269,9 +1598,19 @@ function openPlayer(title, category, url) {
     });
   }
 
+  // Auto-play próximo episódio ao finalizar o vídeo
+  video.onended = () => {
+    if (state.activeSeriesContext) {
+      const { currentIndex, episodes } = state.activeSeriesContext;
+      if (currentIndex < episodes.length - 1) {
+        showToast('Próximo capítulo iniciando...');
+        setTimeout(() => playNextEpisode(), 1500);
+      }
+    }
+  };
+
   // Fallback inteligente caso o navegador bloqueie o stream direto
   video.onerror = () => {
-    // Se o modal foi fechado pelo usuário, NUNCA disparar fallback ou tocar áudio!
     if (!dom.playerModal || !dom.playerModal.classList.contains('active')) {
       return;
     }
@@ -1296,6 +1635,168 @@ function openPlayer(title, category, url) {
   video.onloadeddata = hidePlayerLoading;
   video.onplay = hidePlayerLoading;
   video.onwaiting = null;
+}
+
+function setupPlayerSeriesNavigation(epInfo, currentUrl, category) {
+  let pool = state.rawItems || state.currentItems || [];
+  let seriesEpisodes = pool.filter(it => {
+    if (!it.t) return false;
+    const itEp = parseEpisodeInfo(it.t);
+    return itEp.isEpisode && itEp.seriesName.toLowerCase() === epInfo.seriesName.toLowerCase();
+  });
+
+  if (!seriesEpisodes.length) {
+    if (dom.playerEpisodeNav) dom.playerEpisodeNav.style.display = 'none';
+    if (dom.playerSeriesStrip) dom.playerSeriesStrip.style.display = 'none';
+    state.activeSeriesContext = null;
+    return;
+  }
+
+  seriesEpisodes.sort((a, b) => {
+    const epA = parseEpisodeInfo(a.t);
+    const epB = parseEpisodeInfo(b.t);
+    const sDiff = (epA.season || 1) - (epB.season || 1);
+    if (sDiff !== 0) return sDiff;
+    return (epA.episode || 1) - (epB.episode || 1);
+  });
+
+  const currentIndex = seriesEpisodes.findIndex(it => it.u === currentUrl || it.t === epInfo.cleanTitle || (parseEpisodeInfo(it.t).season === epInfo.season && parseEpisodeInfo(it.t).episode === epInfo.episode));
+  const activeIdx = currentIndex >= 0 ? currentIndex : 0;
+
+  state.activeSeriesContext = {
+    seriesName: epInfo.seriesName,
+    category,
+    episodes: seriesEpisodes,
+    currentIndex: activeIdx
+  };
+
+  // Atualiza botões Anterior / Próximo
+  if (dom.playerEpisodeNav) {
+    dom.playerEpisodeNav.style.display = 'inline-flex';
+    if (dom.btnPrevEp) dom.btnPrevEp.disabled = activeIdx <= 0;
+    if (dom.btnNextEp) dom.btnNextEp.disabled = activeIdx >= seriesEpisodes.length - 1;
+  }
+
+  // Atualiza barra de capítulos
+  if (dom.playerSeriesStrip && dom.playerStripScroll) {
+    dom.playerSeriesStrip.style.display = 'flex';
+    if (dom.stripSeriesName) dom.stripSeriesName.textContent = epInfo.seriesName;
+    if (dom.stripEpCount) dom.stripEpCount.textContent = `${seriesEpisodes.length} capítulos`;
+
+    dom.playerStripScroll.innerHTML = '';
+    seriesEpisodes.forEach((epItem, idx) => {
+      const parsedEp = parseEpisodeInfo(epItem.t);
+      const btn = document.createElement('button');
+      btn.className = `btn-strip-ep ${idx === activeIdx ? 'active' : ''}`;
+      btn.textContent = parsedEp.badge || `EP ${idx + 1}`;
+      btn.title = epItem.t;
+      btn.onclick = () => {
+        openPlayer(epItem.t, category, epItem.u, epItem);
+      };
+      dom.playerStripScroll.appendChild(btn);
+
+      if (idx === activeIdx) {
+        setTimeout(() => btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' }), 100);
+      }
+    });
+  }
+}
+
+function playPreviousEpisode() {
+  if (!state.activeSeriesContext) return;
+  const { episodes, currentIndex, category } = state.activeSeriesContext;
+  if (currentIndex > 0) {
+    const prevEp = episodes[currentIndex - 1];
+    openPlayer(prevEp.t, category, prevEp.u, prevEp);
+  }
+}
+
+function playNextEpisode() {
+  if (!state.activeSeriesContext) return;
+  const { episodes, currentIndex, category } = state.activeSeriesContext;
+  if (currentIndex < episodes.length - 1) {
+    const nextEp = episodes[currentIndex + 1];
+    openPlayer(nextEp.t, category, nextEp.u, nextEp);
+  }
+}
+
+// =====================================================================
+// MODAL DE DETALHES DA SÉRIE (TEMPORADAS & LISTA DE EPISÓDIOS)
+// =====================================================================
+function openSeriesModal(seriesGroup) {
+  state.activeSeriesGroup = seriesGroup;
+
+  dom.seriesModalPoster.src = seriesGroup.poster || FALLBACK_POSTER;
+  dom.seriesModalPoster.onerror = () => { dom.seriesModalPoster.src = FALLBACK_POSTER; };
+  dom.seriesModalTitle.textContent = seriesGroup.seriesName;
+  dom.seriesModalCategory.textContent = seriesGroup.catNome || 'SÉRIE';
+  dom.seriesModalTotalEpisodes.textContent = `${seriesGroup.totalEpisodes} episódios`;
+  dom.seriesModalTotalSeasons.textContent = `${seriesGroup.totalSeasons} temporada${seriesGroup.totalSeasons > 1 ? 's' : ''}`;
+
+  // Organiza episódios por temporada
+  const seasonsMap = new Map();
+  seriesGroup.episodes.forEach(ep => {
+    const s = ep.parsed.season || 1;
+    if (!seasonsMap.has(s)) seasonsMap.set(s, []);
+    seasonsMap.get(s).push(ep);
+  });
+
+  const seasonNumbers = Array.from(seasonsMap.keys()).sort((a, b) => a - b);
+  const activeSeason = seasonNumbers[0] || 1;
+
+  // Renderiza tabs de temporadas
+  dom.seriesSeasonsBar.innerHTML = '';
+  seasonNumbers.forEach((sNum) => {
+    const tab = document.createElement('button');
+    tab.className = `season-tab-btn ${sNum === activeSeason ? 'active' : ''}`;
+    tab.textContent = `Temporada ${sNum} (${seasonsMap.get(sNum).length})`;
+    tab.onclick = () => {
+      document.querySelectorAll('.season-tab-btn').forEach(b => b.classList.remove('active'));
+      tab.classList.add('active');
+      renderSeasonEpisodes(seasonsMap.get(sNum), seriesGroup);
+    };
+    dom.seriesSeasonsBar.appendChild(tab);
+  });
+
+  renderSeasonEpisodes(seasonsMap.get(activeSeason) || seriesGroup.episodes, seriesGroup);
+
+  openModal(dom.seriesModal);
+}
+
+function renderSeasonEpisodes(episodes, seriesGroup) {
+  dom.seriesEpisodesGrid.innerHTML = '';
+
+  if (!episodes || !episodes.length) {
+    dom.seriesEpisodesGrid.innerHTML = '<div style="color: #64748b; padding: 20px;">Nenhum episódio encontrado nesta temporada.</div>';
+    return;
+  }
+
+  episodes.forEach(ep => {
+    const itemEl = document.createElement('div');
+    itemEl.className = 'series-ep-item';
+
+    const parsed = ep.parsed;
+    const epTitle = parsed.episodeTitle || parsed.label;
+
+    itemEl.innerHTML = `
+      <div class="series-ep-info">
+        <span class="series-ep-badge">${parsed.badge}</span>
+        <span class="series-ep-title" title="${escapeHtml(ep.t)}">${escapeHtml(epTitle)}</span>
+      </div>
+      <button class="series-ep-play-btn" title="Assistir ${escapeHtml(parsed.badge)}">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+      </button>
+    `;
+
+    itemEl.onclick = () => {
+      closeModal(dom.seriesModal);
+      openPlayer(ep.t, seriesGroup.catNome || 'Série', ep.u, ep);
+    };
+
+    dom.seriesEpisodesGrid.appendChild(itemEl);
+  });
 }
 
 function getPlayableUrl(rawUrl, forceProxy = false) {

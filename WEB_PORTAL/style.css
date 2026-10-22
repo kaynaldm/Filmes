@@ -2669,3 +2669,483 @@ body.role-cliente #userProfileBtn:hover {
     padding: 0.75rem 0.875rem;
   }
 }
+
+/* =====================================================================
+   ESTILOS DE SÉRIES & CAPÍTULOS ORGANIZADOS
+   ===================================================================== */
+
+/* Alternador de Visualização de Séries */
+.series-view-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+}
+
+.btn-toggle-view {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.btn-toggle-view svg {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.btn-toggle-view:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.btn-toggle-view.active {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.35), rgba(236, 72, 153, 0.35));
+  border-color: rgba(99, 102, 241, 0.5);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.25);
+}
+
+/* Badge de Episódio no Poster */
+.card-badge.series-badge {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.95), rgba(99, 102, 241, 0.95));
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  box-shadow: 0 0.25rem 0.625rem rgba(6, 182, 212, 0.35);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.card-badge.group-badge {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.95), rgba(168, 85, 247, 0.95));
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  box-shadow: 0 0.25rem 0.625rem rgba(236, 72, 153, 0.35);
+}
+
+/* Pílula de Capítulo no Corpo do Card (Nunca Corta o Episódio) */
+.card-chapter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(6, 182, 212, 0.12);
+  border: 1px solid rgba(6, 182, 212, 0.28);
+  color: var(--accent-cyan);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  padding: 0.2rem 0.5rem;
+  margin-bottom: 0.35rem;
+  letter-spacing: 0.02em;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.card-chapter-pill .pill-dot {
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  box-shadow: 0 0 6px var(--accent-cyan);
+  flex-shrink: 0;
+}
+
+.card-chapter-pill span:last-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Card Agrupado de Série */
+.video-card.is-series-group .card-poster {
+  border-bottom: 2px solid var(--accent-pink);
+}
+
+.series-group-meta {
+  font-size: 0.6875rem;
+  color: #38bdf8;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.btn-card-action.btn-view-series {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(236, 72, 153, 0.2));
+  border: 1px solid rgba(99, 102, 241, 0.4);
+  color: #fff;
+}
+
+.btn-card-action.btn-view-series:hover {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.4), rgba(236, 72, 153, 0.4));
+  border-color: rgba(99, 102, 241, 0.7);
+}
+
+/* Navegação de Episódios no Player */
+.player-badges-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.badge.badge-episode {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-primary));
+  color: #fff;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: 0.65rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.player-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.player-episode-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.btn-ep-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-ep-nav svg {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.btn-ep-nav:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--accent-primary);
+  color: #fff;
+}
+
+.btn-ep-nav:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* Barra de Episódios dentro do Player (Horizontal Strip) */
+.player-series-strip-container {
+  background: #0f1218;
+  border-top: 1px solid var(--border-color);
+  padding: 0.625rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.player-series-strip-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.strip-header-title {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: #e2e8f0;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.strip-header-title svg {
+  width: 0.875rem;
+  height: 0.875rem;
+  color: var(--accent-cyan);
+}
+
+.strip-ep-count {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+}
+
+.player-series-strip-scroll {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.player-series-strip-scroll::-webkit-scrollbar {
+  height: 4px;
+}
+
+.player-series-strip-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.btn-strip-ep {
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  color: var(--text-muted);
+  font-size: 0.71875rem;
+  font-weight: 600;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.btn-strip-ep:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-strip-ep.active {
+  background: linear-gradient(135deg, var(--accent-pink), var(--accent-primary));
+  border-color: transparent;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 0 10px rgba(236, 72, 153, 0.4);
+}
+
+/* =====================================================================
+   MODAL DE SÉRIE (TEMPORADAS & LISTA DE CAPÍTULOS)
+   ===================================================================== */
+.series-modal-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  width: 95%;
+  max-width: 56.25rem;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 1.25rem 3.125rem rgba(0, 0, 0, 0.8), var(--shadow-glow);
+  animation: modalScale 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.series-modal-header {
+  padding: 1rem 1.25rem;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.series-modal-hero {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.series-modal-poster {
+  width: 4rem;
+  height: 5.75rem;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  flex-shrink: 0;
+  background: #11141c;
+}
+
+.series-modal-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.series-modal-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.series-modal-info h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.5vw + 0.6rem, 1.35rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.25;
+}
+
+.series-modal-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.meta-tag {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  background: rgba(6, 182, 212, 0.1);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+.series-modal-body {
+  padding: 1rem 1.25rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+/* Abas de Temporadas */
+.series-seasons-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.season-tab-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.78125rem;
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.season-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.09);
+  color: #fff;
+}
+
+.season-tab-btn.active {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.35);
+}
+
+/* Grade de Episódios */
+.series-episodes-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.625rem;
+}
+
+@media (min-width: 640px) {
+  .series-episodes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .series-episodes-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.series-ep-item {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  transition: var(--transition);
+}
+
+.series-ep-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(99, 102, 241, 0.4);
+  transform: translateY(-2px);
+}
+
+.series-ep-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  overflow: hidden;
+}
+
+.series-ep-badge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--accent-cyan);
+  letter-spacing: 0.03em;
+}
+
+.series-ep-title {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-main);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.series-ep-play-btn {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-pink), var(--accent-primary));
+  border: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: var(--transition);
+  box-shadow: 0 0.2rem 0.6rem rgba(236, 72, 153, 0.4);
+}
+
+.series-ep-play-btn svg {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 2px;
+}
+
+.series-ep-play-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0.3rem 0.9rem rgba(236, 72, 153, 0.6);
+}
+
