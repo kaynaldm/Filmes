@@ -21,7 +21,39 @@ const AuthManager = (() => {
       .toLowerCase();
   }
 
-  // Administrador Principal Kaynã (Único Dono)
+  // Função flexível para validação de credenciais de clientes
+  function matchClient(c, normUsername, cleanPassword) {
+    if (!c || !c.username || !c.password) return false;
+
+    const cNorm = normalizeUsername(c.username);
+    const cNormNoSpaces = cNorm.replace(/\s+/g, '');
+    const userNormNoSpaces = normUsername.replace(/\s+/g, '');
+    const cFirstName = cNorm.split(/\s+/)[0];
+
+    // Checa nome: completo, sem espaços ou primeiro nome
+    const userMatches = (
+      cNorm === normUsername ||
+      cNormNoSpaces === userNormNoSpaces ||
+      (cFirstName.length >= 3 && cFirstName === normUsername)
+    );
+
+    if (!userMatches) return false;
+
+    // Checa senha: exata, com # ou sem #
+    const cleanPwNoHash = cleanPassword.replace(/^#+/, '');
+    const cPwNoHash = String(c.password).trim().replace(/^#+/, '');
+
+    const passMatches = (
+      c.password === cleanPassword ||
+      cPwNoHash === cleanPwNoHash ||
+      c.password === '#' + cleanPassword ||
+      cleanPassword === '#' + c.password
+    );
+
+    return passMatches;
+  }
+
+  // Administrador Principal e Clientes Autorizados
   const DEFAULT_CLIENTS = [
     {
       id: 'admin-kayna',
@@ -30,7 +62,34 @@ const AuthManager = (() => {
       role: 'admin',
       status: 'ativo',
       notes: 'Kaynã - Único Dono & Administrador Geral do K-Cine',
-      created_at: new Date().toISOString()
+      created_at: '2026-10-21T00:00:00.000Z'
+    },
+    {
+      id: 'cli-gabriel-aires',
+      username: 'Gabriel Aires',
+      password: '#123456',
+      role: 'cliente',
+      status: 'ativo',
+      notes: 'Sem observações',
+      created_at: '2026-10-21T23:30:00.000Z'
+    },
+    {
+      id: 'cli-leticia-castro',
+      username: 'Letícia Castro',
+      password: '#123456',
+      role: 'cliente',
+      status: 'ativo',
+      notes: 'Sem observações',
+      created_at: '2026-10-21T23:30:00.000Z'
+    },
+    {
+      id: 'cli-lisnildo',
+      username: 'Lisnildo',
+      password: '#23456',
+      role: 'cliente',
+      status: 'ativo',
+      notes: 'Sem observações',
+      created_at: '2026-10-21T23:30:00.000Z'
     }
   ];
 
@@ -43,13 +102,26 @@ const AuthManager = (() => {
   function initLocalClients() {
     let clients = getLocalClients();
 
-    // Remove qualquer conta legada (como 'admin' ou 'cliente1') - o único dono é Kaynã
+    // Remove qualquer conta legada (como 'admin' ou 'cliente1')
     clients = clients.filter(c => 
       normalizeUsername(c.username) !== 'admin' && 
       c.username !== 'cliente1' &&
       c.id !== 'admin-2' &&
       c.id !== 'cli-demo'
     );
+
+    // Garante que todos os clientes autorizados de DEFAULT_CLIENTS existam
+    DEFAULT_CLIENTS.forEach(defCli => {
+      const idx = clients.findIndex(c => normalizeUsername(c.username) === normalizeUsername(defCli.username));
+      if (idx === -1) {
+        clients.push({ ...defCli });
+      } else {
+        // Se a senha estiver vazia, sincroniza
+        if (!clients[idx].password) {
+          clients[idx].password = defCli.password;
+        }
+      }
+    });
 
     // Garante que o Admin Principal Kaynã esteja com a senha 102587
     const kaynaIndex = clients.findIndex(c => normalizeUsername(c.username) === 'kayna');
@@ -73,6 +145,32 @@ const AuthManager = (() => {
     }
 
     saveLocalClients(clients);
+
+    // Sincroniza em segundo plano com data/clientes.json se disponível
+    syncSharedClients();
+  }
+
+  async function syncSharedClients() {
+    try {
+      const resp = await fetch('data/clientes.json?t=' + Date.now());
+      if (resp.ok) {
+        const shared = await resp.json();
+        if (Array.isArray(shared) && shared.length) {
+          let current = getLocalClients();
+          let changed = false;
+          shared.forEach(sc => {
+            const idx = current.findIndex(c => normalizeUsername(c.username) === normalizeUsername(sc.username));
+            if (idx === -1) {
+              current.push({ ...sc });
+              changed = true;
+            }
+          });
+          if (changed) {
+            saveLocalClients(current);
+          }
+        }
+      }
+    } catch (e) {}
   }
 
   function getLocalClients() {
@@ -217,9 +315,7 @@ const AuthManager = (() => {
           .select('*');
 
         if (!error && data && data.length) {
-          const match = data.find(c => 
-            normalizeUsername(c.username) === normUsername && c.password === cleanPassword
-          );
+          const match = data.find(c => matchClient(c, normUsername, cleanPassword));
 
           if (match) {
             if (match.status === 'bloqueado') {
@@ -246,10 +342,34 @@ const AuthManager = (() => {
     }
 
     // 2. Verificação no Armazenamento Local
-    const localClients = getLocalClients();
-    const user = localClients.find(
-      c => normalizeUsername(c.username) === normUsername && c.password === cleanPassword
-    );
+    let localClients = getLocalClients();
+    let user = localClients.find(c => matchClient(c, normUsername, cleanPassword));
+
+    // 3. Fallback garantido no catálogo DEFAULT_CLIENTS (garante login em qualquer dispositivo mesmo sem banco conectado)
+    if (!user) {
+      user = DEFAULT_CLIENTS.find(c => matchClient(c, normUsername, cleanPassword));
+      if (user) {
+        localClients.push({ ...user });
+        saveLocalClients(localClients);
+      }
+    }
+
+    // 4. Fallback remoto em data/clientes.json caso seja um cliente recém adicionado
+    if (!user) {
+      try {
+        const resp = await fetch('data/clientes.json?t=' + Date.now());
+        if (resp.ok) {
+          const shared = await resp.json();
+          if (Array.isArray(shared)) {
+            user = shared.find(c => matchClient(c, normUsername, cleanPassword));
+            if (user) {
+              localClients.push({ ...user });
+              saveLocalClients(localClients);
+            }
+          }
+        }
+      } catch (e) {}
+    }
 
     if (!user) {
       return { success: false, message: 'Usuário ou senha incorretos. Verifique suas credenciais.' };
