@@ -55,9 +55,9 @@ ON public.clientes FOR DELETE
 TO anon, authenticated
 USING (true);
 
--- 5. Cadastro dos Usuários Iniciais (Admin Kaynã)
+-- 5. Cadastro do Administrador Principal (Kaynã)
 INSERT INTO public.clientes (username, password, role, status, notes)
 VALUES 
-    ('admin', 'admin123', 'admin', 'ativo', 'Administrador Principal'),
-    ('kayna', 'admin123', 'admin', 'ativo', 'Kaynã - Proprietário do Canal')
-ON CONFLICT (username) DO NOTHING;
+    ('Kaynã', '102587', 'admin', 'ativo', 'Kaynã - Proprietário & Administrador Geral do K-Cine')
+ON CONFLICT (username) DO UPDATE 
+SET password = '102587', role = 'admin', status = 'ativo';

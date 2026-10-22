@@ -5,31 +5,31 @@
 
 const AuthManager = (() => {
   const STORAGE_KEYS = {
-    SESSION: 'cinestream_user_session',
-    CONFIG: 'cinestream_supabase_config',
-    CLIENTS: 'cinestream_local_clientes'
+    SESSION: 'kcine_user_session',
+    CONFIG: 'kcine_supabase_config',
+    CLIENTS: 'kcine_local_clientes'
   };
 
   let supabase = null;
 
-  // Clientes padrão para início imediato
+  // Função auxiliar para normalização de nomes de usuário (ignora acentos e maiúsculas/minúsculas)
+  function normalizeUsername(str) {
+    return (str || '')
+      .trim()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase();
+  }
+
+  // Administrador Principal Kaynã e clientes padrão
   const DEFAULT_CLIENTS = [
     {
-      id: 'admin-1',
-      username: 'kayna',
-      password: 'admin123',
+      id: 'admin-kayna',
+      username: 'Kaynã',
+      password: '102587',
       role: 'admin',
       status: 'ativo',
-      notes: 'Kaynã - Proprietário & Administrador Geral',
-      created_at: new Date().toISOString()
-    },
-    {
-      id: 'admin-2',
-      username: 'admin',
-      password: 'admin123',
-      role: 'admin',
-      status: 'ativo',
-      notes: 'Administrador Master do Sistema',
+      notes: 'Kaynã - Proprietário & Administrador Geral do K-Cine',
       created_at: new Date().toISOString()
     },
     {
@@ -38,7 +38,7 @@ const AuthManager = (() => {
       password: '123456',
       role: 'cliente',
       status: 'ativo',
-      notes: 'Acesso VIP de Teste',
+      notes: 'Cliente de Demonstração',
       created_at: new Date().toISOString()
     }
   ];
@@ -50,15 +50,43 @@ const AuthManager = (() => {
   }
 
   function initLocalClients() {
-    const stored = localStorage.getItem(STORAGE_KEYS.CLIENTS);
-    if (!stored) {
-      localStorage.setItem(STORAGE_KEYS.CLIENTS, JSON.stringify(DEFAULT_CLIENTS));
+    let clients = getLocalClients();
+
+    // Garante que o Admin Principal Kaynã com a senha 102587 esteja configurado
+    const adminIndex = clients.findIndex(c => 
+      c.role === 'admin' || 
+      normalizeUsername(c.username) === 'kayna' || 
+      normalizeUsername(c.username) === 'admin'
+    );
+
+    if (adminIndex !== -1) {
+      clients[adminIndex].username = 'Kaynã';
+      clients[adminIndex].password = '102587';
+      clients[adminIndex].role = 'admin';
+      clients[adminIndex].status = 'ativo';
+      clients[adminIndex].notes = 'Kaynã - Proprietário & Administrador Geral do K-Cine';
+    } else {
+      clients.unshift({
+        id: 'admin-kayna',
+        username: 'Kaynã',
+        password: '102587',
+        role: 'admin',
+        status: 'ativo',
+        notes: 'Kaynã - Proprietário & Administrador Geral do K-Cine',
+        created_at: new Date().toISOString()
+      });
     }
+
+    saveLocalClients(clients);
   }
 
   function getLocalClients() {
     try {
-      const stored = localStorage.getItem(STORAGE_KEYS.CLIENTS);
+      // Tenta obter pela chave atual ou legada
+      let stored = localStorage.getItem(STORAGE_KEYS.CLIENTS);
+      if (!stored) {
+        stored = localStorage.getItem('cinestream_local_clientes');
+      }
       return stored ? JSON.parse(stored) : DEFAULT_CLIENTS;
     } catch (e) {
       return DEFAULT_CLIENTS;
@@ -87,7 +115,10 @@ const AuthManager = (() => {
 
   function getSupabaseConfig() {
     try {
-      const cfg = localStorage.getItem(STORAGE_KEYS.CONFIG);
+      let cfg = localStorage.getItem(STORAGE_KEYS.CONFIG);
+      if (!cfg) {
+        cfg = localStorage.getItem('cinestream_supabase_config');
+      }
       return cfg ? JSON.parse(cfg) : null;
     } catch (e) {
       return null;
@@ -131,7 +162,10 @@ const AuthManager = (() => {
   // Sessão atual
   function getCurrentUser() {
     try {
-      const session = localStorage.getItem(STORAGE_KEYS.SESSION);
+      let session = localStorage.getItem(STORAGE_KEYS.SESSION);
+      if (!session) {
+        session = localStorage.getItem('cinestream_user_session');
+      }
       return session ? JSON.parse(session) : null;
     } catch (e) {
       return null;
@@ -144,56 +178,72 @@ const AuthManager = (() => {
 
   function logout() {
     localStorage.removeItem(STORAGE_KEYS.SESSION);
+    localStorage.removeItem('cinestream_user_session');
   }
 
   // Login de usuário ou cliente
   async function login(username, password) {
-    const cleanUsername = (username || '').trim().toLowerCase();
+    const rawUsername = (username || '').trim();
+    const normUsername = normalizeUsername(rawUsername);
     const cleanPassword = (password || '').trim();
 
-    if (!cleanUsername || !cleanPassword) {
+    if (!normUsername || !cleanPassword) {
       return { success: false, message: 'Por favor, informe seu usuário e senha.' };
     }
 
-    // 1. Se o Supabase estiver ativo, verifica prioritariamente nele
+    // Acesso direto garantido para a conta Administrador Principal Kaynã
+    if ((normUsername === 'kayna' || normUsername === 'admin') && cleanPassword === '102587') {
+      const adminUser = {
+        id: 'admin-kayna',
+        username: 'Kaynã',
+        role: 'admin',
+        status: 'ativo',
+        notes: 'Kaynã - Proprietário & Administrador Geral do K-Cine'
+      };
+      setSession(adminUser);
+      return { success: true, user: adminUser };
+    }
+
+    // 1. Se o Supabase estiver ativo, verifica no Supabase
     if (supabase) {
       try {
         const { data, error } = await supabase
           .from('clientes')
-          .select('*')
-          .ilike('username', cleanUsername)
-          .eq('password', cleanPassword)
-          .maybeSingle();
+          .select('*');
 
-        if (error) {
-          console.warn('[Auth] Erro na consulta do Supabase, verificando modo local:', error);
-        } else if (data) {
-          if (data.status === 'bloqueado') {
-            return {
-              success: false,
-              blocked: true,
-              message: 'Seu acesso está bloqueado pelo administrador. Entre em contato para regularizar seu plano.'
+        if (!error && data && data.length) {
+          const match = data.find(c => 
+            normalizeUsername(c.username) === normUsername && c.password === cleanPassword
+          );
+
+          if (match) {
+            if (match.status === 'bloqueado') {
+              return {
+                success: false,
+                blocked: true,
+                message: 'Seu acesso está bloqueado pelo administrador. Entre em contato para regularizar seu plano.'
+              };
+            }
+            const userObj = {
+              id: match.id,
+              username: match.username,
+              role: match.role || 'cliente',
+              status: match.status || 'ativo',
+              notes: match.notes || ''
             };
+            setSession(userObj);
+            return { success: true, user: userObj };
           }
-          const userObj = {
-            id: data.id,
-            username: data.username,
-            role: data.role || 'cliente',
-            status: data.status || 'ativo',
-            notes: data.notes || ''
-          };
-          setSession(userObj);
-          return { success: true, user: userObj };
         }
       } catch (err) {
-        console.warn('[Auth] Falha de rede no Supabase, tentando local:', err);
+        console.warn('[Auth] Falha de rede no Supabase, verificando modo local:', err);
       }
     }
 
-    // 2. Verificação no Armazenamento Local (Offline ou Fallback)
+    // 2. Verificação no Armazenamento Local
     const localClients = getLocalClients();
     const user = localClients.find(
-      c => c.username.toLowerCase() === cleanUsername && c.password === cleanPassword
+      c => normalizeUsername(c.username) === normUsername && c.password === cleanPassword
     );
 
     if (!user) {
@@ -224,6 +274,11 @@ const AuthManager = (() => {
     const user = getCurrentUser();
     if (!user) return null;
 
+    // Admin principal nunca é bloqueado
+    if (user.role === 'admin' || normalizeUsername(user.username) === 'kayna') {
+      return { valid: true, user };
+    }
+
     if (supabase) {
       try {
         const { data, error } = await supabase
@@ -243,13 +298,13 @@ const AuthManager = (() => {
           return { valid: true, user };
         }
       } catch (e) {
-        // Ignora erro de rede temporário
+        // Ignora erro temporário de rede
       }
     }
 
     // Checagem local
     const localClients = getLocalClients();
-    const found = localClients.find(c => c.username.toLowerCase() === user.username.toLowerCase());
+    const found = localClients.find(c => normalizeUsername(c.username) === normalizeUsername(user.username));
     if (found) {
       if (found.status === 'bloqueado') {
         logout();
@@ -271,7 +326,6 @@ const AuthManager = (() => {
           .order('created_at', { ascending: false });
 
         if (!error && data) {
-          // Atualiza o cache local
           saveLocalClients(data);
           return data;
         }
@@ -296,9 +350,14 @@ const AuthManager = (() => {
       return { success: false, message: 'O nome de usuário deve ter pelo menos 3 caracteres.' };
     }
 
+    // Impedir criação com nome de admin reservado
+    if (normalizeUsername(cleanUsername) === 'kayna' || normalizeUsername(cleanUsername) === 'admin') {
+      return { success: false, message: 'Este nome de usuário é reservado para o administrador.' };
+    }
+
     // Verificar duplicidade local
     const local = getLocalClients();
-    if (local.some(c => c.username.toLowerCase() === cleanUsername.toLowerCase())) {
+    if (local.some(c => normalizeUsername(c.username) === normalizeUsername(cleanUsername))) {
       return { success: false, message: `O usuário "${cleanUsername}" já existe no catálogo.` };
     }
 
@@ -351,6 +410,10 @@ const AuthManager = (() => {
     const client = local.find(c => c.id === clientId || c.username === clientId);
     if (!client) {
       return { success: false, message: 'Cliente não encontrado.' };
+    }
+
+    if (client.role === 'admin' || normalizeUsername(client.username) === 'kayna') {
+      return { success: false, message: 'Não é possível bloquear o Administrador Principal.' };
     }
 
     const newStatus = client.status === 'ativo' ? 'bloqueado' : 'ativo';
@@ -411,8 +474,8 @@ const AuthManager = (() => {
       return { success: false, message: 'Cliente não encontrado.' };
     }
 
-    if (client.username === 'admin' || client.username === 'kayna') {
-      return { success: false, message: 'Não é permitido excluir os administradores principais.' };
+    if (client.role === 'admin' || normalizeUsername(client.username) === 'kayna') {
+      return { success: false, message: 'Não é permitido excluir o Administrador Principal Kaynã.' };
     }
 
     if (supabase) {
@@ -455,7 +518,6 @@ const AuthManager = (() => {
         if (!error) syncedCount++;
       }
 
-      // Atualiza a lista local com os dados finais do Supabase
       const { data } = await supabase.from('clientes').select('*');
       if (data) saveLocalClients(data);
 
@@ -465,7 +527,7 @@ const AuthManager = (() => {
     }
   }
 
-  // Inicializa ao carregar
+  // Inicializa imediatamente
   init();
 
   return {
