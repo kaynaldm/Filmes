@@ -152,6 +152,9 @@ function openModal(modalEl) {
 
 function closeModal(modalEl) {
   if (!modalEl) return;
+  if (modalEl === dom.playerModal || modalEl.id === 'playerModal') {
+    stopVideoPlayback();
+  }
   modalEl.classList.remove('active');
   const anyActive = document.querySelector('.modal-overlay.active');
   if (!anyActive && (!dom.loginScreen || dom.loginScreen.style.display !== 'flex')) {
@@ -534,6 +537,17 @@ function setupEventListeners() {
           closeAllModals();
         }
       });
+    }
+  });
+
+  // Fechar vídeo se a aba/janela for fechada ou ocultada
+  window.addEventListener('beforeunload', stopVideoPlayback);
+  window.addEventListener('pagehide', stopVideoPlayback);
+
+  // Fechar modais e áudio ao pressionar tecla ESC
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' || e.key === 'Esc') {
+      closeAllModals();
     }
   });
 }
@@ -1257,9 +1271,13 @@ function openPlayer(title, category, url) {
 
   // Fallback inteligente caso o navegador bloqueie o stream direto
   video.onerror = () => {
+    // Se o modal foi fechado pelo usuário, NUNCA disparar fallback ou tocar áudio!
+    if (!dom.playerModal || !dom.playerModal.classList.contains('active')) {
+      return;
+    }
     dom.playerLoading.classList.remove('active');
     const proxiedUrl = getPlayableUrl(url, true);
-    if (!video.src.includes('/api/stream') && video.src !== proxiedUrl) {
+    if (!video.src.includes('/api/stream') && video.src !== proxiedUrl && dom.playerModal.classList.contains('active')) {
       console.log('Tentando reproduzir através do proxy seguro /api/stream...');
       video.src = proxiedUrl;
       video.load();
@@ -1284,18 +1302,48 @@ function getPlayableUrl(rawUrl, forceProxy = false) {
   return rawUrl;
 }
 
-function closePlayerModal() {
-  if (dom.playerModal) {
-    closeModal(dom.playerModal);
-  }
+function stopVideoPlayback() {
   const video = dom.htmlVideoPlayer;
   if (video) {
-    video.pause();
+    // Remove callbacks para evitar loops ou re-ativação acidental
+    video.onerror = null;
+    video.onplaying = null;
+    video.onwaiting = null;
+    video.oncanplay = null;
+    video.onloadeddata = null;
+
+    // Pausa imediata
+    try {
+      video.pause();
+    } catch (e) {}
+
+    // Limpa fontes de reprodução e tempo
+    video.removeAttribute('src');
+    video.srcObject = null;
     video.src = '';
+    video.currentTime = 0;
+
+    // Força o navegador a descarregar buffers de áudio/vídeo da memória
+    try {
+      video.load();
+    } catch (e) {}
   }
+
+  // Destrói Hls.js se ativo
   if (state.hlsPlayer) {
-    state.hlsPlayer.destroy();
+    try {
+      state.hlsPlayer.stopLoad();
+      state.hlsPlayer.detachMedia();
+      state.hlsPlayer.destroy();
+    } catch (e) {}
     state.hlsPlayer = null;
+  }
+}
+
+function closePlayerModal() {
+  stopVideoPlayback();
+  if (dom.playerModal) {
+    closeModal(dom.playerModal);
   }
   // Garantia absoluta de desbloqueio da rolagem da página
   const anyActive = document.querySelector('.modal-overlay.active');
