@@ -58,7 +58,7 @@ def carregar_indice():
 
     print(f"Índice carregado com sucesso: {count:,} títulos prontos para busca instantânea (<5ms)!")
 
-class CineStreamHandler(http.server.SimpleHTTPRequestHandler):
+class KCineHandler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=WEB_DIR, **kwargs)
 
@@ -129,10 +129,10 @@ def main():
     carregar_indice()
     socketserver.TCPServer.allow_reuse_address = True
     try:
-        with socketserver.TCPServer(("", PORT), CineStreamHandler) as httpd:
+        with socketserver.TCPServer(("", PORT), KCineHandler) as httpd:
             url = f"http://localhost:{PORT}"
             print("=" * 65)
-            print("       CINESTREAM BR - PORTAL DO CANAL DE FILMES E SÉRIES")
+            print("            K-CINE - PORTAL DO CANAL DE FILMES E SÉRIES")
             print("=" * 65)
             print(f"\n[+] Servidor ativo em: {url}")
             print(f"[+] Total de títulos no catálogo: {len(search_index):,}")
@@ -146,7 +146,7 @@ def main():
             httpd.serve_forever()
     except OSError as e:
         print(f"Porta {PORT} ocupada, tentando porta {PORT + 1}...")
-        with socketserver.TCPServer(("", PORT + 1), CineStreamHandler) as httpd:
+        with socketserver.TCPServer(("", PORT + 1), KCineHandler) as httpd:
             url = f"http://localhost:{PORT + 1}"
             print(f"[+] Servidor ativo em: {url}")
             try:

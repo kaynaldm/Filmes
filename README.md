@@ -1,4 +1,4 @@
-# 🎬 CineStream BR - Sistema & Catálogo de Filmes e Séries
+# 🎬 K-Cine - Sistema & Catálogo de Filmes e Séries
 
 Catálogo completo, sanitizado e organizado com **316.354 títulos** (mais de **30.200 filmes** e **286.100 episódios de séries**) prontos para uso em Smart TVs, TV Boxes, players multimídia e no próprio Portal Web incluído.
 
@@ -83,7 +83,7 @@ Cada categoria possui 4 arquivos prontos para uso:
 
 ---
 
-## 🚀 Como Iniciar o Portal Web de Streaming (CineStream BR)
+## 🚀 Como Iniciar o Portal Web de Streaming (K-Cine)
 
 Para navegar, pesquisar títulos instantaneamente com posters e assistir aos vídeos diretamente pelo navegador:
 

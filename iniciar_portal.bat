@@ -1,9 +1,9 @@
 @echo off
-title CineStream BR - Canal de Filmes e Series
+title K-Cine - Canal de Filmes e Series
 chcp 65001 > nul
 cls
 echo ======================================================================
-echo           CINESTREAM BR - CANAL DE FILMES E SERIES
+echo                 K-CINE - CANAL DE FILMES E SERIES
 echo ======================================================================
 echo.
 echo Iniciando servidor local e abrindo o portal no navegador...
