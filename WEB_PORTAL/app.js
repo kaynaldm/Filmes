@@ -171,13 +171,13 @@ function setupModalScrollLocks() {
   // Garante que o scroll do mouse ou toque no fundo escuro não role o documento principal
   document.querySelectorAll('.modal-overlay').forEach(modal => {
     modal.addEventListener('wheel', (e) => {
-      if (e.target === modal) {
+      if (modal.classList.contains('active') && e.target === modal) {
         e.preventDefault();
       }
     }, { passive: false });
 
     modal.addEventListener('touchmove', (e) => {
-      if (e.target === modal) {
+      if (modal.classList.contains('active') && e.target === modal) {
         e.preventDefault();
       }
     }, { passive: false });
@@ -1222,13 +1222,22 @@ function openPlayer(title, category, url) {
 }
 
 function closePlayerModal() {
-  dom.playerModal.classList.remove('active');
+  if (dom.playerModal) {
+    closeModal(dom.playerModal);
+  }
   const video = dom.htmlVideoPlayer;
-  video.pause();
-  video.src = '';
+  if (video) {
+    video.pause();
+    video.src = '';
+  }
   if (state.hlsPlayer) {
     state.hlsPlayer.destroy();
     state.hlsPlayer = null;
+  }
+  // Garantia absoluta de desbloqueio da rolagem da página
+  const anyActive = document.querySelector('.modal-overlay.active');
+  if (!anyActive && (!dom.loginScreen || dom.loginScreen.style.display !== 'flex')) {
+    document.body.classList.remove('modal-open');
   }
 }
 
