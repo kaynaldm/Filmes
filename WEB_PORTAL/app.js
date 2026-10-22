@@ -1285,8 +1285,17 @@ function openPlayer(title, category, url) {
     }
   };
 
-  video.onplaying = () => dom.playerLoading.classList.remove('active');
-  video.onwaiting = () => dom.playerLoading.classList.add('active');
+  const hidePlayerLoading = () => {
+    if (dom.playerLoading) {
+      dom.playerLoading.classList.remove('active');
+    }
+  };
+
+  video.oncanplay = hidePlayerLoading;
+  video.onplaying = hidePlayerLoading;
+  video.onloadeddata = hidePlayerLoading;
+  video.onplay = hidePlayerLoading;
+  video.onwaiting = null;
 }
 
 function getPlayableUrl(rawUrl, forceProxy = false) {
