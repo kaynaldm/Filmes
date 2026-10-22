@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaynã | Canal de Filmes & Séries</title>
+  <meta name="description" content="Portal e Catálogo Organizado de Filmes e Séries com mais de 316.000 títulos organizados por categoria.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=3">
+  <!-- Hls.js para suporte a streaming HLS -->
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+  <!-- Header / Barra Superior -->
+  <header class="navbar" id="mainHeader">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-logo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="5 3 19 12 5 21 5 3" fill="url(#brandGrad)" stroke="none"></polygon>
+            <defs>
+              <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ec4899" />
+                <stop offset="100%" stop-color="#6366f1" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">KAYNÃ</span>
+          <span class="brand-badge">CANAL HD & 4K</span>
+        </div>
+      </div>
+
+      <!-- Filtros Rápidos de Tipo -->
+      <nav class="type-nav">
+        <button class="type-btn active" data-type="todos" id="btnTypeTodos">Todos</button>
+        <button class="type-btn" data-type="filmes" id="btnTypeFilmes">🎬 Filmes</button>
+        <button class="type-btn" data-type="series" id="btnTypeSeries">📺 Séries</button>
+      </nav>
+
+      <!-- Barra de Busca -->
+      <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="searchInput" placeholder="Pesquisar entre 316.000 títulos... (Pressione /)" autocomplete="off">
+        <button id="clearSearchBtn" class="clear-btn" style="display: none;">&times;</button>
+      </div>
+
+      <!-- Conta Admin Kaynã -->
+      <div class="user-profile-menu" id="userProfileBtn" title="Painel da Conta Admin - Kaynã">
+        <div class="user-avatar">
+          <span>K</span>
+          <span class="status-dot"></span>
+        </div>
+        <div class="user-info">
+          <span class="user-name">Kaynã</span>
+          <span class="user-role">ADMIN</span>
+        </div>
+        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner Hero em Destaque -->
+  <section class="hero-section" id="heroBanner">
+    <div class="hero-backdrop" id="heroBackdrop"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-meta">
+        <span class="hero-badge" id="heroBadge">🔥 LANÇAMENTO EM ALTA</span>
+        <span class="hero-quality">4K ULTRA HD</span>
+        <span class="hero-category" id="heroCategory">FILMES | Lançamentos</span>
+      </div>
+      <h1 class="hero-title" id="heroTitle">A Casa da Armadilha</h1>
+      <p class="hero-desc" id="heroDesc">
+        Assista agora em alta definição direto pelo navegador.
+      </p>
+      <div class="hero-buttons">
+        <button class="btn-primary" id="btnHeroPlay">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          Assistir no Navegador
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Barra de Estatísticas do Canal -->
+  <section class="stats-bar">
+    <div class="stats-container">
+      <div class="stat-card">
+        <div class="stat-icon purple">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+            <line x1="7" y1="2" x2="7" y2="22"></line>
+            <line x1="17" y1="2" x2="17" y2="22"></line>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <line x1="2" y1="7" x2="7" y2="7"></line>
+            <line x1="2" y1="17" x2="7" y2="17"></line>
+            <line x1="17" y1="17" x2="22" y2="17"></line>
+            <line x1="17" y1="7" x2="22" y2="7"></line>
+          </svg>
+        </div>
+        <div class="stat-info">
+          <span class="stat-number">316.354</span>
+          <span class="stat-label">Títulos Organizados</span>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon pink">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polygon points="10 8 16 12 10 16 10 8" fill="currentColor"></polygon>
+          </svg>
+        </div>
+        <div class="stat-info">
+          <span class="stat-number">30.203</span>
+          <span class="stat-label">Filmes em Catálogo</span>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon cyan">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+            <polyline points="17 2 12 7 7 2"></polyline>
+          </svg>
+        </div>
+        <div class="stat-info">
+          <span class="stat-number">286.151</span>
+          <span class="stat-label">Séries & Episódios</span>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon amber">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+          </svg>
+        </div>
+        <div class="stat-info">
+          <span class="stat-number">50 Pastas</span>
+          <span class="stat-label">Pastas e Playlists M3U</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seletor de Categorias / Barra de Filtros Organizada -->
+  <section class="categories-section">
+    <div class="filter-card">
+      <div class="filter-header-row">
+        <div class="filter-title-group">
+          <div class="filter-icon-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+            </svg>
+          </div>
+          <div>
+            <h2 class="section-title">Filtros & Categorias</h2>
+            <span class="results-count" id="activeCategoryTitle">Exibindo Destaques</span>
+          </div>
+        </div>
+
+        <div class="filter-controls-group">
+          <!-- Dropdown Seletor com Todas as 50 Categorias -->
+          <div class="custom-select-wrapper">
+            <label for="categorySelect" class="select-label">Categoria:</label>
+            <div class="select-box">
+              <select id="categorySelect" class="filter-select">
+                <option value="destaques">⭐ Lançamentos & Destaques</option>
+              </select>
+              <svg class="select-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Seletor de Ordenação A-Z -->
+          <div class="custom-select-wrapper">
+            <label for="sortSelect" class="select-label">Ordem:</label>
+            <div class="select-box">
+              <select id="sortSelect" class="filter-select">
+                <option value="padrao">Padrão</option>
+                <option value="az">Título: A - Z</option>
+                <option value="za">Título: Z - A</option>
+              </select>
+              <svg class="select-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filtros Rápidos (Mais Acessados) sem barra de rolagem feia -->
+      <div class="popular-chips-wrapper" id="categoriesChips">
+        <!-- Injetado dinamicamente via app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Grade de Títulos / Catálogo Principal -->
+  <main class="catalog-section">
+    <div class="catalog-header">
+      <h3 class="catalog-title" id="currentViewTitle">Lançamentos & Destaques</h3>
+      <div class="catalog-filters">
+        <span id="itemsFoundText">Carregando catálogo...</span>
+      </div>
+    </div>
+
+    <!-- Grid de Cards de Vídeo -->
+    <div class="cards-grid" id="cardsGrid">
+      <!-- Cards injetados via app.js -->
+    </div>
+
+    <!-- Paginação / Botão Carregar Mais -->
+    <div class="load-more-container" id="loadMoreContainer" style="display: none;">
+      <button class="btn-load-more" id="btnLoadMore">
+        Carregar Mais Títulos
+      </button>
+    </div>
+  </main>
+
+  <!-- Modal do Player de Vídeo -->
+  <div class="modal-overlay" id="playerModal">
+    <div class="player-container">
+      <div class="player-header">
+        <div class="player-title-info">
+          <span class="badge" id="modalCategoryBadge">CATEGORIA</span>
+          <h3 id="modalVideoTitle">Título do Vídeo</h3>
+        </div>
+        <button class="btn-close" id="btnClosePlayer">&times;</button>
+      </div>
+
+      <div class="video-wrapper">
+        <video id="htmlVideoPlayer" controls playsinline></video>
+        <div class="player-loading" id="playerLoading">
+          <div class="spinner"></div>
+          <span>Carregando transmissão...</span>
+        </div>
+      </div>
+
+      <div class="player-footer">
+        <div class="url-display">
+          <input type="text" id="streamUrlDisplay" readonly>
+          <button class="btn-copy-url" id="btnCopyModalUrl" title="Copiar link direto">Copiar</button>
+        </div>
+        <div class="player-footer-actions">
+          <a id="btnModalOpenVlc" href="#" class="btn-vlc" target="_blank">Abrir no VLC</a>
+          <button class="btn-close-modal" id="btnModalDismiss">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Exportação de Playlists -->
+  <div class="modal-overlay" id="exportModal">
+    <div class="export-container">
+      <div class="export-header">
+        <h3>📁 Listas M3U8 & Pastas Organizadas</h3>
+        <button class="btn-close" id="btnCloseExport">&times;</button>
+      </div>
+      <div class="export-body">
+        <p class="export-intro">
+          Todos os 316.354 links foram extraídos e organizados na pasta:
+          <code>d:\PROJETOS PRE-PRONTOS\FILMES\CANAIS_ORGANIZADOS</code>
+        </p>
+
+        <div class="export-list">
+          <div class="export-card">
+            <h4>🌟 Listas Mestres Gerais</h4>
+            <div class="export-item">
+              <span>Canal Completo (Filmes + Séries - 316.354 títulos)</span>
+              <a href="../CANAIS_ORGANIZADOS/00_LISTAS_MESTRES/Canal_Filmes_e_Series_Completo.m3u8" download class="btn-download">Baixar M3U8</a>
+            </div>
+            <div class="export-item">
+              <span>Canal Filmes Geral (30.203 filmes)</span>
+              <a href="../CANAIS_ORGANIZADOS/00_LISTAS_MESTRES/Canal_Filmes_Geral.m3u8" download class="btn-download">Baixar M3U8</a>
+            </div>
+            <div class="export-item">
+              <span>Canal Séries Geral (286.151 episódios)</span>
+              <a href="../CANAIS_ORGANIZADOS/00_LISTAS_MESTRES/Canal_Series_Geral.m3u8" download class="btn-download">Baixar M3U8</a>
+            </div>
+          </div>
+
+          <div class="export-card">
+            <h4>📁 O que há dentro de cada pasta de categoria?</h4>
+            <p>Cada uma das 50 pastas contém 4 formatos prontos:</p>
+            <ul>
+              <li><strong>playlist.m3u8</strong>: Lista M3U8 pronta para carregar em Smart TV, TV Box e players.</li>
+              <li><strong>links.txt</strong>: Arquivo de texto limpo com Título, Link de Vídeo e Poster.</li>
+              <li><strong>catalogo.csv</strong>: Planilha pronta para abrir no Microsoft Excel com todas as colunas.</li>
+              <li><strong>dados.json</strong>: Arquivo JSON estruturado para integrações e desenvolvedores.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Guia Smart TV & TV Box -->
+  <div class="modal-overlay" id="guideModal">
+    <div class="export-container">
+      <div class="export-header">
+        <h3>📺 Como Usar nas Smart TVs e TV Box</h3>
+        <button class="btn-close" id="btnCloseGuide">&times;</button>
+      </div>
+      <div class="export-body">
+        <div class="guide-steps">
+          <div class="guide-step">
+            <span class="step-num">1</span>
+            <div>
+              <h4>Aplicativos Recomendados</h4>
+              <p><strong>Smart TV (Samsung/LG):</strong> IPTV Smarters Pro, SS IPTV, Smart IPTV, IBO Player.</p>
+              <p><strong>TV Box / Fire TV / Android:</strong> TiviMate IPTV Player, XCIPTV, VLC Media Player.</p>
+              <p><strong>Computador (Windows):</strong> VLC Media Player, PotPlayer, ou este próprio Portal Web.</p>
+            </div>
+          </div>
+
+          <div class="guide-step">
+            <span class="step-num">2</span>
+            <div>
+              <h4>Como Carregar as Listas</h4>
+              <p>No aplicativo escolhido, selecione <strong>"Carregar Arquivo M3U"</strong> ou <strong>"Upload M3U Playlist"</strong> e aponte para qualquer arquivo <code>playlist.m3u8</code> gerado nas pastas.</p>
+            </div>
+          </div>
+
+          <div class="guide-step">
+            <span class="step-num">3</span>
+            <div>
+              <h4>Integração com Jellyfin / Emby / Kodi</h4>
+              <p>Você pode usar as listas M3U como fontes de canais ao vivo (IPTV Live TV) ou usar o script gerador de arquivos <code>.strm</code> para criar bibliotecas sob demanda integradas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Painel Admin Kaynã -->
+  <div class="modal-overlay" id="adminModal">
+    <div class="admin-panel-container">
+      <div class="admin-header">
+        <div class="admin-profile-hero">
+          <div class="admin-avatar-large">
+            <span>K</span>
+            <span class="status-indicator"></span>
+          </div>
+          <div class="admin-identity">
+            <div class="admin-badge-row">
+              <span class="badge-admin">👑 ADMINISTRADOR GERAL</span>
+              <span class="badge-status">CONTA ATIVA</span>
+            </div>
+            <h3>Kaynã</h3>
+            <span class="admin-subtext">Proprietário & Administrador do Canal</span>
+          </div>
+        </div>
+        <button class="btn-close" id="btnCloseAdmin">&times;</button>
+      </div>
+
+      <div class="admin-body">
+        <!-- Abas do Painel -->
+        <div class="admin-tabs">
+          <button class="admin-tab-btn active" data-tab="visao-geral">📊 Visão Geral</button>
+          <button class="admin-tab-btn" data-tab="cadastrar-link">➕ Adicionar Título</button>
+          <button class="admin-tab-btn" data-tab="listas-m3u">📁 Listas & Playlists</button>
+          <button class="admin-tab-btn" data-tab="dados-conta">⚙️ Dados da Conta</button>
+        </div>
+
+        <!-- Aba 1: Visão Geral -->
+        <div class="admin-tab-content active" id="tab-visao-geral">
+          <div class="admin-stats-grid">
+            <div class="admin-stat-box">
+              <span class="box-label">Catálogo Total</span>
+              <span class="box-val">316.354</span>
+              <span class="box-desc">Títulos catalogados</span>
+            </div>
+            <div class="admin-stat-box">
+              <span class="box-label">Filmes</span>
+              <span class="box-val">30.203</span>
+              <span class="box-desc">25 categorias</span>
+            </div>
+            <div class="admin-stat-box">
+              <span class="box-label">Séries & Episódios</span>
+              <span class="box-val">286.151</span>
+              <span class="box-desc">25 produtoras</span>
+            </div>
+            <div class="admin-stat-box">
+              <span class="box-label">Status do Servidor</span>
+              <span class="box-val online">ONLINE</span>
+              <span class="box-desc">Porta 8080 (RAM 2ms)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Aba 2: Cadastrar Link -->
+        <div class="admin-tab-content" id="tab-cadastrar-link">
+          <form id="formAddMovie" class="admin-form">
+            <div class="form-group">
+              <label>Título do Filme ou Série:</label>
+              <input type="text" id="newTitle" placeholder="Ex: Avatar: O Caminho da Água" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Categoria:</label>
+                <select id="newCategory">
+                  <option value="01_lancamentos">FILMES | Lançamentos</option>
+                  <option value="02_4k_uhd">FILMES | 4K UHD</option>
+                  <option value="03_acao">FILMES | Ação</option>
+                  <option value="06_comedia">FILMES | Comédia</option>
+                  <option value="24_terror">FILMES | Terror</option>
+                  <option value="01_netflix">SÉRIES | Netflix</option>
+                  <option value="02_amazon_prime">SÉRIES | Prime Video</option>
+                  <option value="03_max_hbo">SÉRIES | HBO Max</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Tipo:</label>
+                <select id="newType">
+                  <option value="filmes">🎬 Filme</option>
+                  <option value="series">📺 Série</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Link Direto de Transmissão (MP4 ou M3U8):</label>
+              <input type="url" id="newStreamUrl" placeholder="http://.../video.mp4" required>
+            </div>
+            <div class="form-group">
+              <label>Link do Poster / Imagem (TMDB):</label>
+              <input type="url" id="newPosterUrl" placeholder="https://image.tmdb.org/t/p/...jpg">
+            </div>
+            <button type="submit" class="btn-primary" style="margin-top: 8px;">
+              💾 Salvar no Catálogo
+            </button>
+          </form>
+        </div>
+
+        <!-- Aba 3: Listas & Playlists -->
+        <div class="admin-tab-content" id="tab-listas-m3u">
+          <div class="admin-export-list">
+            <div class="admin-export-item">
+              <div>
+                <strong>Canal Completo (316.354 títulos)</strong>
+                <p>Lista M3U8 com todos os filmes e séries organizados</p>
+              </div>
+              <a href="../CANAIS_ORGANIZADOS/00_LISTAS_MESTRES/Canal_Filmes_e_Series_Completo.m3u8" download class="btn-primary-sm">Baixar M3U8</a>
+            </div>
+            <div class="admin-export-item">
+              <div>
+                <strong>Canal Filmes (30.203 títulos)</strong>
+                <p>Lista M3U8 exclusiva com todos os filmes</p>
+              </div>
+              <a href="../CANAIS_ORGANIZADOS/00_LISTAS_MESTRES/Canal_Filmes_Geral.m3u8" download class="btn-primary-sm">Baixar M3U8</a>
+            </div>
+            <div class="admin-export-item">
+              <div>
+                <strong>Canal Séries (286.151 episódios)</strong>
+                <p>Lista M3U8 com Netflix, Prime, HBO Max, Disney+, Doramas e Novelas</p>
+              </div>
+              <a href="../CANAIS_ORGANIZADOS/00_LISTAS_MESTRES/Canal_Series_Geral.m3u8" download class="btn-primary-sm">Baixar M3U8</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Aba 4: Dados da Conta -->
+        <div class="admin-tab-content" id="tab-dados-conta">
+          <div class="account-card">
+            <div class="account-row">
+              <span class="acc-label">Nome do Usuário:</span>
+              <strong class="acc-val">Kaynã</strong>
+            </div>
+            <div class="account-row">
+              <span class="acc-label">Nível de Acesso:</span>
+              <span class="badge-admin">👑 Super Administrador</span>
+            </div>
+            <div class="account-row">
+              <span class="acc-label">Status da Conta:</span>
+              <strong style="color: var(--accent-emerald);">● Conectada e Autenticada</strong>
+            </div>
+            <div class="account-row">
+              <span class="acc-label">Servidor Local:</span>
+              <code style="color: var(--accent-cyan);">http://localhost:8080</code>
+            </div>
+            <div class="account-row">
+              <span class="acc-label">Diretório Raiz:</span>
+              <code style="color: var(--text-muted); font-size: 0.8rem;">d:\PROJETOS PRE-PRONTOS\FILMES</code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast de Notificação -->
+  <div class="toast" id="toastNotification">Link copiado com sucesso!</div>
+
+  <script src="app.js?v=3"></script>
+</body>
+</html>

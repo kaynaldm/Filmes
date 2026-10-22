@@ -1,0 +1,58 @@
+=== FILMES EM CARTAZ / CINEMA (Total: 14) ===
+
+00001. Michael [Cinema]
+    Link: http://dbonline.tech-cdn.top:80/movie/ke-vin-0928392083/PZjF6XATTZ/290825.mp4
+    Poster: https://image.tmdb.org/t/p/w600_and_h900_bestv2/2FYFBgdNVVaUgVfNSh9z5WVTZ9y.jpg
+
+00002. Super Mario Galaxy O Filme [Cinema]
+    Link: http://dbonline.tech-cdn.top:80/movie/ke-vin-0928392083/PZjF6XATTZ/290826.mp4
+    Poster: https://image.tmdb.org/t/p/w600_and_h900_bestv2/b3WeTp42eJSRuE4UZfyPCOJW4c.jpg
+
+00003. Maldição da Múmia [Cinema]
+    Link: http://dbonline.tech-cdn.top:80/movie/ke-vin-0928392083/PZjF6XATTZ/290827.mp4
+    Poster: https://image.tmdb.org/t/p/w600_and_h900_bestv2/ubN87iHY2DyWtwU2JHS0SQ1KqJu.jpg
+
+00004. O Diabo Veste Prada 2 [Cinema]
+    Link: http://dbonline.tech-cdn.top:80/movie/ke-vin-0928392083/PZjF6XATTZ/290828.mp4
+    Poster: https://image.tmdb.org/t/p/w600_and_h900_bestv2/50yWyY981TyUHhoxxSEKwO70FmQ.jpg
+
+00005. Mortal Kombat 2 [Cinema]
+    Link: http://dbonline.tech-cdn.top:80/movie/ke-vin-0928392083/PZjF6XATTZ/290829.mp4
+    Poster: https://image.tmdb.org/t/p/w600_and_h900_bestv2/cGnizm1lIZGvnbeE5BrM7C3a3pu.jpg
+
+00006. Dia D [Cinema]
+    Link: http://dbonline.tech-cdn.top:80/movie/ke-vin-0928392083/PZjF6XATTZ/306448.mp4
+    Poster: https://image.tmdb.org/t/p/w600_and_h900_bestv2/5e8BQ6RP3GRPz45yno1jjlXu56.jpg
+
+00007. Mestres do Universo (2026) [Cinema]
+    Link: http://dbonline.tech-cdn.top:80/movie/ke-vin-0928392083/PZjF6XATTZ/307701.mp4
+    Poster: https://image.tmdb.org/t/p/w600_and_h900_bestv2/uPuVEyoGrtoU9O2sLDhwtKPR78Z.jpg
+
+00008. Supergirl [Cinema]
+    Link: http://dbonline.tech-cdn.top:80/movie/ke-vin-0928392083/PZjF6XATTZ/307702.mp4
+    Poster: https://image.tmdb.org/t/p/w600_and_h900_bestv2/qhXfLI1gDWaahzfHT0cb2CH61hO.jpg
+
+00009. Toy Story 5 [Cinema]
+    Link: http://dbonline.tech-cdn.top:80/movie/ke-vin-0928392083/PZjF6XATTZ/307703.mp4
+    Poster: https://image.tmdb.org/t/p/w600_and_h900_bestv2/iwEuq51BV59mm2LgZ42bWgPgagW.jpg
+
+00010. Homem-Aranha Um Novo Dia [L] [Cinema]
+    Link: http://dbonline.tech-cdn.top:80/movie/ke-vin-0928392083/PZjF6XATTZ/310642.mp4
+    Poster: https://image.tmdb.org/t/p/w600_and_h900_bestv2/x0nvYzQpyJc5pdT9lMnkMuYAg0O.jpg
+
+00011. A Odisseia [Cinema]
+    Link: http://dbonline.tech-cdn.top:80/movie/ke-vin-0928392083/PZjF6XATTZ/310643.mp4
+    Poster: https://image.tmdb.org/t/p/w600_and_h900_bestv2/muMwJAiMtReEHLKpKMWt2rMkYF7.jpg
+
+00012. Moana [Cinema]
+    Link: http://dbonline.tech-cdn.top:80/movie/ke-vin-0928392083/PZjF6XATTZ/310644.mp4
+    Poster: https://image.tmdb.org/t/p/w600_and_h900_bestv2/e0ImfFh3aQ9P0PS81DudN9TZTmA.jpg
+
+00013. Águas Mortais [L] [Cinema]
+    Link: http://dbonline.tech-cdn.top:80/movie/ke-vin-0928392083/PZjF6XATTZ/310645.mp4
+    Poster: https://image.tmdb.org/t/p/w600_and_h900_bestv2/dWsw0X420R6ngEcVCkNlZ189Amr.jpg
+
+00014. Homem-Aranha Um Novo Dia [Cinema]
+    Link: http://dbonline.tech-cdn.top:80/movie/ke-vin-0928392083/PZjF6XATTZ/311018.mp4
+    Poster: https://image.tmdb.org/t/p/w600_and_h900_bestv2/x0nvYzQpyJc5pdT9lMnkMuYAg0O.jpg
+

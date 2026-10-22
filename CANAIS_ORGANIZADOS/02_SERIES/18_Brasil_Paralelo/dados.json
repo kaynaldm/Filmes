@@ -1,0 +1,1693 @@
+{
+  "categoria": "Produções Brasil Paralelo",
+  "tipo": "Séries",
+  "total": 281,
+  "itens": [
+    {
+      "id": 1,
+      "titulo": "A Crise dos Três Poderes S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nms3eo2UWY6C9wuW3SkGBwJdqCz.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34782.mp4"
+    },
+    {
+      "id": 2,
+      "titulo": "A Crise dos Três Poderes S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nms3eo2UWY6C9wuW3SkGBwJdqCz.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34783.mp4"
+    },
+    {
+      "id": 3,
+      "titulo": "A Crise dos Três Poderes S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nms3eo2UWY6C9wuW3SkGBwJdqCz.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34784.mp4"
+    },
+    {
+      "id": 4,
+      "titulo": "A Crise dos Três Poderes S01E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nms3eo2UWY6C9wuW3SkGBwJdqCz.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34786.mp4"
+    },
+    {
+      "id": 5,
+      "titulo": "A Fantastica Fábrica da Sanidade S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/7CC2p1QajubhB3lXjFHkuww2KkN.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34788.mp4"
+    },
+    {
+      "id": 6,
+      "titulo": "A Fantastica Fábrica da Sanidade S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/7CC2p1QajubhB3lXjFHkuww2KkN.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34789.mp4"
+    },
+    {
+      "id": 7,
+      "titulo": "A Fantastica Fábrica da Sanidade S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/7CC2p1QajubhB3lXjFHkuww2KkN.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34790.mp4"
+    },
+    {
+      "id": 8,
+      "titulo": "A Primeira Arte S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/uz4XCuKxN2o47NWoqy6Jn5JUoB7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34793.mp4"
+    },
+    {
+      "id": 9,
+      "titulo": "A Primeira Arte S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/uz4XCuKxN2o47NWoqy6Jn5JUoB7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34794.mp4"
+    },
+    {
+      "id": 10,
+      "titulo": "A Primeira Arte S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/uz4XCuKxN2o47NWoqy6Jn5JUoB7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34795.mp4"
+    },
+    {
+      "id": 11,
+      "titulo": "A Queda Argentina S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/kILCM0KarbX9F58kCYfsiADxmp5.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34798.mp4"
+    },
+    {
+      "id": 12,
+      "titulo": "A Queda Argentina S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/kILCM0KarbX9F58kCYfsiADxmp5.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34799.mp4"
+    },
+    {
+      "id": 13,
+      "titulo": "A Queda Argentina S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/kILCM0KarbX9F58kCYfsiADxmp5.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34800.mp4"
+    },
+    {
+      "id": 14,
+      "titulo": "A Superfantástica História do Balão S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/sxVKZiIFZWxrRRdngcR6SSs423R.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34803.mp4"
+    },
+    {
+      "id": 15,
+      "titulo": "A Superfantástica História do Balão S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/sxVKZiIFZWxrRRdngcR6SSs423R.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34804.mp4"
+    },
+    {
+      "id": 16,
+      "titulo": "A Superfantástica História do Balão S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/sxVKZiIFZWxrRRdngcR6SSs423R.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34805.mp4"
+    },
+    {
+      "id": 17,
+      "titulo": "A Sétima Arte S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/syIud9KHZGtNjxD0ALTAa8WCUMs.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34807.mp4"
+    },
+    {
+      "id": 18,
+      "titulo": "A Sétima Arte S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/syIud9KHZGtNjxD0ALTAa8WCUMs.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34809.mp4"
+    },
+    {
+      "id": 19,
+      "titulo": "A Sétima Arte S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/syIud9KHZGtNjxD0ALTAa8WCUMs.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34810.mp4"
+    },
+    {
+      "id": 20,
+      "titulo": "A Sétima Arte S01E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/syIud9KHZGtNjxD0ALTAa8WCUMs.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34811.mp4"
+    },
+    {
+      "id": 21,
+      "titulo": "A Sétima Arte S01E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/syIud9KHZGtNjxD0ALTAa8WCUMs.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34813.mp4"
+    },
+    {
+      "id": 22,
+      "titulo": "A Sétima Arte S01E06",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/syIud9KHZGtNjxD0ALTAa8WCUMs.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34814.mp4"
+    },
+    {
+      "id": 23,
+      "titulo": "A Sétima Arte S01E07",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/syIud9KHZGtNjxD0ALTAa8WCUMs.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34815.mp4"
+    },
+    {
+      "id": 24,
+      "titulo": "Amada e Ultrajada O Exercito na Historia do Brasil S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/cvfkZNHNWCQAjBnCBeI4yYeeBpO.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34817.mp4"
+    },
+    {
+      "id": 25,
+      "titulo": "Amada e Ultrajada O Exercito na Historia do Brasil S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/cvfkZNHNWCQAjBnCBeI4yYeeBpO.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34819.mp4"
+    },
+    {
+      "id": 26,
+      "titulo": "Amada e Ultrajada O Exercito na Historia do Brasil S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/cvfkZNHNWCQAjBnCBeI4yYeeBpO.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34820.mp4"
+    },
+    {
+      "id": 27,
+      "titulo": "As Grandes Minorias S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/2iTobROW3oOYJyjAIFK2UnK76Ay.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34822.mp4"
+    },
+    {
+      "id": 28,
+      "titulo": "As Grandes Minorias S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/2iTobROW3oOYJyjAIFK2UnK76Ay.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34823.mp4"
+    },
+    {
+      "id": 29,
+      "titulo": "As Grandes Minorias S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/2iTobROW3oOYJyjAIFK2UnK76Ay.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34825.mp4"
+    },
+    {
+      "id": 30,
+      "titulo": "Brasil Raiz S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/dd999mGXyInZmV1S20aiozlWXzD.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34827.mp4"
+    },
+    {
+      "id": 31,
+      "titulo": "Brasil Raiz S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/dd999mGXyInZmV1S20aiozlWXzD.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34829.mp4"
+    },
+    {
+      "id": 32,
+      "titulo": "Brasil Raiz S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/dd999mGXyInZmV1S20aiozlWXzD.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34830.mp4"
+    },
+    {
+      "id": 33,
+      "titulo": "Brasil Raiz S01E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/dd999mGXyInZmV1S20aiozlWXzD.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34831.mp4"
+    },
+    {
+      "id": 34,
+      "titulo": "Brasil Raiz S01E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/dd999mGXyInZmV1S20aiozlWXzD.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34832.mp4"
+    },
+    {
+      "id": 35,
+      "titulo": "Brasil A Última Cruzada S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/kHHWZyy7kaN0C3Onv25ZPwP7OY6.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34835.mp4"
+    },
+    {
+      "id": 36,
+      "titulo": "Brasil A Última Cruzada S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/kHHWZyy7kaN0C3Onv25ZPwP7OY6.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34836.mp4"
+    },
+    {
+      "id": 37,
+      "titulo": "Brasil A Última Cruzada S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/kHHWZyy7kaN0C3Onv25ZPwP7OY6.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34837.mp4"
+    },
+    {
+      "id": 38,
+      "titulo": "Brasil A Última Cruzada S01E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/kHHWZyy7kaN0C3Onv25ZPwP7OY6.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34838.mp4"
+    },
+    {
+      "id": 39,
+      "titulo": "Brasil A Última Cruzada S01E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/kHHWZyy7kaN0C3Onv25ZPwP7OY6.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34840.mp4"
+    },
+    {
+      "id": 40,
+      "titulo": "Congresso S01 S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/iXtAgKuFR2YupumXhcycYcGAlot.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34842.mp4"
+    },
+    {
+      "id": 41,
+      "titulo": "Congresso S01 S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/iXtAgKuFR2YupumXhcycYcGAlot.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34843.mp4"
+    },
+    {
+      "id": 42,
+      "titulo": "Congresso S01 S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/iXtAgKuFR2YupumXhcycYcGAlot.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34845.mp4"
+    },
+    {
+      "id": 43,
+      "titulo": "Congresso S01 S01E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/iXtAgKuFR2YupumXhcycYcGAlot.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34846.mp4"
+    },
+    {
+      "id": 44,
+      "titulo": "Congresso S01 S01E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/iXtAgKuFR2YupumXhcycYcGAlot.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34847.mp4"
+    },
+    {
+      "id": 45,
+      "titulo": "Congresso S01 S01E06",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/iXtAgKuFR2YupumXhcycYcGAlot.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34848.mp4"
+    },
+    {
+      "id": 46,
+      "titulo": "Entre Lobos S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/kXnLyY8ggBsfPyvoSb54fCpvZbm.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34851.mp4"
+    },
+    {
+      "id": 47,
+      "titulo": "Entre Lobos S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/kXnLyY8ggBsfPyvoSb54fCpvZbm.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34852.mp4"
+    },
+    {
+      "id": 48,
+      "titulo": "Entre Lobos S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/kXnLyY8ggBsfPyvoSb54fCpvZbm.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34853.mp4"
+    },
+    {
+      "id": 49,
+      "titulo": "Fim Das Nações S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/z0EWZS5FtSTh5KmVAmcrzNP1HCj.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34855.mp4"
+    },
+    {
+      "id": 50,
+      "titulo": "Fim Das Nações S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/z0EWZS5FtSTh5KmVAmcrzNP1HCj.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34857.mp4"
+    },
+    {
+      "id": 51,
+      "titulo": "Fim Das Nações S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/z0EWZS5FtSTh5KmVAmcrzNP1HCj.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34858.mp4"
+    },
+    {
+      "id": 52,
+      "titulo": "Historia do Comunismo S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/eWfqKtpFOwfKkjBz8Psqsv9KYkM.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34860.mp4"
+    },
+    {
+      "id": 53,
+      "titulo": "Historia do Comunismo S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/eWfqKtpFOwfKkjBz8Psqsv9KYkM.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34861.mp4"
+    },
+    {
+      "id": 54,
+      "titulo": "Historia do Comunismo S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/eWfqKtpFOwfKkjBz8Psqsv9KYkM.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34862.mp4"
+    },
+    {
+      "id": 55,
+      "titulo": "Historia do Comunismo S01E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/eWfqKtpFOwfKkjBz8Psqsv9KYkM.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34864.mp4"
+    },
+    {
+      "id": 56,
+      "titulo": "Historia do Comunismo S01E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/eWfqKtpFOwfKkjBz8Psqsv9KYkM.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34865.mp4"
+    },
+    {
+      "id": 57,
+      "titulo": "Historia do Comunismo S01E06",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/eWfqKtpFOwfKkjBz8Psqsv9KYkM.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34866.mp4"
+    },
+    {
+      "id": 58,
+      "titulo": "Historia do Fascismo S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/2YpUJYrYey45KY1riG068UTvw1p.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34869.mp4"
+    },
+    {
+      "id": 59,
+      "titulo": "Historia do Fascismo S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/2YpUJYrYey45KY1riG068UTvw1p.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34870.mp4"
+    },
+    {
+      "id": 60,
+      "titulo": "Historia do Fascismo S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/2YpUJYrYey45KY1riG068UTvw1p.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34871.mp4"
+    },
+    {
+      "id": 61,
+      "titulo": "Insight BP S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vcRfKl8sYmFRbNPSIkFMr9XmlP3.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34873.mp4"
+    },
+    {
+      "id": 62,
+      "titulo": "Insight BP S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vcRfKl8sYmFRbNPSIkFMr9XmlP3.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34875.mp4"
+    },
+    {
+      "id": 63,
+      "titulo": "Insight BP S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vcRfKl8sYmFRbNPSIkFMr9XmlP3.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34876.mp4"
+    },
+    {
+      "id": 64,
+      "titulo": "Insight BP S01E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vcRfKl8sYmFRbNPSIkFMr9XmlP3.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34877.mp4"
+    },
+    {
+      "id": 65,
+      "titulo": "Insight BP S01E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vcRfKl8sYmFRbNPSIkFMr9XmlP3.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34878.mp4"
+    },
+    {
+      "id": 66,
+      "titulo": "Insight BP S01E06",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vcRfKl8sYmFRbNPSIkFMr9XmlP3.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34880.mp4"
+    },
+    {
+      "id": 67,
+      "titulo": "Insight BP S01E07",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vcRfKl8sYmFRbNPSIkFMr9XmlP3.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34881.mp4"
+    },
+    {
+      "id": 68,
+      "titulo": "Insight BP S01E08",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vcRfKl8sYmFRbNPSIkFMr9XmlP3.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34882.mp4"
+    },
+    {
+      "id": 69,
+      "titulo": "Insight BP S01E09",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vcRfKl8sYmFRbNPSIkFMr9XmlP3.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34884.mp4"
+    },
+    {
+      "id": 70,
+      "titulo": "Insight BP S01E10",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vcRfKl8sYmFRbNPSIkFMr9XmlP3.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34885.mp4"
+    },
+    {
+      "id": 71,
+      "titulo": "Insight BP S01E11",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vcRfKl8sYmFRbNPSIkFMr9XmlP3.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34886.mp4"
+    },
+    {
+      "id": 72,
+      "titulo": "Insight BP S02E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vcRfKl8sYmFRbNPSIkFMr9XmlP3.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34887.mp4"
+    },
+    {
+      "id": 73,
+      "titulo": "Insight BP S02E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vcRfKl8sYmFRbNPSIkFMr9XmlP3.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34889.mp4"
+    },
+    {
+      "id": 74,
+      "titulo": "Insight BP S02E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vcRfKl8sYmFRbNPSIkFMr9XmlP3.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34890.mp4"
+    },
+    {
+      "id": 75,
+      "titulo": "Insight BP S02E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vcRfKl8sYmFRbNPSIkFMr9XmlP3.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34891.mp4"
+    },
+    {
+      "id": 76,
+      "titulo": "Insight BP S02E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vcRfKl8sYmFRbNPSIkFMr9XmlP3.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34892.mp4"
+    },
+    {
+      "id": 77,
+      "titulo": "Insight BP S02E06",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vcRfKl8sYmFRbNPSIkFMr9XmlP3.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34894.mp4"
+    },
+    {
+      "id": 78,
+      "titulo": "Insight BP S02E07",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vcRfKl8sYmFRbNPSIkFMr9XmlP3.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34895.mp4"
+    },
+    {
+      "id": 79,
+      "titulo": "Insight BP S02E08",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vcRfKl8sYmFRbNPSIkFMr9XmlP3.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34896.mp4"
+    },
+    {
+      "id": 80,
+      "titulo": "Investigação Paralela S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34899.mp4"
+    },
+    {
+      "id": 81,
+      "titulo": "Investigação Paralela S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34900.mp4"
+    },
+    {
+      "id": 82,
+      "titulo": "Investigação Paralela S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34901.mp4"
+    },
+    {
+      "id": 83,
+      "titulo": "Investigação Paralela S01E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34902.mp4"
+    },
+    {
+      "id": 84,
+      "titulo": "Investigação Paralela S01E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34904.mp4"
+    },
+    {
+      "id": 85,
+      "titulo": "Investigação Paralela S01E06",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34905.mp4"
+    },
+    {
+      "id": 86,
+      "titulo": "Investigação Paralela S01E07",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34906.mp4"
+    },
+    {
+      "id": 87,
+      "titulo": "Investigação Paralela S01E08",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34907.mp4"
+    },
+    {
+      "id": 88,
+      "titulo": "Investigação Paralela S01E09",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34909.mp4"
+    },
+    {
+      "id": 89,
+      "titulo": "Investigação Paralela S01E10",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34910.mp4"
+    },
+    {
+      "id": 90,
+      "titulo": "Investigação Paralela S02E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34911.mp4"
+    },
+    {
+      "id": 91,
+      "titulo": "Investigação Paralela S02E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34913.mp4"
+    },
+    {
+      "id": 92,
+      "titulo": "Investigação Paralela S02E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34914.mp4"
+    },
+    {
+      "id": 93,
+      "titulo": "Investigação Paralela S02E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34915.mp4"
+    },
+    {
+      "id": 94,
+      "titulo": "Investigação Paralela S02E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34916.mp4"
+    },
+    {
+      "id": 95,
+      "titulo": "Investigação Paralela S02E06",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34918.mp4"
+    },
+    {
+      "id": 96,
+      "titulo": "Investigação Paralela S02E07",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34919.mp4"
+    },
+    {
+      "id": 97,
+      "titulo": "Investigação Paralela S02E08",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34920.mp4"
+    },
+    {
+      "id": 98,
+      "titulo": "Investigação Paralela S03E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34921.mp4"
+    },
+    {
+      "id": 99,
+      "titulo": "Investigação Paralela S03E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34923.mp4"
+    },
+    {
+      "id": 100,
+      "titulo": "Investigação Paralela S03E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34924.mp4"
+    },
+    {
+      "id": 101,
+      "titulo": "Investigação Paralela S03E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34925.mp4"
+    },
+    {
+      "id": 102,
+      "titulo": "Investigação Paralela S04E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34927.mp4"
+    },
+    {
+      "id": 103,
+      "titulo": "Investigação Paralela S04E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34928.mp4"
+    },
+    {
+      "id": 104,
+      "titulo": "Investigação Paralela S04E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34929.mp4"
+    },
+    {
+      "id": 105,
+      "titulo": "Investigação Paralela S04E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34931.mp4"
+    },
+    {
+      "id": 106,
+      "titulo": "Investigação Paralela S04E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nxDboN14VxkkrV7cxGeNekysOn7.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34932.mp4"
+    },
+    {
+      "id": 107,
+      "titulo": "Joan de Arcadia S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34934.mp4"
+    },
+    {
+      "id": 108,
+      "titulo": "Joan de Arcadia S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34936.mp4"
+    },
+    {
+      "id": 109,
+      "titulo": "Joan de Arcadia S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34937.mp4"
+    },
+    {
+      "id": 110,
+      "titulo": "Joan de Arcadia S01E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34938.mp4"
+    },
+    {
+      "id": 111,
+      "titulo": "Joan de Arcadia S01E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34940.mp4"
+    },
+    {
+      "id": 112,
+      "titulo": "Joan de Arcadia S01E06",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34941.mp4"
+    },
+    {
+      "id": 113,
+      "titulo": "Joan de Arcadia S01E07",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34942.mp4"
+    },
+    {
+      "id": 114,
+      "titulo": "Joan de Arcadia S01E08",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34943.mp4"
+    },
+    {
+      "id": 115,
+      "titulo": "Joan de Arcadia S01E09",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34945.mp4"
+    },
+    {
+      "id": 116,
+      "titulo": "Joan de Arcadia S01E10",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34946.mp4"
+    },
+    {
+      "id": 117,
+      "titulo": "Joan de Arcadia S01E11",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34947.mp4"
+    },
+    {
+      "id": 118,
+      "titulo": "Joan de Arcadia S01E12",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34948.mp4"
+    },
+    {
+      "id": 119,
+      "titulo": "Joan de Arcadia S01E13",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34950.mp4"
+    },
+    {
+      "id": 120,
+      "titulo": "Joan de Arcadia S01E14",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34951.mp4"
+    },
+    {
+      "id": 121,
+      "titulo": "Joan de Arcadia S01E15",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34952.mp4"
+    },
+    {
+      "id": 122,
+      "titulo": "Joan de Arcadia S01E16",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34954.mp4"
+    },
+    {
+      "id": 123,
+      "titulo": "Joan de Arcadia S01E17",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34955.mp4"
+    },
+    {
+      "id": 124,
+      "titulo": "Joan de Arcadia S01E18",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34956.mp4"
+    },
+    {
+      "id": 125,
+      "titulo": "Joan de Arcadia S01E19",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34957.mp4"
+    },
+    {
+      "id": 126,
+      "titulo": "Joan de Arcadia S01E20",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34959.mp4"
+    },
+    {
+      "id": 127,
+      "titulo": "Joan de Arcadia S01E21",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34960.mp4"
+    },
+    {
+      "id": 128,
+      "titulo": "Joan de Arcadia S01E22",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34961.mp4"
+    },
+    {
+      "id": 129,
+      "titulo": "Joan de Arcadia S01E23",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34962.mp4"
+    },
+    {
+      "id": 130,
+      "titulo": "Joan de Arcadia S02E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34964.mp4"
+    },
+    {
+      "id": 131,
+      "titulo": "Joan de Arcadia S02E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34965.mp4"
+    },
+    {
+      "id": 132,
+      "titulo": "Joan de Arcadia S02E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34966.mp4"
+    },
+    {
+      "id": 133,
+      "titulo": "Joan de Arcadia S02E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34968.mp4"
+    },
+    {
+      "id": 134,
+      "titulo": "Joan de Arcadia S02E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34969.mp4"
+    },
+    {
+      "id": 135,
+      "titulo": "Joan de Arcadia S02E06",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34970.mp4"
+    },
+    {
+      "id": 136,
+      "titulo": "Joan de Arcadia S02E07",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34972.mp4"
+    },
+    {
+      "id": 137,
+      "titulo": "Joan de Arcadia S02E08",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34973.mp4"
+    },
+    {
+      "id": 138,
+      "titulo": "Joan de Arcadia S02E09",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34974.mp4"
+    },
+    {
+      "id": 139,
+      "titulo": "Joan de Arcadia S02E10",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34975.mp4"
+    },
+    {
+      "id": 140,
+      "titulo": "Joan de Arcadia S02E11",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34977.mp4"
+    },
+    {
+      "id": 141,
+      "titulo": "Joan de Arcadia S02E12",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34978.mp4"
+    },
+    {
+      "id": 142,
+      "titulo": "Joan de Arcadia S02E13",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34979.mp4"
+    },
+    {
+      "id": 143,
+      "titulo": "Joan de Arcadia S02E14",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34980.mp4"
+    },
+    {
+      "id": 144,
+      "titulo": "Joan de Arcadia S02E15",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34982.mp4"
+    },
+    {
+      "id": 145,
+      "titulo": "Joan de Arcadia S02E16",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34983.mp4"
+    },
+    {
+      "id": 146,
+      "titulo": "Joan de Arcadia S02E17",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34984.mp4"
+    },
+    {
+      "id": 147,
+      "titulo": "Joan de Arcadia S02E18",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34986.mp4"
+    },
+    {
+      "id": 148,
+      "titulo": "Joan de Arcadia S02E19",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34987.mp4"
+    },
+    {
+      "id": 149,
+      "titulo": "Joan de Arcadia S02E20",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34988.mp4"
+    },
+    {
+      "id": 150,
+      "titulo": "Joan de Arcadia S02E21",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34989.mp4"
+    },
+    {
+      "id": 151,
+      "titulo": "Joan de Arcadia S02E22",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdSIHbGVuHGrdZs5BXajiCwep75.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34991.mp4"
+    },
+    {
+      "id": 152,
+      "titulo": "Lewis e Tolkien S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/bPsyyI6Ia5aJhs5p8KMDYpIiupz.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34993.mp4"
+    },
+    {
+      "id": 153,
+      "titulo": "Lewis e Tolkien S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/bPsyyI6Ia5aJhs5p8KMDYpIiupz.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34994.mp4"
+    },
+    {
+      "id": 154,
+      "titulo": "Lewis e Tolkien S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/bPsyyI6Ia5aJhs5p8KMDYpIiupz.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34995.mp4"
+    },
+    {
+      "id": 155,
+      "titulo": "O Dia Depois da Eleição S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/gvMoIMpVB2uOhWNvk5nPauwymoD.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34998.mp4"
+    },
+    {
+      "id": 156,
+      "titulo": "O Dia Depois da Eleição S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/gvMoIMpVB2uOhWNvk5nPauwymoD.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34999.mp4"
+    },
+    {
+      "id": 157,
+      "titulo": "O Dia Depois da Eleição S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/gvMoIMpVB2uOhWNvk5nPauwymoD.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35000.mp4"
+    },
+    {
+      "id": 158,
+      "titulo": "O Dia Depois da Eleição S01E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/gvMoIMpVB2uOhWNvk5nPauwymoD.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35002.mp4"
+    },
+    {
+      "id": 159,
+      "titulo": "O Dia Depois da Eleição S01E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/gvMoIMpVB2uOhWNvk5nPauwymoD.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35003.mp4"
+    },
+    {
+      "id": 160,
+      "titulo": "O Fim da Beleza S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nqcWiSSPDHKbwxNi07EwUNtWBs2.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35005.mp4"
+    },
+    {
+      "id": 161,
+      "titulo": "O Fim da Beleza S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nqcWiSSPDHKbwxNi07EwUNtWBs2.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35007.mp4"
+    },
+    {
+      "id": 162,
+      "titulo": "O Fim da Beleza S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nqcWiSSPDHKbwxNi07EwUNtWBs2.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35008.mp4"
+    },
+    {
+      "id": 163,
+      "titulo": "O Teatro das Tesouras S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/SIJ2LAae2JlFrfzH3BxkLmLS3H.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35010.mp4"
+    },
+    {
+      "id": 164,
+      "titulo": "O Teatro das Tesouras S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/SIJ2LAae2JlFrfzH3BxkLmLS3H.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35012.mp4"
+    },
+    {
+      "id": 165,
+      "titulo": "O Teatro das Tesouras S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/SIJ2LAae2JlFrfzH3BxkLmLS3H.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35013.mp4"
+    },
+    {
+      "id": 166,
+      "titulo": "O Teatro das Tesouras S01E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/SIJ2LAae2JlFrfzH3BxkLmLS3H.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35014.mp4"
+    },
+    {
+      "id": 167,
+      "titulo": "O Teatro das Tesouras S01E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/SIJ2LAae2JlFrfzH3BxkLmLS3H.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35016.mp4"
+    },
+    {
+      "id": 168,
+      "titulo": "O Teatro das Tesouras S01E06",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/SIJ2LAae2JlFrfzH3BxkLmLS3H.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35017.mp4"
+    },
+    {
+      "id": 169,
+      "titulo": "O Teatro das Tesouras S01E07",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/SIJ2LAae2JlFrfzH3BxkLmLS3H.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35018.mp4"
+    },
+    {
+      "id": 170,
+      "titulo": "O Teatro das Tesouras S01E08",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/SIJ2LAae2JlFrfzH3BxkLmLS3H.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35019.mp4"
+    },
+    {
+      "id": 171,
+      "titulo": "Pindorama S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/uXBIs7WL5N4IWelVro6cSgoV5kO.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35022.mp4"
+    },
+    {
+      "id": 172,
+      "titulo": "Pindorama S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/uXBIs7WL5N4IWelVro6cSgoV5kO.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35023.mp4"
+    },
+    {
+      "id": 173,
+      "titulo": "Pindorama S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/uXBIs7WL5N4IWelVro6cSgoV5kO.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35024.mp4"
+    },
+    {
+      "id": 174,
+      "titulo": "Pindorama S01E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/uXBIs7WL5N4IWelVro6cSgoV5kO.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35026.mp4"
+    },
+    {
+      "id": 175,
+      "titulo": "Pindorama S01E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/uXBIs7WL5N4IWelVro6cSgoV5kO.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35027.mp4"
+    },
+    {
+      "id": 176,
+      "titulo": "Pátria Educadora S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/v4JTl6g4IzRoH3qOeW6JHGTQEPu.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35029.mp4"
+    },
+    {
+      "id": 177,
+      "titulo": "Pátria Educadora S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/v4JTl6g4IzRoH3qOeW6JHGTQEPu.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35030.mp4"
+    },
+    {
+      "id": 178,
+      "titulo": "Pátria Educadora S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/v4JTl6g4IzRoH3qOeW6JHGTQEPu.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35032.mp4"
+    },
+    {
+      "id": 179,
+      "titulo": "Stella Models S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/f8lTfilkExsq294HCLu5juVCjTl.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35034.mp4"
+    },
+    {
+      "id": 180,
+      "titulo": "Stella Models S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/f8lTfilkExsq294HCLu5juVCjTl.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35035.mp4"
+    },
+    {
+      "id": 181,
+      "titulo": "Stella Models S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/f8lTfilkExsq294HCLu5juVCjTl.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35037.mp4"
+    },
+    {
+      "id": 182,
+      "titulo": "Stella Models S01E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/f8lTfilkExsq294HCLu5juVCjTl.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35038.mp4"
+    },
+    {
+      "id": 183,
+      "titulo": "Stella Models S01E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/f8lTfilkExsq294HCLu5juVCjTl.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35039.mp4"
+    },
+    {
+      "id": 184,
+      "titulo": "Stella Models S01E06",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/f8lTfilkExsq294HCLu5juVCjTl.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35040.mp4"
+    },
+    {
+      "id": 185,
+      "titulo": "Stella Models S01E07",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/f8lTfilkExsq294HCLu5juVCjTl.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35042.mp4"
+    },
+    {
+      "id": 186,
+      "titulo": "Stella Models S01E08",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/f8lTfilkExsq294HCLu5juVCjTl.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35043.mp4"
+    },
+    {
+      "id": 187,
+      "titulo": "Stella Models S01E09",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/f8lTfilkExsq294HCLu5juVCjTl.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35044.mp4"
+    },
+    {
+      "id": 188,
+      "titulo": "Stella Models S01E10",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/f8lTfilkExsq294HCLu5juVCjTl.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35046.mp4"
+    },
+    {
+      "id": 189,
+      "titulo": "Unitopia S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/9J1of3PcaaYrCkl8vimOJoEB8sM.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35048.mp4"
+    },
+    {
+      "id": 190,
+      "titulo": "Unitopia S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/9J1of3PcaaYrCkl8vimOJoEB8sM.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35049.mp4"
+    },
+    {
+      "id": 191,
+      "titulo": "Face Oculta S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246737.mp4"
+    },
+    {
+      "id": 192,
+      "titulo": "Face Oculta S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246738.mp4"
+    },
+    {
+      "id": 193,
+      "titulo": "Face Oculta S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246739.mp4"
+    },
+    {
+      "id": 194,
+      "titulo": "Face Oculta S01E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246740.mp4"
+    },
+    {
+      "id": 195,
+      "titulo": "Face Oculta S01E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246741.mp4"
+    },
+    {
+      "id": 196,
+      "titulo": "Face Oculta S01E06",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246742.mp4"
+    },
+    {
+      "id": 197,
+      "titulo": "Face Oculta S01E07",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246743.mp4"
+    },
+    {
+      "id": 198,
+      "titulo": "Face Oculta S01E08",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246744.mp4"
+    },
+    {
+      "id": 199,
+      "titulo": "Face Oculta S01E09",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246745.mp4"
+    },
+    {
+      "id": 200,
+      "titulo": "Face Oculta S01E10",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246746.mp4"
+    },
+    {
+      "id": 201,
+      "titulo": "Face Oculta S01E11",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246747.mp4"
+    },
+    {
+      "id": 202,
+      "titulo": "Face Oculta S01E12",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246748.mp4"
+    },
+    {
+      "id": 203,
+      "titulo": "Face Oculta S01E13",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246749.mp4"
+    },
+    {
+      "id": 204,
+      "titulo": "Face Oculta S01E14",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246750.mp4"
+    },
+    {
+      "id": 205,
+      "titulo": "Face Oculta S01E15",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246751.mp4"
+    },
+    {
+      "id": 206,
+      "titulo": "Face Oculta S01E16",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246752.mp4"
+    },
+    {
+      "id": 207,
+      "titulo": "Face Oculta S01E17",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246753.mp4"
+    },
+    {
+      "id": 208,
+      "titulo": "Face Oculta S01E18",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246754.mp4"
+    },
+    {
+      "id": 209,
+      "titulo": "Face Oculta S01E19",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246755.mp4"
+    },
+    {
+      "id": 210,
+      "titulo": "Face Oculta S01E20",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246756.mp4"
+    },
+    {
+      "id": 211,
+      "titulo": "Face Oculta S01E21",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246757.mp4"
+    },
+    {
+      "id": 212,
+      "titulo": "Face Oculta S01E22",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246758.mp4"
+    },
+    {
+      "id": 213,
+      "titulo": "Face Oculta S01E23",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246759.mp4"
+    },
+    {
+      "id": 214,
+      "titulo": "Face Oculta S01E24",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246760.mp4"
+    },
+    {
+      "id": 215,
+      "titulo": "Face Oculta S01E25",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246761.mp4"
+    },
+    {
+      "id": 216,
+      "titulo": "Face Oculta S01E26",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246762.mp4"
+    },
+    {
+      "id": 217,
+      "titulo": "Face Oculta S01E27",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246763.mp4"
+    },
+    {
+      "id": 218,
+      "titulo": "Face Oculta S01E28",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246764.mp4"
+    },
+    {
+      "id": 219,
+      "titulo": "Face Oculta S01E29",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246765.mp4"
+    },
+    {
+      "id": 220,
+      "titulo": "Face Oculta S02E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246766.mp4"
+    },
+    {
+      "id": 221,
+      "titulo": "Face Oculta S02E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246767.mp4"
+    },
+    {
+      "id": 222,
+      "titulo": "Face Oculta S02E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246768.mp4"
+    },
+    {
+      "id": 223,
+      "titulo": "Face Oculta S02E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246769.mp4"
+    },
+    {
+      "id": 224,
+      "titulo": "Face Oculta S02E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246770.mp4"
+    },
+    {
+      "id": 225,
+      "titulo": "Face Oculta S02E06",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246771.mp4"
+    },
+    {
+      "id": 226,
+      "titulo": "Face Oculta S02E07",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246772.mp4"
+    },
+    {
+      "id": 227,
+      "titulo": "Face Oculta S02E08",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246773.mp4"
+    },
+    {
+      "id": 228,
+      "titulo": "Face Oculta S02E09",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246774.mp4"
+    },
+    {
+      "id": 229,
+      "titulo": "Face Oculta S02E10",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246775.mp4"
+    },
+    {
+      "id": 230,
+      "titulo": "Face Oculta S02E11",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246776.mp4"
+    },
+    {
+      "id": 231,
+      "titulo": "Face Oculta S02E12",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246777.mp4"
+    },
+    {
+      "id": 232,
+      "titulo": "Face Oculta S02E13",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246778.mp4"
+    },
+    {
+      "id": 233,
+      "titulo": "Face Oculta S02E14",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246779.mp4"
+    },
+    {
+      "id": 234,
+      "titulo": "Face Oculta S02E15",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246780.mp4"
+    },
+    {
+      "id": 235,
+      "titulo": "Face Oculta S02E16",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246781.mp4"
+    },
+    {
+      "id": 236,
+      "titulo": "Face Oculta S02E17",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246782.mp4"
+    },
+    {
+      "id": 237,
+      "titulo": "Face Oculta S03E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246783.mp4"
+    },
+    {
+      "id": 238,
+      "titulo": "Face Oculta S03E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246784.mp4"
+    },
+    {
+      "id": 239,
+      "titulo": "Face Oculta S03E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246785.mp4"
+    },
+    {
+      "id": 240,
+      "titulo": "Face Oculta S03E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246786.mp4"
+    },
+    {
+      "id": 241,
+      "titulo": "Face Oculta S03E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246787.mp4"
+    },
+    {
+      "id": 242,
+      "titulo": "Face Oculta S03E06",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246788.mp4"
+    },
+    {
+      "id": 243,
+      "titulo": "Face Oculta S03E07",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246789.mp4"
+    },
+    {
+      "id": 244,
+      "titulo": "Face Oculta S03E08",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246790.mp4"
+    },
+    {
+      "id": 245,
+      "titulo": "Face Oculta S03E09",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8eR0lFrKtlWycT3esfcpvseosN4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/246791.mp4"
+    },
+    {
+      "id": 246,
+      "titulo": "A Vida dos Santos S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/2gwzb1c6cRe8xzm5PwxtKvGmPd5.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247609.mp4"
+    },
+    {
+      "id": 247,
+      "titulo": "A Vida dos Santos S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/2gwzb1c6cRe8xzm5PwxtKvGmPd5.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247610.mp4"
+    },
+    {
+      "id": 248,
+      "titulo": "A Vida dos Santos S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/2gwzb1c6cRe8xzm5PwxtKvGmPd5.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247611.mp4"
+    },
+    {
+      "id": 249,
+      "titulo": "A Vida dos Santos S01E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/2gwzb1c6cRe8xzm5PwxtKvGmPd5.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247612.mp4"
+    },
+    {
+      "id": 250,
+      "titulo": "A Vida dos Santos S01E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/2gwzb1c6cRe8xzm5PwxtKvGmPd5.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247613.mp4"
+    },
+    {
+      "id": 251,
+      "titulo": "Herois em Foco Batalhao de Acoes com Caes (BAC) S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AkEybhvfl4kCzjPAR27aKMXT6rj.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247614.mp4"
+    },
+    {
+      "id": 252,
+      "titulo": "Herois em Foco Batalhao de Acoes com Caes (BAC) S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AkEybhvfl4kCzjPAR27aKMXT6rj.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247615.mp4"
+    },
+    {
+      "id": 253,
+      "titulo": "Herois em Foco Batalhao de Acoes com Caes (BAC) S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AkEybhvfl4kCzjPAR27aKMXT6rj.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247616.mp4"
+    },
+    {
+      "id": 254,
+      "titulo": "Herois em Foco Batalhao de Acoes com Caes (BAC) S01E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AkEybhvfl4kCzjPAR27aKMXT6rj.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247617.mp4"
+    },
+    {
+      "id": 255,
+      "titulo": "Herois em Foco Batalhao de Acoes com Caes (BAC) S01E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AkEybhvfl4kCzjPAR27aKMXT6rj.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247618.mp4"
+    },
+    {
+      "id": 256,
+      "titulo": "Herois em Foco Batalhao de Acoes com Caes (BAC) S01E06",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AkEybhvfl4kCzjPAR27aKMXT6rj.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247619.mp4"
+    },
+    {
+      "id": 257,
+      "titulo": "Herois em Foco Batalhao de Acoes com Caes (BAC) S01E07",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AkEybhvfl4kCzjPAR27aKMXT6rj.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247620.mp4"
+    },
+    {
+      "id": 258,
+      "titulo": "Herois em Foco Batalhao de Acoes com Caes (BAC) S01E08",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AkEybhvfl4kCzjPAR27aKMXT6rj.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247621.mp4"
+    },
+    {
+      "id": 259,
+      "titulo": "Herois em Foco Batalhao de Acoes com Caes (BAC) S01E09",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AkEybhvfl4kCzjPAR27aKMXT6rj.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247622.mp4"
+    },
+    {
+      "id": 260,
+      "titulo": "Ministerio da Verdade S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/y7O22T3QXtEAv8ZA7YLX9CrgQ8O.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247830.mp4"
+    },
+    {
+      "id": 261,
+      "titulo": "Ministerio da Verdade S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/y7O22T3QXtEAv8ZA7YLX9CrgQ8O.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247831.mp4"
+    },
+    {
+      "id": 262,
+      "titulo": "Ministerio da Verdade S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/y7O22T3QXtEAv8ZA7YLX9CrgQ8O.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247832.mp4"
+    },
+    {
+      "id": 263,
+      "titulo": "Ministerio da Verdade S01E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/y7O22T3QXtEAv8ZA7YLX9CrgQ8O.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247833.mp4"
+    },
+    {
+      "id": 264,
+      "titulo": "Ministerio da Verdade S01E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/y7O22T3QXtEAv8ZA7YLX9CrgQ8O.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247834.mp4"
+    },
+    {
+      "id": 265,
+      "titulo": "Ministerio da Verdade S01E06",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/y7O22T3QXtEAv8ZA7YLX9CrgQ8O.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247835.mp4"
+    },
+    {
+      "id": 266,
+      "titulo": "Ministerio da Verdade S01E07",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/y7O22T3QXtEAv8ZA7YLX9CrgQ8O.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247836.mp4"
+    },
+    {
+      "id": 267,
+      "titulo": "Ministerio da Verdade S01E08",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/y7O22T3QXtEAv8ZA7YLX9CrgQ8O.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247837.mp4"
+    },
+    {
+      "id": 268,
+      "titulo": "Ministerio da Verdade S01E09",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/y7O22T3QXtEAv8ZA7YLX9CrgQ8O.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247838.mp4"
+    },
+    {
+      "id": 269,
+      "titulo": "Ministerio da Verdade S01E10",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/y7O22T3QXtEAv8ZA7YLX9CrgQ8O.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247839.mp4"
+    },
+    {
+      "id": 270,
+      "titulo": "Ministerio da Verdade S01E11",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/y7O22T3QXtEAv8ZA7YLX9CrgQ8O.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247840.mp4"
+    },
+    {
+      "id": 271,
+      "titulo": "Ministerio da Verdade S01E12",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/y7O22T3QXtEAv8ZA7YLX9CrgQ8O.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247841.mp4"
+    },
+    {
+      "id": 272,
+      "titulo": "Especial Papado S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/w9z9PYTZkCYcBydv0WTRxF3ebMN.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247969.mp4"
+    },
+    {
+      "id": 273,
+      "titulo": "Especial Papado S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/w9z9PYTZkCYcBydv0WTRxF3ebMN.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247970.mp4"
+    },
+    {
+      "id": 274,
+      "titulo": "Especial Papado S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/w9z9PYTZkCYcBydv0WTRxF3ebMN.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247971.mp4"
+    },
+    {
+      "id": 275,
+      "titulo": "Especial Papado S01E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/w9z9PYTZkCYcBydv0WTRxF3ebMN.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247972.mp4"
+    },
+    {
+      "id": 276,
+      "titulo": "Especial Papado S01E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/w9z9PYTZkCYcBydv0WTRxF3ebMN.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/247973.mp4"
+    },
+    {
+      "id": 277,
+      "titulo": "Congresso Bitcoin S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vMqQX10ZjwGTKF2sb3ncwOBQfe4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/248838.mp4"
+    },
+    {
+      "id": 278,
+      "titulo": "Congresso Bitcoin S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vMqQX10ZjwGTKF2sb3ncwOBQfe4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/248839.mp4"
+    },
+    {
+      "id": 279,
+      "titulo": "Congresso Bitcoin S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vMqQX10ZjwGTKF2sb3ncwOBQfe4.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/248840.mp4"
+    },
+    {
+      "id": 280,
+      "titulo": "Raio X Guerra do Ira S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/eqJNAIKCfUurDMSb9ku3vwjam1y.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/250723.mp4"
+    },
+    {
+      "id": 281,
+      "titulo": "Raio X Guerra do Ira S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/eqJNAIKCfUurDMSb9ku3vwjam1y.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/250724.mp4"
+    }
+  ]
+}

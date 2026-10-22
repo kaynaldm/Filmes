@@ -1,0 +1,307 @@
+{
+  "total_geral": 316354,
+  "total_filmes": 30203,
+  "total_series": 286151,
+  "categorias": {
+    "FILMES | Lançamentos": {
+      "nome_exibicao": "Filmes Lançamentos",
+      "tipo": "Filmes",
+      "pasta": "01_FILMES/01_Lancamentos",
+      "quantidade": 1058
+    },
+    "FILMES | 4K UHD": {
+      "nome_exibicao": "Filmes 4K Ultra HD",
+      "tipo": "Filmes",
+      "pasta": "01_FILMES/02_4K_UHD",
+      "quantidade": 1684
+    },
+    "FILMES | Ação": {
+      "nome_exibicao": "Filmes de Ação",
+      "tipo": "Filmes",
+      "pasta": "01_FILMES/03_Acao",
+      "quantidade": 2273
+    },
+    "FILMES | Animação": {
+      "nome_exibicao": "Filmes de Animação",
+      "tipo": "Filmes",
+      "pasta": "01_FILMES/04_Animacao",
+      "quantidade": 1125
+    },
+    "FILMES | Aventura": {
+      "nome_exibicao": "Filmes de Aventura",
+      "tipo": "Filmes",
+      "pasta": "01_FILMES/05_Aventura",
+      "quantidade": 96
+    },
+    "FILMES | Comédia": {
+      "nome_exibicao": "Filmes de Comédia",
+      "tipo": "Filmes",
+      "pasta": "01_FILMES/06_Comedia",
+      "quantidade": 2580
+    },
+    "FILMES | Crime": {
+      "nome_exibicao": "Filmes de Crime e Policial",
+      "tipo": "Filmes",
+      "pasta": "01_FILMES/07_Crime",
+      "quantidade": 293
+    },
+    "FILMES | Drama": {
+      "nome_exibicao": "Filmes de Drama",
+      "tipo": "Filmes",
+      "pasta": "01_FILMES/08_Drama",
+      "quantidade": 3051
+    },
+    "FILMES | Dramas Curtos": {
+      "nome_exibicao": "Dramas Curtos",
+      "tipo": "Filmes",
+      "pasta": "01_FILMES/09_Dramas_Curtos",
+      "quantidade": 2075
+    },
+    "FILMES | Família": {
+      "nome_exibicao": "Filmes para Família",
+      "tipo": "Filmes",
+      "pasta": "01_FILMES/10_Familia",
+      "quantidade": 79
+    },
+    "FILMES | Fantasia": {
+      "nome_exibicao": "Filmes de Fantasia",
+      "tipo": "Filmes",
+      "pasta": "01_FILMES/11_Fantasia",
+      "quantidade": 382
+    },
+    "FILMES | Faroeste": {
+      "nome_exibicao": "Filmes de Faroeste / Western",
+      "tipo": "Filmes",
+      "pasta": "01_FILMES/12_Faroeste",
+      "quantidade": 147
+    },
+    "FILMES | Ficcao": {
+      "nome_exibicao": "Filmes de Ficção Científica",
+      "tipo": "Filmes",
+      "pasta": "01_FILMES/13_Ficcao_Cientifica",
+      "quantidade": 382
+    },
+    "FILMES | Guerra": {
+      "nome_exibicao": "Filmes de Guerra",
+      "tipo": "Filmes",
+      "pasta": "01_FILMES/14_Guerra",
+      "quantidade": 125
+    },
+    "FILMES | Infantis": {
+      "nome_exibicao": "Filmes Infantis",
+      "tipo": "Filmes",
+      "pasta": "01_FILMES/15_Infantis",
+      "quantidade": 53
+    },
+    "FILMES | Legendados": {
+      "nome_exibicao": "Filmes Legendados",
+      "tipo": "Filmes",
+      "pasta": "01_FILMES/16_Legendados",
+      "quantidade": 10422
+    },
+    "FILMES | Nacionais": {
+      "nome_exibicao": "Filmes Nacionais",
+      "tipo": "Filmes",
+      "pasta": "01_FILMES/17_Nacionais",
+      "quantidade": 954
+    },
+    "FILMES | Natalino": {
+      "nome_exibicao": "Filmes Natalinos",
+      "tipo": "Filmes",
+      "pasta": "01_FILMES/18_Natalino",
+      "quantidade": 192
+    },
+    "FILMES | Oscar 2024": {
+      "nome_exibicao": "Filmes Indicados ao Oscar 2024",
+      "tipo": "Filmes",
+      "pasta": "01_FILMES/19_Oscar_2024",
+      "quantidade": 6
+    },
+    "FILMES | Oscar 2025": {
+      "nome_exibicao": "Filmes Indicados ao Oscar 2025",
+      "tipo": "Filmes",
+      "pasta": "01_FILMES/20_Oscar_2025",
+      "quantidade": 22
+    },
+    "FILMES | Religiosos": {
+      "nome_exibicao": "Filmes Religiosos / Gospel",
+      "tipo": "Filmes",
+      "pasta": "01_FILMES/21_Religiosos",
+      "quantidade": 98
+    },
+    "FILMES | Romance": {
+      "nome_exibicao": "Filmes de Romance",
+      "tipo": "Filmes",
+      "pasta": "01_FILMES/22_Romance",
+      "quantidade": 616
+    },
+    "FILMES | Suspense": {
+      "nome_exibicao": "Filmes de Suspense",
+      "tipo": "Filmes",
+      "pasta": "01_FILMES/23_Suspense",
+      "quantidade": 814
+    },
+    "FILMES | Terror": {
+      "nome_exibicao": "Filmes de Terror",
+      "tipo": "Filmes",
+      "pasta": "01_FILMES/24_Terror",
+      "quantidade": 1662
+    },
+    "Cinema": {
+      "nome_exibicao": "Filmes em Cartaz / Cinema",
+      "tipo": "Filmes",
+      "pasta": "01_FILMES/25_Cinema",
+      "quantidade": 14
+    },
+    "SÉRIES | NETFLIX": {
+      "nome_exibicao": "Séries Netflix",
+      "tipo": "Séries",
+      "pasta": "02_SERIES/01_Netflix",
+      "quantidade": 32046
+    },
+    "SÉRIES | AMAZON PRIME VIDEO": {
+      "nome_exibicao": "Séries Amazon Prime Video",
+      "tipo": "Séries",
+      "pasta": "02_SERIES/02_Amazon_Prime",
+      "quantidade": 21465
+    },
+    "SÉRIES | MAX": {
+      "nome_exibicao": "Séries HBO / Max",
+      "tipo": "Séries",
+      "pasta": "02_SERIES/03_Max_HBO",
+      "quantidade": 17611
+    },
+    "SÉRIES | DISNEY PLUS": {
+      "nome_exibicao": "Séries Disney+",
+      "tipo": "Séries",
+      "pasta": "02_SERIES/04_Disney_Plus",
+      "quantidade": 17182
+    },
+    "SÉRIES | GLOBOPLAY": {
+      "nome_exibicao": "Séries Globoplay",
+      "tipo": "Séries",
+      "pasta": "02_SERIES/05_Globoplay",
+      "quantidade": 20409
+    },
+    "SÉRIES | APPLE TV PLUS": {
+      "nome_exibicao": "Séries Apple TV+",
+      "tipo": "Séries",
+      "pasta": "02_SERIES/06_Apple_TV_Plus",
+      "quantidade": 6554
+    },
+    "SÉRIES | PARAMOUNT": {
+      "nome_exibicao": "Séries Paramount+",
+      "tipo": "Séries",
+      "pasta": "02_SERIES/07_Paramount_Plus",
+      "quantidade": 9253
+    },
+    "SÉRIES | CRUNCHYROLL": {
+      "nome_exibicao": "Animes Crunchyroll",
+      "tipo": "Séries",
+      "pasta": "02_SERIES/08_Crunchyroll",
+      "quantidade": 6838
+    },
+    "SÉRIES | DORAMA": {
+      "nome_exibicao": "Doramas Coreanos e Asiáticos",
+      "tipo": "Séries",
+      "pasta": "02_SERIES/09_Doramas",
+      "quantidade": 17346
+    },
+    "SÉRIES | NOVELAS": {
+      "nome_exibicao": "Novelas Completas",
+      "tipo": "Séries",
+      "pasta": "02_SERIES/10_Novelas",
+      "quantidade": 43886
+    },
+    "SÉRIES | TURCAS": {
+      "nome_exibicao": "Séries e Novelas Turcas",
+      "tipo": "Séries",
+      "pasta": "02_SERIES/11_Turcas",
+      "quantidade": 40691
+    },
+    "SÉRIES | MEXICANAS": {
+      "nome_exibicao": "Séries e Novelas Mexicanas",
+      "tipo": "Séries",
+      "pasta": "02_SERIES/12_Mexicanas",
+      "quantidade": 9631
+    },
+    "SÉRIES | DISCOVERY PLUS": {
+      "nome_exibicao": "Séries Discovery+",
+      "tipo": "Séries",
+      "pasta": "02_SERIES/13_Discovery_Plus",
+      "quantidade": 7478
+    },
+    "SÉRIES | STAR PLUS": {
+      "nome_exibicao": "Séries Star+",
+      "tipo": "Séries",
+      "pasta": "02_SERIES/14_Star_Plus",
+      "quantidade": 4489
+    },
+    "SÉRIES | DIRECTV": {
+      "nome_exibicao": "Séries DirecTV",
+      "tipo": "Séries",
+      "pasta": "02_SERIES/15_DirecTV",
+      "quantidade": 2982
+    },
+    "SÉRIES | FUNIMATION NOW": {
+      "nome_exibicao": "Animes Funimation",
+      "tipo": "Séries",
+      "pasta": "02_SERIES/16_Funimation",
+      "quantidade": 1044
+    },
+    "SÉRIES | SBT": {
+      "nome_exibicao": "Séries e Programas SBT",
+      "tipo": "Séries",
+      "pasta": "02_SERIES/17_SBT",
+      "quantidade": 988
+    },
+    "SÉRIES | BRASIL PARALELO": {
+      "nome_exibicao": "Produções Brasil Paralelo",
+      "tipo": "Séries",
+      "pasta": "02_SERIES/18_Brasil_Paralelo",
+      "quantidade": 281
+    },
+    "SÉRIES | INDIANAS": {
+      "nome_exibicao": "Séries Indianas",
+      "tipo": "Séries",
+      "pasta": "02_SERIES/19_Indianas",
+      "quantidade": 276
+    },
+    "SÉRIES | CLARO VIDEO": {
+      "nome_exibicao": "Séries Claro Vídeo",
+      "tipo": "Séries",
+      "pasta": "02_SERIES/20_Claro_Video",
+      "quantidade": 236
+    },
+    "SÉRIES | LIONSGATE": {
+      "nome_exibicao": "Séries Lionsgate+",
+      "tipo": "Séries",
+      "pasta": "02_SERIES/21_Lionsgate",
+      "quantidade": 171
+    },
+    "SÉRIES | PORTUGUESAS": {
+      "nome_exibicao": "Séries Portuguesas",
+      "tipo": "Séries",
+      "pasta": "02_SERIES/22_Portuguesas",
+      "quantidade": 152
+    },
+    "SÉRIES | PLUTOTV": {
+      "nome_exibicao": "Séries Pluto TV",
+      "tipo": "Séries",
+      "pasta": "02_SERIES/23_Pluto_TV",
+      "quantidade": 122
+    },
+    "SÉRIES | AMC PLUS": {
+      "nome_exibicao": "Séries AMC+",
+      "tipo": "Séries",
+      "pasta": "02_SERIES/24_AMC_Plus",
+      "quantidade": 82
+    },
+    "SÉRIES | OUTRAS PRODUTORAS": {
+      "nome_exibicao": "Séries de Outras Produtoras",
+      "tipo": "Séries",
+      "pasta": "02_SERIES/25_Outras_Produtoras",
+      "quantidade": 24938
+    }
+  }
+}

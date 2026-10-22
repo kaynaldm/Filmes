@@ -1,0 +1,62 @@
+============================================================
+      CANAL DE FILMES E SÉRIES - CATÁLOGO ORGANIZADO
+============================================================
+
+Total Geral de Títulos/Links: 316,354
+Total de Filmes: 30,203
+Total de Séries/Episódios: 286,151
+Total de Pastas de Categorias: 50
+
+------------------------------------------------------------
+DISTRIBUIÇÃO POR CATEGORIA:
+------------------------------------------------------------
+[Séries] Novelas Completas (02_SERIES/10_Novelas): 43,886 títulos
+[Séries] Séries e Novelas Turcas (02_SERIES/11_Turcas): 40,691 títulos
+[Séries] Séries Netflix (02_SERIES/01_Netflix): 32,046 títulos
+[Séries] Séries de Outras Produtoras (02_SERIES/25_Outras_Produtoras): 24,938 títulos
+[Séries] Séries Amazon Prime Video (02_SERIES/02_Amazon_Prime): 21,465 títulos
+[Séries] Séries Globoplay (02_SERIES/05_Globoplay): 20,409 títulos
+[Séries] Séries HBO / Max (02_SERIES/03_Max_HBO): 17,611 títulos
+[Séries] Doramas Coreanos e Asiáticos (02_SERIES/09_Doramas): 17,346 títulos
+[Séries] Séries Disney+ (02_SERIES/04_Disney_Plus): 17,182 títulos
+[Filmes] Filmes Legendados (01_FILMES/16_Legendados): 10,422 títulos
+[Séries] Séries e Novelas Mexicanas (02_SERIES/12_Mexicanas): 9,631 títulos
+[Séries] Séries Paramount+ (02_SERIES/07_Paramount_Plus): 9,253 títulos
+[Séries] Séries Discovery+ (02_SERIES/13_Discovery_Plus): 7,478 títulos
+[Séries] Animes Crunchyroll (02_SERIES/08_Crunchyroll): 6,838 títulos
+[Séries] Séries Apple TV+ (02_SERIES/06_Apple_TV_Plus): 6,554 títulos
+[Séries] Séries Star+ (02_SERIES/14_Star_Plus): 4,489 títulos
+[Filmes] Filmes de Drama (01_FILMES/08_Drama): 3,051 títulos
+[Séries] Séries DirecTV (02_SERIES/15_DirecTV): 2,982 títulos
+[Filmes] Filmes de Comédia (01_FILMES/06_Comedia): 2,580 títulos
+[Filmes] Filmes de Ação (01_FILMES/03_Acao): 2,273 títulos
+[Filmes] Dramas Curtos (01_FILMES/09_Dramas_Curtos): 2,075 títulos
+[Filmes] Filmes 4K Ultra HD (01_FILMES/02_4K_UHD): 1,684 títulos
+[Filmes] Filmes de Terror (01_FILMES/24_Terror): 1,662 títulos
+[Filmes] Filmes de Animação (01_FILMES/04_Animacao): 1,125 títulos
+[Filmes] Filmes Lançamentos (01_FILMES/01_Lancamentos): 1,058 títulos
+[Séries] Animes Funimation (02_SERIES/16_Funimation): 1,044 títulos
+[Séries] Séries e Programas SBT (02_SERIES/17_SBT): 988 títulos
+[Filmes] Filmes Nacionais (01_FILMES/17_Nacionais): 954 títulos
+[Filmes] Filmes de Suspense (01_FILMES/23_Suspense): 814 títulos
+[Filmes] Filmes de Romance (01_FILMES/22_Romance): 616 títulos
+[Filmes] Filmes de Fantasia (01_FILMES/11_Fantasia): 382 títulos
+[Filmes] Filmes de Ficção Científica (01_FILMES/13_Ficcao_Cientifica): 382 títulos
+[Filmes] Filmes de Crime e Policial (01_FILMES/07_Crime): 293 títulos
+[Séries] Produções Brasil Paralelo (02_SERIES/18_Brasil_Paralelo): 281 títulos
+[Séries] Séries Indianas (02_SERIES/19_Indianas): 276 títulos
+[Séries] Séries Claro Vídeo (02_SERIES/20_Claro_Video): 236 títulos
+[Filmes] Filmes Natalinos (01_FILMES/18_Natalino): 192 títulos
+[Séries] Séries Lionsgate+ (02_SERIES/21_Lionsgate): 171 títulos
+[Séries] Séries Portuguesas (02_SERIES/22_Portuguesas): 152 títulos
+[Filmes] Filmes de Faroeste / Western (01_FILMES/12_Faroeste): 147 títulos
+[Filmes] Filmes de Guerra (01_FILMES/14_Guerra): 125 títulos
+[Séries] Séries Pluto TV (02_SERIES/23_Pluto_TV): 122 títulos
+[Filmes] Filmes Religiosos / Gospel (01_FILMES/21_Religiosos): 98 títulos
+[Filmes] Filmes de Aventura (01_FILMES/05_Aventura): 96 títulos
+[Séries] Séries AMC+ (02_SERIES/24_AMC_Plus): 82 títulos
+[Filmes] Filmes para Família (01_FILMES/10_Familia): 79 títulos
+[Filmes] Filmes Infantis (01_FILMES/15_Infantis): 53 títulos
+[Filmes] Filmes Indicados ao Oscar 2025 (01_FILMES/20_Oscar_2025): 22 títulos
+[Filmes] Filmes em Cartaz / Cinema (01_FILMES/25_Cinema): 14 títulos
+[Filmes] Filmes Indicados ao Oscar 2024 (01_FILMES/19_Oscar_2024): 6 títulos

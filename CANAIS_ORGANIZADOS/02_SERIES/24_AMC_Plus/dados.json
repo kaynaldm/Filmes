@@ -1,0 +1,499 @@
+{
+  "categoria": "Séries AMC+",
+  "tipo": "Séries",
+  "total": 82,
+  "itens": [
+    {
+      "id": 1,
+      "titulo": "Channel Zero S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/oCutmhFznao1Pzy6wM1C32kxAEu.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/1.mp4"
+    },
+    {
+      "id": 2,
+      "titulo": "Channel Zero S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/oCutmhFznao1Pzy6wM1C32kxAEu.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/2.mp4"
+    },
+    {
+      "id": 3,
+      "titulo": "Channel Zero S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/oCutmhFznao1Pzy6wM1C32kxAEu.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/3.mp4"
+    },
+    {
+      "id": 4,
+      "titulo": "Channel Zero S01E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/oCutmhFznao1Pzy6wM1C32kxAEu.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/4.mp4"
+    },
+    {
+      "id": 5,
+      "titulo": "Channel Zero S01E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/oCutmhFznao1Pzy6wM1C32kxAEu.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/5.mp4"
+    },
+    {
+      "id": 6,
+      "titulo": "Channel Zero S01E06",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/oCutmhFznao1Pzy6wM1C32kxAEu.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/6.mp4"
+    },
+    {
+      "id": 7,
+      "titulo": "Channel Zero S02E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/oCutmhFznao1Pzy6wM1C32kxAEu.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/7.mp4"
+    },
+    {
+      "id": 8,
+      "titulo": "Channel Zero S02E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/oCutmhFznao1Pzy6wM1C32kxAEu.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/8.mp4"
+    },
+    {
+      "id": 9,
+      "titulo": "Channel Zero S02E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/oCutmhFznao1Pzy6wM1C32kxAEu.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/9.mp4"
+    },
+    {
+      "id": 10,
+      "titulo": "Channel Zero S02E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/oCutmhFznao1Pzy6wM1C32kxAEu.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/10.mp4"
+    },
+    {
+      "id": 11,
+      "titulo": "Channel Zero S02E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/oCutmhFznao1Pzy6wM1C32kxAEu.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/11.mp4"
+    },
+    {
+      "id": 12,
+      "titulo": "Channel Zero S02E06",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/oCutmhFznao1Pzy6wM1C32kxAEu.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/12.mp4"
+    },
+    {
+      "id": 13,
+      "titulo": "Channel Zero S03E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/oCutmhFznao1Pzy6wM1C32kxAEu.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/13.mp4"
+    },
+    {
+      "id": 14,
+      "titulo": "Channel Zero S03E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/oCutmhFznao1Pzy6wM1C32kxAEu.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/14.mp4"
+    },
+    {
+      "id": 15,
+      "titulo": "Channel Zero S03E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/oCutmhFznao1Pzy6wM1C32kxAEu.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/15.mp4"
+    },
+    {
+      "id": 16,
+      "titulo": "Channel Zero S03E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/oCutmhFznao1Pzy6wM1C32kxAEu.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/16.mp4"
+    },
+    {
+      "id": 17,
+      "titulo": "Channel Zero S03E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/oCutmhFznao1Pzy6wM1C32kxAEu.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/17.mp4"
+    },
+    {
+      "id": 18,
+      "titulo": "Channel Zero S03E06",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/oCutmhFznao1Pzy6wM1C32kxAEu.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/18.mp4"
+    },
+    {
+      "id": 19,
+      "titulo": "This Is Going to Hurt S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/bUTv4ZJ8GLjCne0ajTlFMpwJ0fS.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/19.mp4"
+    },
+    {
+      "id": 20,
+      "titulo": "This Is Going to Hurt S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/bUTv4ZJ8GLjCne0ajTlFMpwJ0fS.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/20.mp4"
+    },
+    {
+      "id": 21,
+      "titulo": "This Is Going to Hurt S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/bUTv4ZJ8GLjCne0ajTlFMpwJ0fS.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/21.mp4"
+    },
+    {
+      "id": 22,
+      "titulo": "This Is Going to Hurt S01E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/bUTv4ZJ8GLjCne0ajTlFMpwJ0fS.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/22.mp4"
+    },
+    {
+      "id": 23,
+      "titulo": "This Is Going to Hurt S01E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/bUTv4ZJ8GLjCne0ajTlFMpwJ0fS.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/23.mp4"
+    },
+    {
+      "id": 24,
+      "titulo": "This Is Going to Hurt S01E06",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/bUTv4ZJ8GLjCne0ajTlFMpwJ0fS.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/24.mp4"
+    },
+    {
+      "id": 25,
+      "titulo": "This Is Going to Hurt S01E07",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/bUTv4ZJ8GLjCne0ajTlFMpwJ0fS.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/25.mp4"
+    },
+    {
+      "id": 26,
+      "titulo": "Inferno Sobre Rodas S01E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/26.mp4"
+    },
+    {
+      "id": 27,
+      "titulo": "Inferno Sobre Rodas S01E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/27.mp4"
+    },
+    {
+      "id": 28,
+      "titulo": "Inferno Sobre Rodas S01E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/28.mp4"
+    },
+    {
+      "id": 29,
+      "titulo": "Inferno Sobre Rodas S01E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/29.mp4"
+    },
+    {
+      "id": 30,
+      "titulo": "Inferno Sobre Rodas S01E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/30.mp4"
+    },
+    {
+      "id": 31,
+      "titulo": "Inferno Sobre Rodas S01E06",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/31.mp4"
+    },
+    {
+      "id": 32,
+      "titulo": "Inferno Sobre Rodas S01E07",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/32.mp4"
+    },
+    {
+      "id": 33,
+      "titulo": "Inferno Sobre Rodas S01E08",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/33.mp4"
+    },
+    {
+      "id": 34,
+      "titulo": "Inferno Sobre Rodas S01E09",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/34.mp4"
+    },
+    {
+      "id": 35,
+      "titulo": "Inferno Sobre Rodas S01E10",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/35.mp4"
+    },
+    {
+      "id": 36,
+      "titulo": "Inferno Sobre Rodas S02E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/36.mp4"
+    },
+    {
+      "id": 37,
+      "titulo": "Inferno Sobre Rodas S02E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/37.mp4"
+    },
+    {
+      "id": 38,
+      "titulo": "Inferno Sobre Rodas S02E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/38.mp4"
+    },
+    {
+      "id": 39,
+      "titulo": "Inferno Sobre Rodas S02E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/39.mp4"
+    },
+    {
+      "id": 40,
+      "titulo": "Inferno Sobre Rodas S02E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/40.mp4"
+    },
+    {
+      "id": 41,
+      "titulo": "Inferno Sobre Rodas S02E06",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/41.mp4"
+    },
+    {
+      "id": 42,
+      "titulo": "Inferno Sobre Rodas S02E07",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/42.mp4"
+    },
+    {
+      "id": 43,
+      "titulo": "Inferno Sobre Rodas S02E08",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/43.mp4"
+    },
+    {
+      "id": 44,
+      "titulo": "Inferno Sobre Rodas S02E09",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/44.mp4"
+    },
+    {
+      "id": 45,
+      "titulo": "Inferno Sobre Rodas S02E10",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/45.mp4"
+    },
+    {
+      "id": 46,
+      "titulo": "Inferno Sobre Rodas S03E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/46.mp4"
+    },
+    {
+      "id": 47,
+      "titulo": "Inferno Sobre Rodas S03E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/47.mp4"
+    },
+    {
+      "id": 48,
+      "titulo": "Inferno Sobre Rodas S03E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/48.mp4"
+    },
+    {
+      "id": 49,
+      "titulo": "Inferno Sobre Rodas S03E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/49.mp4"
+    },
+    {
+      "id": 50,
+      "titulo": "Inferno Sobre Rodas S03E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/50.mp4"
+    },
+    {
+      "id": 51,
+      "titulo": "Inferno Sobre Rodas S03E06",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/51.mp4"
+    },
+    {
+      "id": 52,
+      "titulo": "Inferno Sobre Rodas S03E07",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/52.mp4"
+    },
+    {
+      "id": 53,
+      "titulo": "Inferno Sobre Rodas S03E08",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/53.mp4"
+    },
+    {
+      "id": 54,
+      "titulo": "Inferno Sobre Rodas S03E09",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/54.mp4"
+    },
+    {
+      "id": 55,
+      "titulo": "Inferno Sobre Rodas S03E10",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/55.mp4"
+    },
+    {
+      "id": 56,
+      "titulo": "Inferno Sobre Rodas S04E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/56.mp4"
+    },
+    {
+      "id": 57,
+      "titulo": "Inferno Sobre Rodas S04E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/57.mp4"
+    },
+    {
+      "id": 58,
+      "titulo": "Inferno Sobre Rodas S04E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/58.mp4"
+    },
+    {
+      "id": 59,
+      "titulo": "Inferno Sobre Rodas S04E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/59.mp4"
+    },
+    {
+      "id": 60,
+      "titulo": "Inferno Sobre Rodas S04E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/60.mp4"
+    },
+    {
+      "id": 61,
+      "titulo": "Inferno Sobre Rodas S04E06",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/61.mp4"
+    },
+    {
+      "id": 62,
+      "titulo": "Inferno Sobre Rodas S04E07",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/62.mp4"
+    },
+    {
+      "id": 63,
+      "titulo": "Inferno Sobre Rodas S04E08",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/63.mp4"
+    },
+    {
+      "id": 64,
+      "titulo": "Inferno Sobre Rodas S04E09",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/64.mp4"
+    },
+    {
+      "id": 65,
+      "titulo": "Inferno Sobre Rodas S04E10",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/65.mp4"
+    },
+    {
+      "id": 66,
+      "titulo": "Inferno Sobre Rodas S04E11",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/66.mp4"
+    },
+    {
+      "id": 67,
+      "titulo": "Inferno Sobre Rodas S04E12",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/67.mp4"
+    },
+    {
+      "id": 68,
+      "titulo": "Inferno Sobre Rodas S04E13",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/68.mp4"
+    },
+    {
+      "id": 69,
+      "titulo": "Inferno Sobre Rodas S05E01",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/69.mp4"
+    },
+    {
+      "id": 70,
+      "titulo": "Inferno Sobre Rodas S05E02",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/70.mp4"
+    },
+    {
+      "id": 71,
+      "titulo": "Inferno Sobre Rodas S05E03",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/71.mp4"
+    },
+    {
+      "id": 72,
+      "titulo": "Inferno Sobre Rodas S05E04",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/72.mp4"
+    },
+    {
+      "id": 73,
+      "titulo": "Inferno Sobre Rodas S05E05",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/73.mp4"
+    },
+    {
+      "id": 74,
+      "titulo": "Inferno Sobre Rodas S05E06",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/74.mp4"
+    },
+    {
+      "id": 75,
+      "titulo": "Inferno Sobre Rodas S05E07",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/75.mp4"
+    },
+    {
+      "id": 76,
+      "titulo": "Inferno Sobre Rodas S05E08",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/76.mp4"
+    },
+    {
+      "id": 77,
+      "titulo": "Inferno Sobre Rodas S05E09",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/77.mp4"
+    },
+    {
+      "id": 78,
+      "titulo": "Inferno Sobre Rodas S05E10",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/78.mp4"
+    },
+    {
+      "id": 79,
+      "titulo": "Inferno Sobre Rodas S05E11",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/79.mp4"
+    },
+    {
+      "id": 80,
+      "titulo": "Inferno Sobre Rodas S05E12",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/80.mp4"
+    },
+    {
+      "id": 81,
+      "titulo": "Inferno Sobre Rodas S05E13",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/81.mp4"
+    },
+    {
+      "id": 82,
+      "titulo": "Inferno Sobre Rodas S05E14",
+      "logo": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xu1LmA6fwFQDeQxJEHpIvziAZgA.jpg",
+      "url": "http://dbonline.tech-cdn.top:80/series/ke-vin-0928392083/PZjF6XATTZ/82.mp4"
+    }
+  ]
+}
