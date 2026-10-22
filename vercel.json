@@ -1,9 +1,11 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
+  "buildCommand": null,
+  "outputDirectory": "WEB_PORTAL",
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/", "destination": "/WEB_PORTAL/index.html" },
-    { "source": "/:path*", "destination": "/WEB_PORTAL/:path*" }
+    { "source": "/WEB_PORTAL/(.*)", "destination": "/$1" }
   ],
   "headers": [
     {
@@ -14,9 +16,10 @@
       ]
     },
     {
-      "source": "/(.*).(js|css|html|png|jpg|svg)",
+      "source": "/(.*)\\.(js|css|html|png|jpg|svg|json)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400" }
+        { "key": "Cache-Control", "value": "public, max-age=86400" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
       ]
     }
   ]
