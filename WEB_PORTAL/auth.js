@@ -21,7 +21,7 @@ const AuthManager = (() => {
       .toLowerCase();
   }
 
-  // Administrador Principal Kaynã e clientes padrão
+  // Administrador Principal Kaynã (Único Dono)
   const DEFAULT_CLIENTS = [
     {
       id: 'admin-kayna',
@@ -29,16 +29,7 @@ const AuthManager = (() => {
       password: '102587',
       role: 'admin',
       status: 'ativo',
-      notes: 'Kaynã - Proprietário & Administrador Geral do K-Cine',
-      created_at: new Date().toISOString()
-    },
-    {
-      id: 'cli-demo',
-      username: 'cliente1',
-      password: '123456',
-      role: 'cliente',
-      status: 'ativo',
-      notes: 'Cliente de Demonstração',
+      notes: 'Kaynã - Único Dono & Administrador Geral do K-Cine',
       created_at: new Date().toISOString()
     }
   ];
@@ -52,19 +43,23 @@ const AuthManager = (() => {
   function initLocalClients() {
     let clients = getLocalClients();
 
-    // Garante que o Admin Principal Kaynã com a senha 102587 esteja configurado
-    const adminIndex = clients.findIndex(c => 
-      c.role === 'admin' || 
-      normalizeUsername(c.username) === 'kayna' || 
-      normalizeUsername(c.username) === 'admin'
+    // Remove qualquer conta legada (como 'admin' ou 'cliente1') - o único dono é Kaynã
+    clients = clients.filter(c => 
+      normalizeUsername(c.username) !== 'admin' && 
+      c.username !== 'cliente1' &&
+      c.id !== 'admin-2' &&
+      c.id !== 'cli-demo'
     );
 
-    if (adminIndex !== -1) {
-      clients[adminIndex].username = 'Kaynã';
-      clients[adminIndex].password = '102587';
-      clients[adminIndex].role = 'admin';
-      clients[adminIndex].status = 'ativo';
-      clients[adminIndex].notes = 'Kaynã - Proprietário & Administrador Geral do K-Cine';
+    // Garante que o Admin Principal Kaynã esteja com a senha 102587
+    const kaynaIndex = clients.findIndex(c => normalizeUsername(c.username) === 'kayna');
+
+    if (kaynaIndex !== -1) {
+      clients[kaynaIndex].username = 'Kaynã';
+      clients[kaynaIndex].password = '102587';
+      clients[kaynaIndex].role = 'admin';
+      clients[kaynaIndex].status = 'ativo';
+      clients[kaynaIndex].notes = 'Kaynã - Único Dono & Administrador Geral do K-Cine';
     } else {
       clients.unshift({
         id: 'admin-kayna',
@@ -72,7 +67,7 @@ const AuthManager = (() => {
         password: '102587',
         role: 'admin',
         status: 'ativo',
-        notes: 'Kaynã - Proprietário & Administrador Geral do K-Cine',
+        notes: 'Kaynã - Único Dono & Administrador Geral do K-Cine',
         created_at: new Date().toISOString()
       });
     }
@@ -201,14 +196,14 @@ const AuthManager = (() => {
       return { success: false, message: 'Por favor, informe seu usuário e senha.' };
     }
 
-    // Acesso direto garantido para a conta Administrador Principal Kaynã
-    if ((normUsername === 'kayna' || normUsername === 'admin') && cleanPassword === '102587') {
+    // Acesso direto garantido exclusivamente para o Administrador Principal Kaynã (Único Dono)
+    if (normUsername === 'kayna' && cleanPassword === '102587') {
       const adminUser = {
         id: 'admin-kayna',
         username: 'Kaynã',
         role: 'admin',
         status: 'ativo',
-        notes: 'Kaynã - Proprietário & Administrador Geral do K-Cine'
+        notes: 'Kaynã - Único Dono & Administrador Geral do K-Cine'
       };
       setSession(adminUser);
       return { success: true, user: adminUser };

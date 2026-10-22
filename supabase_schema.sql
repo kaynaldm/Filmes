@@ -55,9 +55,12 @@ ON public.clientes FOR DELETE
 TO anon, authenticated
 USING (true);
 
--- 5. Cadastro do Administrador Principal (Kaynã)
+-- 5. Cadastro do Administrador Principal (Kaynã - Único Dono)
 INSERT INTO public.clientes (username, password, role, status, notes)
 VALUES 
-    ('Kaynã', '102587', 'admin', 'ativo', 'Kaynã - Proprietário & Administrador Geral do K-Cine')
+    ('Kaynã', '102587', 'admin', 'ativo', 'Kaynã - Único Dono & Administrador Geral do K-Cine')
 ON CONFLICT (username) DO UPDATE 
 SET password = '102587', role = 'admin', status = 'ativo';
+
+-- Remove contas de demonstração e admin legadas (o único dono é Kaynã)
+DELETE FROM public.clientes WHERE username = 'admin' OR username = 'cliente1';
