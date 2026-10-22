@@ -114,6 +114,16 @@ const AuthManager = (() => {
   }
 
   function getSupabaseConfig() {
+    // 1. Verifica configuração limpa definida em código (supabase-config.js)
+    if (window.SUPABASE_CONFIG && window.SUPABASE_CONFIG.url && window.SUPABASE_CONFIG.anonKey) {
+      const url = window.SUPABASE_CONFIG.url.trim();
+      const key = window.SUPABASE_CONFIG.anonKey.trim();
+      if (url && key && !url.includes('exemplo.supabase.co')) {
+        return { url, anonKey: key };
+      }
+    }
+
+    // 2. Fallback para chave em armazenamento
     try {
       let cfg = localStorage.getItem(STORAGE_KEYS.CONFIG);
       if (!cfg) {

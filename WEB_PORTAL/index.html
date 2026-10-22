@@ -477,7 +477,6 @@
         <div class="admin-tabs">
           <button class="admin-tab-btn active" data-tab="visao-geral">📊 Visão Geral</button>
           <button class="admin-tab-btn" data-tab="central-clientes">👥 Central de Clientes</button>
-          <button class="admin-tab-btn" data-tab="supabase-sync">⚡ Supabase & Nuvem</button>
           <button class="admin-tab-btn" data-tab="cadastrar-link">➕ Adicionar Título</button>
           <button class="admin-tab-btn" data-tab="listas-m3u">📁 Listas & Playlists</button>
           <button class="admin-tab-btn" data-tab="dados-conta">⚙️ Dados da Conta</button>
@@ -524,10 +523,6 @@
             <div class="client-stat-card blocked-card">
               <span class="client-stat-label">Clientes Bloqueados</span>
               <span class="client-stat-val text-red" id="statBlockedClients">0</span>
-            </div>
-            <div class="client-stat-card">
-              <span class="client-stat-label">Banco de Dados</span>
-              <span class="client-stat-badge" id="clientStorageBadge">Local</span>
             </div>
           </div>
 
@@ -582,72 +577,6 @@
             <div class="clients-list-container" id="clientsListContainer">
               <div class="clients-loading">Carregando lista de clientes...</div>
             </div>
-          </div>
-        </div>
-
-        <!-- Aba 3: Supabase & Nuvem -->
-        <div class="admin-tab-content" id="tab-supabase-sync">
-          <div class="admin-section-box">
-            <div class="box-title-row">
-              <div class="supabase-brand-row">
-                <svg class="supabase-icon" viewBox="0 0 24 24" fill="none">
-                  <path d="M13.4 2.1C13 1.6 12.3 2 12.4 2.6L13.8 10H4.5C3.8 10 3.3 10.8 3.7 11.4L10.6 21.9C11 22.4 11.7 22 11.6 21.4L10.2 14H19.5C20.2 14 20.7 13.2 20.3 12.6L13.4 2.1Z" fill="#3ECF8E"/>
-                </svg>
-                <h4>Conectar Supabase (Banco de Dados em Nuvem)</h4>
-              </div>
-              <span class="supabase-status-pill" id="supabasePill">Modo Local (Offline)</span>
-            </div>
-            <p class="box-desc-text">
-              Ao conectar o Supabase, todos os clientes, logins e bloqueios ficam salvos e sincronizados automaticamente na nuvem, funcionando 100% no Vercel.
-            </p>
-
-            <form id="formSupabaseConfig" class="supabase-form">
-              <div class="form-group">
-                <label for="inputSupabaseUrl">Project URL (Supabase):</label>
-                <input type="url" id="inputSupabaseUrl" placeholder="https://exemplo.supabase.co" autocomplete="off">
-              </div>
-              <div class="form-group">
-                <label for="inputSupabaseKey">Project API Key (Anon / Public Key):</label>
-                <input type="password" id="inputSupabaseKey" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." autocomplete="off">
-              </div>
-
-              <div class="supabase-actions-row">
-                <button type="submit" class="btn-primary" id="btnSaveSupabase">
-                  <span>⚡ Salvar & Testar Conexão</span>
-                </button>
-                <button type="button" class="btn-secondary" id="btnSyncToSupabase">
-                  <span>🔄 Sincronizar Clientes Locais com o Supabase</span>
-                </button>
-                <button type="button" class="btn-text-danger" id="btnDisconnectSupabase" style="display: none;">
-                  Desconectar Supabase
-                </button>
-              </div>
-            </form>
-          </div>
-
-          <div class="admin-section-box">
-            <div class="box-title-row">
-              <h4>📄 Script SQL do Supabase (Executar no SQL Editor)</h4>
-              <button class="btn-copy-url" id="btnCopySqlScript">Copiar Script SQL</button>
-            </div>
-            <p class="box-desc-text">
-              Antes de conectar, abra o <strong>SQL Editor</strong> no painel do Supabase, cole o script abaixo e clique em <strong>Run</strong>:
-            </p>
-            <pre class="sql-code-preview"><code>CREATE TABLE IF NOT EXISTS public.clientes (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    username TEXT UNIQUE NOT NULL,
-    password TEXT NOT NULL,
-    role TEXT NOT NULL DEFAULT 'cliente',
-    status TEXT NOT NULL DEFAULT 'ativo',
-    notes TEXT DEFAULT '',
-    created_at TIMESTAMPTZ DEFAULT NOW(),
-    updated_at TIMESTAMPTZ DEFAULT NOW()
-);
-ALTER TABLE public.clientes ENABLE ROW LEVEL SECURITY;
-CREATE POLICY "Permitir leitura publica de clientes" ON public.clientes FOR SELECT TO anon, authenticated USING (true);
-CREATE POLICY "Permitir criacao de clientes" ON public.clientes FOR INSERT TO anon, authenticated WITH CHECK (true);
-CREATE POLICY "Permitir atualizacao de clientes" ON public.clientes FOR UPDATE TO anon, authenticated USING (true);
-CREATE POLICY "Permitir exclusao de clientes" ON public.clientes FOR DELETE TO anon, authenticated USING (true);</code></pre>
           </div>
         </div>
 
@@ -753,7 +682,8 @@ CREATE POLICY "Permitir exclusao de clientes" ON public.clientes FOR DELETE TO a
   <!-- Toast de Notificação -->
   <div class="toast" id="toastNotification">Link copiado com sucesso!</div>
 
-  <script src="auth.js?v=5"></script>
-  <script src="app.js?v=5"></script>
+  <script src="supabase-config.js?v=6"></script>
+  <script src="auth.js?v=6"></script>
+  <script src="app.js?v=6"></script>
 </body>
 </html>
