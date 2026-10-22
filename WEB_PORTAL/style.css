@@ -2351,3 +2351,82 @@ body.role-admin .client-only {
   line-height: 1.5;
 }
 
+/* =====================================================================
+   SEGURANÇA E PROTEÇÃO TOTAL CONTRA CÓPIA DE LINKS DE CANAIS
+   ===================================================================== */
+/* Por padrão (visitantes, clientes e qualquer usuário não-admin),
+   OCULTA COMPLETAMENTE qualquer campo de link, botão de cópia ou atalho VLC */
+.admin-only,
+.url-display,
+.btn-copy-url,
+.btn-vlc,
+.btn-copy,
+.admin-actions-col,
+#streamUrlDisplay,
+#btnModalOpenVlc,
+#btnCopyModalUrl {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* APENAS se o body tiver a classe role-admin (Logado como Kaynã), exibe as ferramentas de administrador */
+body.role-admin .admin-only {
+  display: flex !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+body.role-admin a.admin-only,
+body.role-admin button.admin-only,
+body.role-admin .btn-copy-url,
+body.role-admin .btn-vlc,
+body.role-admin .btn-copy {
+  display: inline-flex !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+body.role-admin .url-display {
+  display: flex !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+body.role-admin #streamUrlDisplay {
+  display: block !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+/* Para Clientes: Bloqueio Total de Seleção de Texto, Arraste e Foco de Cópia */
+body.role-cliente,
+body:not(.role-admin) {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+body.role-cliente img,
+body:not(.role-admin) img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}
+
+/* Mensagem VIP Exclusiva para Clientes no Player */
+.client-only {
+  display: none;
+}
+body.role-cliente .client-only,
+body:not(.role-admin) .client-only {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-emerald);
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+

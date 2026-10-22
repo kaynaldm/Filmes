@@ -247,19 +247,39 @@ function applyUserRole(user) {
     }
   }
 
-  // Previne cópia e contexto do cliente
+  // Previne cópia, clique direito e inspeção para clientes
   if (isClient) {
-    document.addEventListener('contextmenu', handleClientContextMenu);
+    document.addEventListener('contextmenu', blockClientAction);
+    document.addEventListener('copy', blockClientAction);
+    document.addEventListener('cut', blockClientAction);
+    document.addEventListener('dragstart', blockClientAction);
+    document.addEventListener('keydown', handleSecurityKeys);
   } else {
-    document.removeEventListener('contextmenu', handleClientContextMenu);
+    document.removeEventListener('contextmenu', blockClientAction);
+    document.removeEventListener('copy', blockClientAction);
+    document.removeEventListener('cut', blockClientAction);
+    document.removeEventListener('dragstart', blockClientAction);
+    document.removeEventListener('keydown', handleSecurityKeys);
   }
 }
 
-function handleClientContextMenu(e) {
-  if (state.currentUser && state.currentUser.role === 'cliente') {
-    // Não permite inspecionar ou copiar links através de menu de contexto nos vídeos
-    if (e.target.closest('.video-wrapper') || e.target.closest('.video-card') || e.target.closest('video')) {
+function blockClientAction(e) {
+  if (!state.currentUser || state.currentUser.role === 'cliente') {
+    e.preventDefault();
+    return false;
+  }
+}
+
+function handleSecurityKeys(e) {
+  if (!state.currentUser || state.currentUser.role === 'cliente') {
+    // Bloqueia F12, Ctrl+Shift+I/J/C, Ctrl+U (Ver Código Fonte) e Ctrl+S (Salvar Página)
+    if (
+      e.key === 'F12' ||
+      (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) ||
+      (e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S'))
+    ) {
       e.preventDefault();
+      return false;
     }
   }
 }
@@ -1044,10 +1064,10 @@ function createVideoCard(item, index) {
   const isSeries = categoryName.toLowerCase().includes('séries') || item.t.toLowerCase().match(/s\d+e\d+/i);
   const badgeText = isSeries ? 'SÉRIE' : 'HD / 4K';
 
-  const isClient = state.currentUser && state.currentUser.role === 'cliente';
+  const isAdmin = state.currentUser && state.currentUser.role === 'admin';
 
-  // Se for cliente, o botão de copiar link NÃO É RENDERIZADO! Apenas assistir.
-  const copyBtnHtml = !isClient ? `
+  // Se NÃO for admin (cliente ou visitante), o botão de copiar link NÃO É RENDERIZADO! Apenas assistir.
+  const copyBtnHtml = isAdmin ? `
     <button class="btn-card-action btn-copy" title="Copiar Link de Vídeo">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
@@ -1165,12 +1185,27 @@ function openPlayer(title, category, url) {
   dom.modalVideoTitle.textContent = title;
   dom.modalCategoryBadge.textContent = category;
 
-  // Apenas admin tem visualização do link direto
-  if (state.currentUser && state.currentUser.role === 'admin') {
-    dom.streamUrlDisplay.value = url;
-    if (dom.btnModalOpenVlc) dom.btnModalOpenVlc.href = `vlc://${url}`;
+  // Apenas admin tem visualização e cópia do link direto
+  const isAdmin = state.currentUser && state.currentUser.role === 'admin';
+  if (isAdmin) {
+    if (dom.streamUrlDisplay) dom.streamUrlDisplay.value = url;
+    if (dom.btnModalOpenVlc) {
+      dom.btnModalOpenVlc.href = `vlc://${url}`;
+      dom.btnModalOpenVlc.style.display = 'inline-flex';
+    }
+    if (dom.btnCopyModalUrl) dom.btnCopyModalUrl.style.display = 'inline-flex';
   } else {
-    dom.streamUrlDisplay.value = '';
+    if (dom.streamUrlDisplay) {
+      dom.streamUrlDisplay.value = '';
+      dom.streamUrlDisplay.removeAttribute('value');
+    }
+    if (dom.btnModalOpenVlc) {
+      dom.btnModalOpenVlc.removeAttribute('href');
+      dom.btnModalOpenVlc.style.display = 'none';
+    }
+    if (dom.btnCopyModalUrl) {
+      dom.btnCopyModalUrl.style.display = 'none';
+    }
   }
 
   openModal(dom.playerModal);
@@ -1178,9 +1213,9 @@ function openPlayer(title, category, url) {
   const video = dom.htmlVideoPlayer;
   dom.playerLoading.classList.add('active');
 
-  // Previne menu de contexto se for cliente
-  if (state.currentUser && state.currentUser.role === 'cliente') {
-    video.oncontextmenu = (e) => e.preventDefault();
+  // Previne menu de contexto e clique direito no player para clientes
+  if (!isAdmin) {
+    video.oncontextmenu = (e) => { e.preventDefault(); return false; };
   }
 
   if (state.hlsPlayer) {
@@ -1188,13 +1223,15 @@ function openPlayer(title, category, url) {
     state.hlsPlayer = null;
   }
 
+  const playableUrl = getPlayableUrl(url);
+
   if (url.includes('.m3u8')) {
     if (Hls.isSupported()) {
       state.hlsPlayer = new Hls({
         debug: false,
         enableWorker: true
       });
-      state.hlsPlayer.loadSource(url);
+      state.hlsPlayer.loadSource(playableUrl);
       state.hlsPlayer.attachMedia(video);
       state.hlsPlayer.on(Hls.Events.MANIFEST_PARSED, () => {
         dom.playerLoading.classList.remove('active');
@@ -1204,11 +1241,11 @@ function openPlayer(title, category, url) {
         dom.playerLoading.classList.remove('active');
       });
     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = url;
+      video.src = playableUrl;
       video.play().catch(() => console.log('Autoplay bloqueado'));
     }
   } else {
-    video.src = url;
+    video.src = playableUrl;
     video.load();
     video.play().then(() => {
       dom.playerLoading.classList.remove('active');
@@ -1217,8 +1254,33 @@ function openPlayer(title, category, url) {
     });
   }
 
+  // Fallback inteligente caso o navegador bloqueie o stream direto
+  video.onerror = () => {
+    dom.playerLoading.classList.remove('active');
+    const proxiedUrl = getPlayableUrl(url, true);
+    if (!video.src.includes('/api/stream') && video.src !== proxiedUrl) {
+      console.log('Tentando reproduzir através do proxy seguro /api/stream...');
+      video.src = proxiedUrl;
+      video.load();
+      video.play().catch(() => {});
+    }
+  };
+
   video.onplaying = () => dom.playerLoading.classList.remove('active');
   video.onwaiting = () => dom.playerLoading.classList.add('active');
+}
+
+function getPlayableUrl(rawUrl, forceProxy = false) {
+  if (!rawUrl) return '';
+  // Se estiver rodando em HTTPS (ex: Vercel) ou forçado:
+  // Navegadores bloqueiam streams HTTP (Mixed Content).
+  // O proxy /api/stream resolve os redirecionamentos no backend e entrega via HTTPS.
+  if (forceProxy || window.location.protocol === 'https:' || (!rawUrl.startsWith('http://localhost') && !rawUrl.startsWith('http://127.0.0.1') && window.location.hostname.includes('vercel.app'))) {
+    if (rawUrl.startsWith('http://') || rawUrl.startsWith('https://')) {
+      return `/api/stream?url=${encodeURIComponent(rawUrl)}`;
+    }
+  }
+  return rawUrl;
 }
 
 function closePlayerModal() {

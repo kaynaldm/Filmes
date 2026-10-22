@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=9">
   <!-- Supabase JS Client para banco de dados e autenticacao na nuvem -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <!-- Hls.js para suporte a streaming HLS -->
@@ -246,8 +246,8 @@
           </svg>
         </div>
         <div class="stat-info">
-          <span class="stat-number">50 Pastas</span>
-          <span class="stat-label">Pastas e Playlists M3U</span>
+          <span class="stat-number">50 Gêneros</span>
+          <span class="stat-label">Categorias & Coleções HD</span>
         </div>
       </div>
     </div>
@@ -341,7 +341,7 @@
       </div>
 
       <div class="video-wrapper">
-        <video id="htmlVideoPlayer" controls playsinline></video>
+        <video id="htmlVideoPlayer" controls playsinline controlsList="nodownload noplaybackrate" disablePictureInPicture oncontextmenu="return false;"></video>
         <div class="player-loading" id="playerLoading">
           <div class="spinner"></div>
           <span>Carregando transmissão...</span>
@@ -367,89 +367,6 @@
     </div>
   </div>
 
-  <!-- Modal de Exportação de Playlists -->
-  <div class="modal-overlay" id="exportModal">
-    <div class="export-container">
-      <div class="export-header">
-        <h3>📁 Listas M3U8 & Pastas Organizadas</h3>
-        <button class="btn-close" id="btnCloseExport">&times;</button>
-      </div>
-      <div class="export-body">
-        <p class="export-intro">
-          Todos os 316.354 links foram extraídos e organizados na pasta:
-          <code>d:\PROJETOS PRE-PRONTOS\FILMES\CANAIS_ORGANIZADOS</code>
-        </p>
-
-        <div class="export-list">
-          <div class="export-card">
-            <h4>🌟 Listas Mestres Gerais</h4>
-            <div class="export-item">
-              <span>Canal Completo (Filmes + Séries - 316.354 títulos)</span>
-              <a href="../CANAIS_ORGANIZADOS/00_LISTAS_MESTRES/Canal_Filmes_e_Series_Completo.m3u8" download class="btn-download">Baixar M3U8</a>
-            </div>
-            <div class="export-item">
-              <span>Canal Filmes Geral (30.203 filmes)</span>
-              <a href="../CANAIS_ORGANIZADOS/00_LISTAS_MESTRES/Canal_Filmes_Geral.m3u8" download class="btn-download">Baixar M3U8</a>
-            </div>
-            <div class="export-item">
-              <span>Canal Séries Geral (286.151 episódios)</span>
-              <a href="../CANAIS_ORGANIZADOS/00_LISTAS_MESTRES/Canal_Series_Geral.m3u8" download class="btn-download">Baixar M3U8</a>
-            </div>
-          </div>
-
-          <div class="export-card">
-            <h4>📁 O que há dentro de cada pasta de categoria?</h4>
-            <p>Cada uma das 50 pastas contém 4 formatos prontos:</p>
-            <ul>
-              <li><strong>playlist.m3u8</strong>: Lista M3U8 pronta para carregar em Smart TV, TV Box e players.</li>
-              <li><strong>links.txt</strong>: Arquivo de texto limpo com Título, Link de Vídeo e Poster.</li>
-              <li><strong>catalogo.csv</strong>: Planilha pronta para abrir no Microsoft Excel com todas as colunas.</li>
-              <li><strong>dados.json</strong>: Arquivo JSON estruturado para integrações e desenvolvedores.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal de Guia Smart TV & TV Box -->
-  <div class="modal-overlay" id="guideModal">
-    <div class="export-container">
-      <div class="export-header">
-        <h3>📺 Como Usar nas Smart TVs e TV Box</h3>
-        <button class="btn-close" id="btnCloseGuide">&times;</button>
-      </div>
-      <div class="export-body">
-        <div class="guide-steps">
-          <div class="guide-step">
-            <span class="step-num">1</span>
-            <div>
-              <h4>Aplicativos Recomendados</h4>
-              <p><strong>Smart TV (Samsung/LG):</strong> IPTV Smarters Pro, SS IPTV, Smart IPTV, IBO Player.</p>
-              <p><strong>TV Box / Fire TV / Android:</strong> TiviMate IPTV Player, XCIPTV, VLC Media Player.</p>
-              <p><strong>Computador (Windows):</strong> VLC Media Player, PotPlayer, ou este próprio Portal Web.</p>
-            </div>
-          </div>
-
-          <div class="guide-step">
-            <span class="step-num">2</span>
-            <div>
-              <h4>Como Carregar as Listas</h4>
-              <p>No aplicativo escolhido, selecione <strong>"Carregar Arquivo M3U"</strong> ou <strong>"Upload M3U Playlist"</strong> e aponte para qualquer arquivo <code>playlist.m3u8</code> gerado nas pastas.</p>
-            </div>
-          </div>
-
-          <div class="guide-step">
-            <span class="step-num">3</span>
-            <div>
-              <h4>Integração com Jellyfin / Emby / Kodi</h4>
-              <p>Você pode usar as listas M3U como fontes de canais ao vivo (IPTV Live TV) ou usar o script gerador de arquivos <code>.strm</code> para criar bibliotecas sob demanda integradas.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Modal Painel Admin Kaynã -->
   <div class="modal-overlay" id="adminModal">
@@ -478,7 +395,6 @@
           <button class="admin-tab-btn active" data-tab="visao-geral">📊 Visão Geral</button>
           <button class="admin-tab-btn" data-tab="central-clientes">👥 Central de Clientes</button>
           <button class="admin-tab-btn" data-tab="cadastrar-link">➕ Adicionar Título</button>
-          <button class="admin-tab-btn" data-tab="listas-m3u">📁 Listas & Playlists</button>
           <button class="admin-tab-btn" data-tab="dados-conta">⚙️ Dados da Conta</button>
         </div>
 
@@ -623,32 +539,6 @@
           </form>
         </div>
 
-        <!-- Aba 3: Listas & Playlists -->
-        <div class="admin-tab-content" id="tab-listas-m3u">
-          <div class="admin-export-list">
-            <div class="admin-export-item">
-              <div>
-                <strong>Canal Completo (316.354 títulos)</strong>
-                <p>Lista M3U8 com todos os filmes e séries organizados</p>
-              </div>
-              <a href="../CANAIS_ORGANIZADOS/00_LISTAS_MESTRES/Canal_Filmes_e_Series_Completo.m3u8" download class="btn-primary-sm">Baixar M3U8</a>
-            </div>
-            <div class="admin-export-item">
-              <div>
-                <strong>Canal Filmes (30.203 títulos)</strong>
-                <p>Lista M3U8 exclusiva com todos os filmes</p>
-              </div>
-              <a href="../CANAIS_ORGANIZADOS/00_LISTAS_MESTRES/Canal_Filmes_Geral.m3u8" download class="btn-primary-sm">Baixar M3U8</a>
-            </div>
-            <div class="admin-export-item">
-              <div>
-                <strong>Canal Séries (286.151 episódios)</strong>
-                <p>Lista M3U8 com Netflix, Prime, HBO Max, Disney+, Doramas e Novelas</p>
-              </div>
-              <a href="../CANAIS_ORGANIZADOS/00_LISTAS_MESTRES/Canal_Series_Geral.m3u8" download class="btn-primary-sm">Baixar M3U8</a>
-            </div>
-          </div>
-        </div>
 
         <!-- Aba 4: Dados da Conta -->
         <div class="admin-tab-content" id="tab-dados-conta">
@@ -682,8 +572,8 @@
   <!-- Toast de Notificação -->
   <div class="toast" id="toastNotification">Link copiado com sucesso!</div>
 
-  <script src="supabase-config.js?v=8"></script>
-  <script src="auth.js?v=8"></script>
-  <script src="app.js?v=8"></script>
+  <script src="supabase-config.js?v=10"></script>
+  <script src="auth.js?v=10"></script>
+  <script src="app.js?v=10"></script>
 </body>
 </html>
