@@ -1065,6 +1065,7 @@ function createVideoCard(item, index) {
   const badgeText = isSeries ? 'SÉRIE' : 'HD / 4K';
 
   const isAdmin = state.currentUser && state.currentUser.role === 'admin';
+  const isClient = !isAdmin;
 
   // Se NÃO for admin (cliente ou visitante), o botão de copiar link NÃO É RENDERIZADO! Apenas assistir.
   const copyBtnHtml = isAdmin ? `
