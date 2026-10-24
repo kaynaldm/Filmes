@@ -2,13 +2,13 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>K-Cine | Catálogo de Filmes & Séries</title>
   <meta name="description" content="K-Cine - Portal e Catálogo Organizado de Filmes e Séries com mais de 316.000 títulos organizados por categoria.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=17">
+  <link rel="stylesheet" href="style.css?v=18">
   <!-- Supabase JS Client para banco de dados e autenticacao na nuvem -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <!-- Hls.js para suporte a streaming HLS -->
@@ -97,11 +97,14 @@
         </svg>
         <span>Apenas acessos autorizados pelo administrador. Não compartilhe seu login.</span>
       </div>
-    </div>
   </div>
 
-  <!-- Header / Barra Superior -->
-  <header class="navbar" id="mainHeader">
+  <!-- ========================================== -->
+  <!-- PORTAL PRINCIPAL (OCULTO ATÉ O LOGIN)      -->
+  <!-- ========================================== -->
+  <div id="portalMainApp" class="portal-main-app" style="display: none;">
+    <!-- Header / Barra Superior -->
+    <header class="navbar" id="mainHeader">
     <div class="nav-container">
       <div class="brand">
         <div class="brand-logo">
@@ -348,6 +351,7 @@
       </button>
     </div>
   </main>
+  </div><!-- Fim do #portalMainApp -->
 
   <!-- Modal do Player de Vídeo -->
   <div class="modal-overlay" id="playerModal">
@@ -662,8 +666,8 @@
   <!-- Toast de Notificação -->
   <div class="toast" id="toastNotification">Link copiado com sucesso!</div>
 
-  <script src="supabase-config.js?v=17"></script>
-  <script src="auth.js?v=17"></script>
-  <script src="app.js?v=17"></script>
+  <script src="supabase-config.js?v=18"></script>
+  <script src="auth.js?v=18"></script>
+  <script src="app.js?v=18"></script>
 </body>
 </html>

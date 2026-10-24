@@ -65,6 +65,24 @@ const AuthManager = (() => {
       created_at: '2026-10-21T00:00:00.000Z'
     },
     {
+      id: 'cli-gleydson',
+      username: 'Gleydson',
+      password: '#123456',
+      role: 'cliente',
+      status: 'ativo',
+      notes: 'Sem observações',
+      created_at: '2026-10-22T00:00:00.000Z'
+    },
+    {
+      id: 'cli-lisnildo',
+      username: 'Lisnildo',
+      password: '#23456',
+      role: 'cliente',
+      status: 'ativo',
+      notes: 'Sem observações',
+      created_at: '2026-10-21T23:30:00.000Z'
+    },
+    {
       id: 'cli-gabriel-aires',
       username: 'Gabriel Aires',
       password: '#123456',
@@ -77,15 +95,6 @@ const AuthManager = (() => {
       id: 'cli-leticia-castro',
       username: 'Letícia Castro',
       password: '#123456',
-      role: 'cliente',
-      status: 'ativo',
-      notes: 'Sem observações',
-      created_at: '2026-10-21T23:30:00.000Z'
-    },
-    {
-      id: 'cli-lisnildo',
-      username: 'Lisnildo',
-      password: '#23456',
       role: 'cliente',
       status: 'ativo',
       notes: 'Sem observações',
@@ -144,7 +153,7 @@ const AuthManager = (() => {
       });
     }
 
-    saveLocalClients(clients);
+    saveLocalClients(clients, false);
 
     // Sincroniza em segundo plano com data/clientes.json se disponível
     syncSharedClients();
@@ -163,13 +172,32 @@ const AuthManager = (() => {
             if (idx === -1) {
               current.push({ ...sc });
               changed = true;
+            } else {
+              if (sc.password && current[idx].password !== sc.password) {
+                current[idx].password = sc.password;
+                changed = true;
+              }
+              if (sc.status && current[idx].status !== sc.status) {
+                current[idx].status = sc.status;
+                changed = true;
+              }
             }
           });
           if (changed) {
-            saveLocalClients(current);
+            saveLocalClients(current, false);
           }
         }
       }
+    } catch (e) {}
+  }
+
+  async function persistClientsToServer(list) {
+    try {
+      await fetch('/api/clients', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(list)
+      });
     } catch (e) {}
   }
 
@@ -186,8 +214,11 @@ const AuthManager = (() => {
     }
   }
 
-  function saveLocalClients(list) {
+  function saveLocalClients(list, syncServer = true) {
     localStorage.setItem(STORAGE_KEYS.CLIENTS, JSON.stringify(list));
+    if (syncServer) {
+      persistClientsToServer(list);
+    }
   }
 
   // Inicializa o cliente do Supabase com as credenciais salvas

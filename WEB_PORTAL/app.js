@@ -159,16 +159,59 @@ const FALLBACK_POSTER = "https://images.unsplash.com/photo-1489599849927-2ee91ce
 // INICIALIZAÇÃO
 // =====================================================================
 document.addEventListener('DOMContentLoaded', async () => {
+  disableZoomGestures();
   setupEventListeners();
   setupModalScrollLocks();
   initSupabaseTab();
 
   // 1. Verificar Sessão de Autenticação do Usuário
-  await checkAuthSession();
+  const isAuthenticated = await checkAuthSession();
 
-  // 2. Carregar Manifesto de Filmes e Séries
-  await loadManifesto();
+  // 2. Carregar Manifesto de Filmes e Séries APENAS se autenticado
+  if (isAuthenticated) {
+    await loadManifesto();
+  }
 });
+
+// =====================================================================
+// BLOQUEIO DE ZOOM (PINÇA TOUCH, DUPLO TOQUE, CTRL+WHEEL E ATALHOS)
+// =====================================================================
+function disableZoomGestures() {
+  // 1. Bloqueia zoom por gesto de pinça no iOS / Safari
+  document.addEventListener('gesturestart', (e) => {
+    e.preventDefault();
+  }, { passive: false });
+  document.addEventListener('gesturechange', (e) => {
+    e.preventDefault();
+  }, { passive: false });
+  document.addEventListener('gestureend', (e) => {
+    e.preventDefault();
+  }, { passive: false });
+
+  // 2. Bloqueia duplo toque para dar zoom em telas touch
+  let lastTouchEnd = 0;
+  document.addEventListener('touchend', (e) => {
+    const now = Date.now();
+    if (now - lastTouchEnd <= 300) {
+      e.preventDefault();
+    }
+    lastTouchEnd = now;
+  }, { passive: false });
+
+  // 3. Bloqueia zoom por rolagem com tecla Ctrl pressionada (Ctrl + Scroll)
+  window.addEventListener('wheel', (e) => {
+    if (e.ctrlKey) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+
+  // 4. Bloqueia atalhos de zoom do teclado (Ctrl + Mais, Ctrl + Menos, Ctrl + Zero)
+  window.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '_' || e.key === '0')) {
+      e.preventDefault();
+    }
+  });
+}
 
 // =====================================================================
 // CONTROLE DE MODAIS (TRAVA TOTAL DO FUNDO / BACKGROUND FREEZE)
@@ -225,19 +268,26 @@ async function checkAuthSession() {
     state.currentUser = check.user;
     applyUserRole(state.currentUser);
     hideLoginScreen();
+    return true;
   } else {
     state.currentUser = null;
     const msg = check && check.blocked
       ? 'Seu acesso foi bloqueado pelo administrador. Entre em contato para regularizar seu plano.'
       : null;
     showLoginScreen(msg);
+    return false;
   }
 }
 
 function showLoginScreen(alertMsg = null) {
+  const portalMainApp = document.getElementById('portalMainApp');
+  if (portalMainApp) {
+    portalMainApp.style.display = 'none';
+  }
   if (dom.loginScreen) {
     dom.loginScreen.style.display = 'flex';
   }
+  document.body.classList.add('login-active');
   document.body.classList.add('modal-open');
 
   if (alertMsg) {
@@ -252,6 +302,11 @@ function hideLoginScreen() {
   if (dom.loginScreen) {
     dom.loginScreen.style.display = 'none';
   }
+  const portalMainApp = document.getElementById('portalMainApp');
+  if (portalMainApp) {
+    portalMainApp.style.display = 'block';
+  }
+  document.body.classList.remove('login-active');
   const anyModal = document.querySelector('.modal-overlay.active');
   if (!anyModal) {
     document.body.classList.remove('modal-open');
@@ -317,6 +372,7 @@ function handleSecurityKeys(e) {
 }
 
 function handleLogout() {
+  stopVideoPlayback();
   AuthManager.logout();
   state.currentUser = null;
   document.body.classList.remove('role-cliente', 'role-admin');
@@ -351,8 +407,10 @@ function setupEventListeners() {
         dom.loginForm.reset();
         showToast(`Bem-vindo, ${result.user.username}!`);
 
-        // Re-renderiza o catálogo para aplicar restrições visuais do perfil
-        if (state.rawItems && state.rawItems.length) {
+        // Carrega o catálogo caso ainda não tenha sido carregado
+        if (!state.manifesto) {
+          await loadManifesto();
+        } else if (state.rawItems && state.rawItems.length) {
           refreshCatalogDisplay();
         } else if (state.currentItems && state.currentItems.length) {
           state.displayedCount = 0;
@@ -1067,18 +1125,18 @@ function setSeriesViewMode(mode) {
 
 function updateSeriesControlsVisibility() {
   if (!dom.seriesViewControls) return;
-  const isSeriesCat = (state.activeType === 'series') || 
-                      (state.activeCategoryId && (
-                        state.activeCategoryId.includes('series') ||
-                        state.activeCategoryId.includes('novelas') ||
-                        state.activeCategoryId.includes('doramas') ||
-                        state.activeCategoryId.includes('netflix') ||
-                        state.activeCategoryId.includes('prime') ||
-                        state.activeCategoryId.includes('max') ||
-                        state.activeCategoryId.includes('disney') ||
-                        state.activeCategoryId.includes('crunchyroll') ||
-                        state.activeCategoryId.includes('turcas')
-                      ));
+  const isSeriesCat = (state.activeType === 'series') ||
+    (state.activeCategoryId && (
+      state.activeCategoryId.includes('series') ||
+      state.activeCategoryId.includes('novelas') ||
+      state.activeCategoryId.includes('doramas') ||
+      state.activeCategoryId.includes('netflix') ||
+      state.activeCategoryId.includes('prime') ||
+      state.activeCategoryId.includes('max') ||
+      state.activeCategoryId.includes('disney') ||
+      state.activeCategoryId.includes('crunchyroll') ||
+      state.activeCategoryId.includes('turcas')
+    ));
   const hasEpisodes = state.rawItems && state.rawItems.some(it => parseEpisodeInfo(it.t).isEpisode);
 
   if (isSeriesCat || hasEpisodes) {
@@ -1191,7 +1249,9 @@ function parseEpisodeInfo(rawTitle) {
       episode: e,
       episodeTitle: epTitle,
       badge: `T${sStr} • EP ${eStr}`,
-      label: `Temporada ${s} • Episódio ${e}`,
+      seasonLabel: `Temporada ${s}`,
+      label: `Temporada ${s}`,
+      fullLabel: `Temporada ${s} • Episódio ${e}`,
       shortBadge: `T${sStr} E${eStr}`,
       cleanTitle: seriesName
     };
@@ -1215,7 +1275,9 @@ function parseEpisodeInfo(rawTitle) {
       episode: e,
       episodeTitle: epTitle,
       badge: `T${sStr} • EP ${eStr}`,
-      label: `Temporada ${s} • Episódio ${e}`,
+      seasonLabel: `Temporada ${s}`,
+      label: `Temporada ${s}`,
+      fullLabel: `Temporada ${s} • Episódio ${e}`,
       shortBadge: `T${sStr} E${eStr}`,
       cleanTitle: seriesName
     };
@@ -1237,7 +1299,9 @@ function parseEpisodeInfo(rawTitle) {
       episode: e,
       episodeTitle: m[3] ? m[3].trim() : '',
       badge: isCap ? `CAP ${eStr}` : `EP ${eStr}`,
-      label: isCap ? `Capítulo ${e}` : `Episódio ${e}`,
+      seasonLabel: isCap ? `Capítulo ${e}` : `Temporada 1`,
+      label: isCap ? `Capítulo ${e}` : `Temporada 1`,
+      fullLabel: isCap ? `Capítulo ${e}` : `Episódio ${e}`,
       shortBadge: isCap ? `C${eStr}` : `E${eStr}`,
       cleanTitle: seriesName
     };
@@ -1250,7 +1314,9 @@ function parseEpisodeInfo(rawTitle) {
     episode: null,
     episodeTitle: '',
     badge: '',
+    seasonLabel: '',
     label: '',
+    fullLabel: '',
     shortBadge: '',
     cleanTitle: title
   };
@@ -1399,7 +1465,7 @@ function createVideoCard(item, index) {
     : `<span class="card-badge">HD / 4K</span>`;
 
   const chapterPillHtml = epInfo.isEpisode
-    ? `<div class="card-chapter-pill"><span class="pill-dot"></span><span>${escapeHtml(epInfo.label)}</span></div>`
+    ? `<div class="card-chapter-pill"><span class="pill-dot"></span><span>${escapeHtml(epInfo.seasonLabel || epInfo.label)}</span></div>`
     : '';
 
   const displayTitle = epInfo.isEpisode ? epInfo.seriesName : item.t;
@@ -1620,7 +1686,7 @@ function openPlayer(title, category, url, itemObj = null) {
       console.log('Tentando reproduzir através do proxy seguro /api/stream...');
       video.src = proxiedUrl;
       video.load();
-      video.play().catch(() => {});
+      video.play().catch(() => { });
     }
   };
 
@@ -1776,7 +1842,7 @@ function renderSeasonEpisodes(episodes, seriesGroup) {
     itemEl.className = 'series-ep-item';
 
     const parsed = ep.parsed;
-    const epTitle = parsed.episodeTitle || parsed.label;
+    const epTitle = parsed.episodeTitle || (parsed.episode ? `Episódio ${parsed.episode}` : (parsed.fullLabel || parsed.label));
 
     itemEl.innerHTML = `
       <div class="series-ep-info">
@@ -1825,7 +1891,7 @@ function stopVideoPlayback() {
     // Pausa imediata
     try {
       video.pause();
-    } catch (e) {}
+    } catch (e) { }
 
     // Limpa fontes de reprodução e tempo
     video.removeAttribute('src');
@@ -1836,7 +1902,7 @@ function stopVideoPlayback() {
     // Força o navegador a descarregar buffers de áudio/vídeo da memória
     try {
       video.load();
-    } catch (e) {}
+    } catch (e) { }
   }
 
   // Destrói Hls.js se ativo
@@ -1845,7 +1911,7 @@ function stopVideoPlayback() {
       state.hlsPlayer.stopLoad();
       state.hlsPlayer.detachMedia();
       state.hlsPlayer.destroy();
-    } catch (e) {}
+    } catch (e) { }
     state.hlsPlayer = null;
   }
 }
@@ -1893,7 +1959,7 @@ function showToast(msg) {
 
 function escapeHtml(str) {
   if (!str) return '';
-  return str.replace(/[&<>"']/g, function(m) {
+  return str.replace(/[&<>"']/g, function (m) {
     return {
       '&': '&amp;',
       '<': '&lt;',

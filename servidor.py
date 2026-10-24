@@ -102,6 +102,21 @@ class KCineHandler(http.server.SimpleHTTPRequestHandler):
             self.wfile.write(json.dumps(results, ensure_ascii=False).encode("utf-8"))
             return
 
+        # Endpoint de gerenciamento de clientes: /api/clients
+        if path == "/api/clients":
+            clients_file = os.path.join(WEB_DIR, "data", "clientes.json")
+            if os.path.exists(clients_file):
+                with open(clients_file, "r", encoding="utf-8") as f:
+                    content = f.read()
+            else:
+                content = "[]"
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json; charset=utf-8")
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            self.wfile.write(content.encode("utf-8"))
+            return
+
         # Rota para acessar arquivos de CANAIS_ORGANIZADOS diretamente
         if path.startswith("/CANAIS_ORGANIZADOS/"):
             rel_path = path[len("/CANAIS_ORGANIZADOS/"):]
@@ -124,6 +139,42 @@ class KCineHandler(http.server.SimpleHTTPRequestHandler):
                 return
 
         return super().do_GET()
+
+    def do_OPTIONS(self):
+        self.send_response(200)
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+        self.send_header("Access-Control-Allow-Headers", "Content-Type")
+        self.end_headers()
+
+    def do_POST(self):
+        parsed = urllib.parse.urlparse(self.path)
+        path = parsed.path
+
+        if path == "/api/clients":
+            content_length = int(self.headers.get("Content-Length", 0))
+            post_body = self.rfile.read(content_length)
+            try:
+                data = json.loads(post_body.decode("utf-8"))
+                clients_file = os.path.join(WEB_DIR, "data", "clientes.json")
+                os.makedirs(os.path.dirname(clients_file), exist_ok=True)
+                with open(clients_file, "w", encoding="utf-8") as f:
+                    json.dump(data, f, ensure_ascii=False, indent=2)
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json; charset=utf-8")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.end_headers()
+                self.wfile.write(json.dumps({"success": True}).encode("utf-8"))
+                return
+            except Exception as e:
+                self.send_response(500)
+                self.send_header("Content-Type", "application/json; charset=utf-8")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.end_headers()
+                self.wfile.write(json.dumps({"success": False, "error": str(e)}).encode("utf-8"))
+                return
+
+        return super().do_POST()
 
 def main():
     carregar_indice()

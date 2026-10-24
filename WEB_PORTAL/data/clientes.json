@@ -8,6 +8,22 @@
     "notes": "Kaynã - Único Dono & Administrador Geral do K-Cine"
   },
   {
+    "id": "cli-gleydson",
+    "username": "Gleydson",
+    "password": "#123456",
+    "role": "cliente",
+    "status": "ativo",
+    "notes": "Sem observações"
+  },
+  {
+    "id": "cli-lisnildo",
+    "username": "Lisnildo",
+    "password": "#23456",
+    "role": "cliente",
+    "status": "ativo",
+    "notes": "Sem observações"
+  },
+  {
     "id": "cli-gabriel-aires",
     "username": "Gabriel Aires",
     "password": "#123456",
@@ -19,14 +35,6 @@
     "id": "cli-leticia-castro",
     "username": "Letícia Castro",
     "password": "#123456",
-    "role": "cliente",
-    "status": "ativo",
-    "notes": "Sem observações"
-  },
-  {
-    "id": "cli-lisnildo",
-    "username": "Lisnildo",
-    "password": "#23456",
     "role": "cliente",
     "status": "ativo",
     "notes": "Sem observações"
